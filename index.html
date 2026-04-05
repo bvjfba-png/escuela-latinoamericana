@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escuela Latinoamericana — Donde Dos Mundos se Encuentran</title>
+    <title>Escuela Latina de Terapia Gestalt — Del alma eslava al corazón latino</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,6 +26,9 @@
 
         html {
             scroll-behavior: smooth;
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         body {
@@ -35,13 +38,12 @@
             line-height: 1.6;
             overflow-x: hidden;
             font-weight: 400;
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         .lang-switch {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
-            z-index: 1000;
             display: flex;
             gap: 0.5rem;
             background: rgba(255, 255, 255, 0.9);
@@ -49,6 +51,7 @@
             padding: 0.5rem;
             border-radius: 50px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            flex-shrink: 0;
         }
 
         .lang-btn {
@@ -84,6 +87,12 @@
             align-items: center;
             z-index: 100;
             transition: all 0.4s ease;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
 
         nav.scrolled {
@@ -136,29 +145,27 @@
             justify-content: center;
             position: relative;
             padding: 0 2rem;
-            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100%;
+            min-height: 100vh;
+            background: #fff;
+            z-index: -1;
         }
 
         .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--color-bg) 0%, #F5F0EB 100%);
-            z-index: -2;
+            display: none;
         }
 
         .hero-pattern {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            z-index: -1;
+            display: none;
         }
 
         .hero-content {
@@ -655,38 +662,174 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Schedule */
+        .schedule-intro {
+            font-size: 1.0625rem;
+            color: var(--color-muted);
+            max-width: 720px;
+            margin: 0 auto 3rem;
+            line-height: 1.75;
+            text-align: center;
+        }
+
+        .schedule-day-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .schedule-tab {
+            padding: 0.65rem 1.75rem;
+            border: 1px solid var(--color-text);
+            background: transparent;
+            color: var(--color-text);
+            font-family: var(--font-main);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .schedule-tab:hover {
+            background: var(--color-accent-light);
+            border-color: var(--color-accent);
+        }
+
+        .schedule-tab.active {
+            background: var(--color-secondary);
+            border-color: var(--color-secondary);
+            color: #fff;
+        }
+
+        .schedule-panel {
+            display: none;
+        }
+
+        .schedule-panel.active {
+            display: block;
+            animation: fadeInUp 0.45s ease;
+        }
+
+        .schedule-table-wrap {
+            overflow-x: auto;
+            border-radius: 20px;
+            box-shadow: 0 12px 48px rgba(0,0,0,0.06);
+            background: #fff;
+            border: 1px solid rgba(44, 95, 93, 0.12);
+        }
+
+        .schedule-table {
+            width: 100%;
+            min-width: 640px;
+            border-collapse: collapse;
+            font-size: 0.9375rem;
+        }
+
+        .schedule-table thead th {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, #1e4a48 100%);
+            color: #fff;
+            font-weight: 600;
+            text-align: left;
+            padding: 1rem 1.1rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        .schedule-table thead th:first-child {
+            width: 118px;
+            border-radius: 0;
+        }
+
+        .schedule-table tbody td {
+            padding: 0.95rem 1.1rem;
+            vertical-align: top;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            color: var(--color-text);
+            line-height: 1.55;
+        }
+
+        .schedule-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table tbody tr:nth-child(even) td {
+            background: rgba(212, 165, 116, 0.06);
+        }
+
+        .schedule-time {
+            font-weight: 600;
+            color: var(--color-secondary);
+            font-variant-numeric: tabular-nums;
+            white-space: nowrap;
+        }
+
+        .schedule-table td.schedule-plenary {
+            background: rgba(44, 95, 93, 0.06) !important;
+            font-weight: 500;
+        }
+
+        .schedule-table td.schedule-break {
+            color: var(--color-muted);
+            font-style: italic;
+        }
+
+        .schedule-note {
+            margin-top: 2rem;
+            padding: 1.25rem 1.5rem;
+            background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(253,252,248,0.9) 100%);
+            border-radius: 16px;
+            font-size: 0.9375rem;
+            color: var(--color-muted);
+            line-height: 1.65;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .hero-kicker {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            font-weight: 400;
+            color: var(--color-secondary);
+            max-width: 36rem;
+            margin: 0 auto 1.25rem;
+            line-height: 1.45;
+            letter-spacing: -0.01em;
+        }
     </style>
 </head>
 <body>
 
-    <div class="lang-switch">
-        <button class="lang-btn active" onclick="switchLang('es')">ES</button>
-        <button class="lang-btn" onclick="switchLang('ru')">RU</button>
-    </div>
-
     <nav id="navbar">
-        <div class="logo">Escuela Latinoamericana</div>
-        <ul class="nav-links">
-            <li><a href="#concepto" data-es="Concepto" data-ru="Концепция">Concepto</a></li>
-            <li><a href="#programa" data-es="Programa" data-ru="Программа">Programa</a></li>
-            <li><a href="#ponentes" data-es="Ponentes" data-ru="Спикеры">Ponentes</a></li>
-            <li><a href="#lugar" data-es="Lugar" data-ru="Место">Lugar</a></li>
-            <li><a href="#registro" data-es="Registro" data-ru="Регистрация">Registro</a></li>
-        </ul>
+        <div class="logo" data-es="Escuela Latina de Terapia Gestalt" data-ru="Латинская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#concepto" data-es="Concepto" data-ru="Концепция">Concepto</a></li>
+                <li><a href="#programa" data-es="Programa" data-ru="Программа">Programa</a></li>
+                <li><a href="#ponentes" data-es="Ponentes" data-ru="Спикеры">Ponentes</a></li>
+                <li><a href="#lugar" data-es="Lugar" data-ru="Место">Lugar</a></li>
+                <li><a href="#registro" data-es="Registro" data-ru="Регистрация">Registro</a></li>
+            </ul>
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" onclick="switchLang('es', this)">ES</button>
+                <button type="button" class="lang-btn" onclick="switchLang('ru', this)">RU</button>
+            </div>
+        </div>
     </nav>
 
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-pattern"></div>
         <div class="hero-content">
-            <p class="hero-subtitle" data-es="Encuentro de Psicología" data-ru="Встреча психологов">Encuentro de Psicología</p>
+            <p class="hero-subtitle" data-es="Encuentro internacional de terapia gestalt" data-ru="Международная встреча по гештальт-терапии">Encuentro internacional de terapia gestalt</p>
+            <p class="hero-kicker" data-es="Puentes de presencia: diálogo gestáltico entre Rusia y Latinoamérica" data-ru="Мосты присутствия: гештальт-диалог между Россией и Латинской Америкой">Puentes de presencia: diálogo gestáltico entre Rusia y Latinoamérica</p>
             <h1 class="hero-title">
                 <span data-es="Donde Dos Mundos" data-ru="Где два мира">Donde Dos Mundos</span>
                 <span data-es="se Encuentran" data-ru="встречаются">se Encuentran</span>
             </h1>
-            <p class="hero-date" data-es="16—17 de octubre, 2026 • Hotel Crystal Tower, Montevideo" data-ru="16—17 октября 2026 • Отель Crystal Tower, Монтевидео">
-                16—17 de octubre, 2026 • Hotel Crystal Tower, Montevideo
-            </p>
+            <p class="hero-date" data-es="Del alma eslava al corazón latino • 9—10 de octubre, 2026 • Montevideo, Uruguay" data-ru="От славянской души к латинскому сердцу • 9—10 октября 2026 • Монтевидео, Уругвай">Del alma eslava al corazón latino • 9—10 de octubre, 2026 • Montevideo, Uruguay</p>
             <div class="hero-cta">
                 <a href="#registro" class="btn-primary" data-es="Reservar Lugar" data-ru="Забронировать место">Reservar Lugar</a>
                 <a href="#programa" class="btn-secondary" data-es="Ver Programa" data-ru="Смотреть программу">Ver Programa</a>
@@ -697,16 +840,16 @@
     <section id="concepto" class="fade-in">
         <div class="section-header">
             <span class="section-tag" data-es="Nuestra Esencia" data-ru="Наша суть">Nuestra Esencia</span>
-            <h2 class="section-title" data-es="Diálogo entre Tradiciones" data-ru="Диалог традиций">Diálogo entre Tradiciones</h2>
-            <p class="section-desc" data-es="Un espacio único donde convergen la profundidad del enfoque latinoamericano y la riqueza de la psicología de habla rusa." data-ru="Уникальное пространство, где сходятся глубина латиноамериканского подхода и богатство русскоязычной психологии.">
-                Un espacio único donde convergen la profundidad del enfoque latinoamericano y la riqueza de la psicología de habla rusa.
+            <h2 class="section-title" data-es="Gestalt en diálogo: Rusia y Latinoamérica" data-ru="Гештальт в диалоге: Россия и Латинская Америка">Gestalt en diálogo: Rusia y Latinoamérica</h2>
+            <p class="section-desc" data-es="Un encuentro bilingüe para tejer puentes de presencia: experiencia clínica, mesas redondas y talleres en paralelo, con la sensibilidad del alma eslava y el calor del corazón latino." data-ru="Двуязычная встреча, чтобы сплести мосты присутствия: клинический опыт, круглые столы и параллельные мастер-классы — чувствительность славянской души и тепло латинского сердца.">
+                Un encuentro bilingüe para tejer puentes de presencia: experiencia clínica, mesas redondas y talleres en paralelo, con la sensibilidad del alma eslava y el calor del corazón latino.
             </p>
         </div>
 
         <div class="concept-grid">
             <div class="concept-text">
-                <p data-es="La Escuela Latinoamericana nace del encuentro fortuito y necesario entre dos tradiciones terapéuticas profundas. Por un lado, la sensibilidad latinoamericana con su calidez humana, su enfoque comunitario y su capacidad de contener lo emocional. Por otro, la tradición ruso-parlante con su rigor teórico, su profundidad analítica y su rica herencia histórica en la comprensión del psiquismo." data-ru="Escuela Latinoamericana рождается из случайной и необходимой встречи двух глубоких терапевтических традиций. С одной стороны — латиноамериканская чувствительность с её человеческим теплом, общностным подходом и способностью удерживать эмоциональное. С другой — русскоязычная традиция с её теоретической строгостью, аналитической глубиной и богатым историческим наследием в понимании психики.">
-                    La Escuela Latinoamericana nace del encuentro fortuito y necesario entre dos tradiciones terapéuticas profundas.
+                <p data-es="La Escuela Latina de Terapia Gestalt convoca a colegas de Rusia, Latinoamérica y más allá. Cada día incluye una conferencia magistral para todo el público; después, mesas redondas, masterclasses y talleres prácticos se ofrecen en tres salas en paralelo, para que cada persona elija según su interés. Los bloques de 120 minutos combinan teoría y reflexión; los de 90 minutos privilegian la práctica. El programa es flexible: en algunos tramos puede concentrarse un gran taller o una sola mesa, según el cuerpo docente." data-ru="Латинская школа гештальт-терапии собирает коллег из России, Латинской Америки и дальше. Каждый день начинается с пленарной лекции для всех; затем круглые столы, мастер-классы и практические воркшопы идут параллельно в трёх залах — каждый выбирает по интересу. Блоки по 120 минут сочетают теорию и размышление; по 90 минут — больше про практику. Программа гибкая: в отдельные слоты возможен один большой формат вместо трёх параллельных.">
+                    La Escuela Latina de Terapia Gestalt convoca a colegas de Rusia, Latinoamérica y más allá. Cada día incluye una conferencia magistral para todo el público; después, mesas redondas, masterclasses y talleres prácticos se ofrecen en tres salas en paralelo, para que cada persona elija según su interés.
                 </p>
             </div>
             <div class="concept-visual"></div>
@@ -714,111 +857,219 @@
 
         <div class="culture-cards">
             <div class="culture-card fade-in">
-                <h3 data-es="Alma Latina" data-ru="Латинская душа">Alma Latina</h3>
-                <p data-es="Calidez, presencia corporal, trabajo comunitario y una mirada que honra lo emocional y lo relacional como núcleo del cambio terapéutico." data-ru="Теплота, телесность, общностная работа и взгляд, который чтит эмоциональное и реляционное как ядро терапевтического изменения.">
-                    Calidez, presencia corporal, trabajo comunitario y una mirada que honra lo emocional y lo relacional como núcleo del cambio terapéutico.
+                <h3 data-es="Corazón latino" data-ru="Латинское сердце">Corazón latino</h3>
+                <p data-es="Contacto, campo relacional y creatividad clínica: la gestalt latinoamericana en su dimensión viva, comunitaria y sensible al contexto." data-ru="Контакт, реляционное поле и клиническая креативность: латиноамериканский гештальт во всей живости, общности и чувствительности к контексту.">
+                    Contacto, campo relacional y creatividad clínica: la gestalt latinoamericana en su dimensión viva, comunitaria y sensible al contexto.
                 </p>
             </div>
             <div class="culture-card fade-in">
-                <h3 data-es="Visión Rusa" data-ru="Русское видение">Visión Rusa</h3>
-                <p data-es="Profundidad analítica, tradición académica rigurosa, enfoque en la historia personal y comprensión multifacética de la subjetividad humana." data-ru="Аналитическая глубина, строгая академическая традиция, фокус на личной истории и многогранное понимание человеческой субъективности.">
-                    Profundidad analítica, tradición académica rigurosa, enfoque en la historia personal y comprensión multifacética de la subjetividad humana.
+                <h3 data-es="Alma eslava" data-ru="Славянская душа">Alma eslava</h3>
+                <p data-es="Profundidad fenomenológica, rigor conceptual y una larga tradición de formación en gestalt: voces rusas y rusoparlantes en conversación con el sur." data-ru="Феноменологическая глубина, концептуальная строгость и богатая традиция гештальт-образования: русские и русскоязычные голоса в разговоре с Югом.">
+                    Profundidad fenomenológica, rigor conceptual y una larga tradición de formación en gestalt: voces rusas y rusoparlantes en conversación con el sur.
                 </p>
             </div>
         </div>
     </section>
 
     <section id="programa" class="fade-in" style="background: white; margin: 0; max-width: 100%; padding: 8rem 2rem;">
-        <div style="max-width: 900px; margin: 0 auto;">
+        <div style="max-width: 960px; margin: 0 auto;">
             <div class="section-header">
                 <span class="section-tag" data-es="Cronograma" data-ru="Расписание">Cronograma</span>
-                <h2 class="section-title" data-es="Dos Días de Inmersión" data-ru="Два дня погружения">Dos Días de Inmersión</h2>
+                <h2 class="section-title" data-es="Programa tentativo — 9 y 10 de octubre" data-ru="Предварительная программа — 9 и 10 октября">Programa tentativo — 9 y 10 de octubre</h2>
             </div>
 
-            <div class="program-timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date" data-es="16 Oct" data-ru="16 окт">16 Oct</div>
-                    <div class="timeline-content">
-                        <h3 data-es="Apertura y Encuentro" data-ru="Открытие и встреча">Apertura y Encuentro</h3>
-                        <p data-es="Ceremonia de bienvenida, presentación de las tradiciones y primer diálogo intercultural sobre fundamentos teóricos compartidos." data-ru="Церемония приветствия, презентация традиций и первый межкультурный диалог о общих теоретических основаниях.">
-                            Ceremonia de bienvenida, presentación de las tradiciones y primer diálogo intercultural sobre fundamentos teóricos compartidos.
-                        </p>
-                    </div>
-                </div>
+            <p class="schedule-intro" data-es="Horarios orientativos. Las actividades en tres salas son paralelas; el cierre del segundo día reúne impresiones y agradecimientos." data-ru="Ориентировочное время. Занятия в трёх залах идут параллельно; финал второго дня — впечатления и благодарности.">
+                Horarios orientativos. Las actividades en tres salas son paralelas; el cierre del segundo día reúne impresiones y agradecimientos.
+            </p>
 
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date" data-es="16 Oct" data-ru="16 окт">16 Oct</div>
-                    <div class="timeline-content">
-                        <h3 data-es="Workshops Paralelos" data-ru="Параллельные мастер-классы">Workshops Paralelos</h3>
-                        <p data-es="Sesiones prácticas de psicología corporal latinoamericana y análisis de los sueños en la tradición rusa." data-ru="Практические сессии латиноамериканской телесной психологии и анализ снов в русской традиции.">
-                            Sesiones prácticas de psicología corporal latinoamericana y análisis de los sueños en la tradición rusa.
-                        </p>
-                    </div>
-                </div>
+            <div class="schedule-day-tabs" role="tablist">
+                <button type="button" class="schedule-tab active" role="tab" aria-selected="true" data-panel="day1" data-es="Día 1 — 9 de octubre" data-ru="День 1 — 9 октября">Día 1 — 9 de octubre</button>
+                <button type="button" class="schedule-tab" role="tab" aria-selected="false" data-panel="day2" data-es="Día 2 — 10 de octubre" data-ru="День 2 — 10 октября">Día 2 — 10 de octubre</button>
+            </div>
 
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date" data-es="17 Oct" data-ru="17 окт">17 Oct</div>
-                    <div class="timeline-content">
-                        <h3 data-es="Mesa Redonda: Fronteras y Puentes" data-ru="Круглый стол: Границы и мосты">Mesa Redonda: Fronteras y Puentes</h3>
-                        <p data-es="Debate entre referentes de ambas tradiciones sobre convergencias y divergencias en la práctica clínica contemporánea." data-ru="Дискуссия между представителями обеих традиций о сходствах и различиях в современной клинической практике.">
-                            Debate entre referentes de ambas tradiciones sobre convergencias y divergencias en la práctica clínica contemporánea.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-date" data-es="17 Oct" data-ru="17 окт">17 Oct</div>
-                    <div class="timeline-content">
-                        <h3 data-es="Clausura y Integración" data-ru="Закрытие и интеграция">Clausura y Integración</h3>
-                        <p data-es="Experiencia grupal de síntesis, establecimiento de redes profesionales y compromisos para futuras colaboraciones." data-ru="Групповой опыт синтеза, создание профессиональных сетей и договорённости о будущем сотрудничестве.">
-                            Experiencia grupal de síntesis, establecimiento de redes profesionales y compromisos para futuras colaboraciones.
-                        </p>
-                    </div>
+            <div id="day1" class="schedule-panel active" role="tabpanel">
+                <div class="schedule-table-wrap">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th data-es="Hora" data-ru="Время">Hora</th>
+                                <th data-es="Sala principal (1)" data-ru="Главный зал (1)">Sala principal (1)</th>
+                                <th data-es="Sala 2" data-ru="Зал 2">Sala 2</th>
+                                <th data-es="Sala 3" data-ru="Зал 3">Sala 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="schedule-time">9:30–10:00</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Registro y acreditación de participantes" data-ru="Регистрация и аккредитация участников">Registro y acreditación de participantes</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">10:00–10:15</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Apertura de la conferencia: presentación de ponentes e invitados" data-ru="Открытие конференции: представление спикеров и гостей">Apertura de la conferencia: presentación de ponentes e invitados</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">10:15–11:00</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Conferencia magistral — experto invitado (tema transversal para todo el encuentro)" data-ru="Пленарная лекция — приглашённый эксперт (сквозная тема для всей встречи)">Conferencia magistral — experto invitado (tema transversal para todo el encuentro)</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">11:10–11:15</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Presentación de las actividades siguientes (breve introducción por salas)" data-ru="Представление следующих активностей (краткое введение по залам)">Presentación de las actividades siguientes (breve introducción por salas)</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">11:15–11:30</td>
+                                <td colspan="3" class="schedule-break" data-es="Pausa para café" data-ru="Кофе-брейк">Pausa para café</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">11:30–13:30</td>
+                                <td data-es="Taller 1 (120 min — teoría y reflexión)" data-ru="Мастер-класс 1 (120 мин — теория и размышление)">Taller 1 (120 min — teoría y reflexión)</td>
+                                <td data-es="Taller 2 (120 min)" data-ru="Мастер-класс 2 (120 мин)">Taller 2 (120 min)</td>
+                                <td data-es="Taller 3 (120 min)" data-ru="Мастер-класс 3 (120 мин)">Taller 3 (120 min)</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">13:30–14:30</td>
+                                <td colspan="3" class="schedule-break" data-es="Almuerzo" data-ru="Обед">Almuerzo</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">14:30–16:30</td>
+                                <td data-es="Mesa redonda de terapia — tema 1" data-ru="Круглый стол — тема 1">Mesa redonda de terapia — tema 1</td>
+                                <td data-es="Mesa redonda de terapia — tema 2" data-ru="Круглый стол — тема 2">Mesa redonda de terapia — tema 2</td>
+                                <td data-es="Mesa redonda de terapia — tema 3" data-ru="Круглый стол — тема 3">Mesa redonda de terapia — tema 3</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">16:30–16:45</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Presentación de las actividades de la tarde" data-ru="Представление вечерних активностей">Presentación de las actividades de la tarde</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">16:45–17:00</td>
+                                <td colspan="3" class="schedule-break" data-es="Pausa para café" data-ru="Кофе-брейк">Pausa para café</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">17:00–18:30</td>
+                                <td data-es="Taller práctico 1 (90 min)" data-ru="Практический воркшоп 1 (90 мин)">Taller práctico 1 (90 min)</td>
+                                <td data-es="Taller práctico 2 (90 min)" data-ru="Практический воркшоп 2 (90 мин)">Taller práctico 2 (90 min)</td>
+                                <td data-es="Taller práctico 3 (90 min)" data-ru="Практический воркшоп 3 (90 мин)">Taller práctico 3 (90 min)</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+
+            <div id="day2" class="schedule-panel" role="tabpanel">
+                <div class="schedule-table-wrap">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th data-es="Hora" data-ru="Время">Hora</th>
+                                <th data-es="Sala principal (1)" data-ru="Главный зал (1)">Sala principal (1)</th>
+                                <th data-es="Sala 2" data-ru="Зал 2">Sala 2</th>
+                                <th data-es="Sala 3" data-ru="Зал 3">Sala 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="schedule-time">10:00–10:45</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Conferencia magistral — experto invitado" data-ru="Пленарная лекция — приглашённый эксперт">Conferencia magistral — experto invitado</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">10:45–11:00</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Presentación de las actividades siguientes" data-ru="Представление следующих активностей">Presentación de las actividades siguientes</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">11:00–11:15</td>
+                                <td colspan="3" class="schedule-break" data-es="Pausa para café" data-ru="Кофе-брейк">Pausa para café</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">11:15–13:15</td>
+                                <td data-es="Taller 1 o mesa redonda de terapia (120 min)" data-ru="Мастер-класс 1 или круглый стол (120 мин)">Taller 1 o mesa redonda de terapia (120 min)</td>
+                                <td data-es="Taller 2 (120 min)" data-ru="Мастер-класс 2 (120 мин)">Taller 2 (120 min)</td>
+                                <td data-es="Taller 3 (120 min)" data-ru="Мастер-класс 3 (120 мин)">Taller 3 (120 min)</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">13:15–13:30</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Presentación de los talleres de la tarde (tras el almuerzo)" data-ru="Представление послеобеденных мастер-классов">Presentación de los talleres de la tarde (tras el almuerzo)</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">13:30–14:30</td>
+                                <td colspan="3" class="schedule-break" data-es="Almuerzo" data-ru="Обед">Almuerzo</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">14:30–16:00</td>
+                                <td data-es="Taller práctico 1 (90 min)" data-ru="Практический воркшоп 1 (90 мин)">Taller práctico 1 (90 min)</td>
+                                <td data-es="Taller práctico 2 (90 min)" data-ru="Практический воркшоп 2 (90 мин)">Taller práctico 2 (90 min)</td>
+                                <td data-es="Taller práctico 3 (90 min)" data-ru="Практический воркшоп 3 (90 мин)">Taller práctico 3 (90 min)</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">16:00–16:15</td>
+                                <td colspan="3" class="schedule-break" data-es="Pausa para café" data-ru="Кофе-брейк">Pausa para café</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">16:15–17:45</td>
+                                <td data-es="Taller práctico 1 — segundo bloque (90 min)" data-ru="Практический воркшоп 1 — второй блок (90 мин)">Taller práctico 1 — segundo bloque (90 min)</td>
+                                <td data-es="Taller práctico 2 — segundo bloque (90 min)" data-ru="Практический воркшоп 2 — второй блок (90 мин)">Taller práctico 2 — segundo bloque (90 min)</td>
+                                <td data-es="Taller práctico 3 — segundo bloque (90 min)" data-ru="Практический воркшоп 3 — второй блок (90 мин)">Taller práctico 3 — segundo bloque (90 min)</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">17:45–18:00</td>
+                                <td colspan="3" class="schedule-break" data-es="Pausa para café" data-ru="Кофе-брейк">Pausa para café</td>
+                            </tr>
+                            <tr>
+                                <td class="schedule-time">18:00–18:30</td>
+                                <td colspan="3" class="schedule-plenary" data-es="Cierre de la conferencia: impresiones, agradecimientos y despedida" data-ru="Закрытие конференции: впечатления, благодарности и прощание">Cierre de la conferencia: impresiones, agradecimientos y despedida</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p class="schedule-note" data-es="La organización puede ajustar duraciones (por ejemplo, unificar talleres a 90 minutos o ampliar la conferencia magistral). Se busca equilibrar salas paralelas con trayectorias formativas parecidas, para que la oferta sea clara y justa para participantes y docentes." data-ru="Организаторы могут скорректировать длительность (например, унифицировать мастер-классы до 90 минут или удлинить пленарную лекцию). Важно балансировать параллельные залы и уровень опыта ведущих, чтобы предложение было понятным и справедливым.">
+                La organización puede ajustar duraciones (por ejemplo, unificar talleres a 90 minutos o ampliar la conferencia magistral). Se busca equilibrar salas paralelas con trayectorias formativas parecidas, para que la oferta sea clara y justa para participantes y docentes.
+            </p>
         </div>
     </section>
 
     <section id="ponentes" class="fade-in">
         <div class="section-header">
             <span class="section-tag" data-es="Voces del Encuentro" data-ru="Голоса встречи">Voces del Encuentro</span>
-            <h2 class="section-title" data-es="Ponentes Confirmados" data-ru="Подтверждённые спикеры">Ponentes Confirmados</h2>
+            <h2 class="section-title" data-es="Ponentes y talleristas" data-ru="Спикеры и ведущие">Ponentes y talleristas</h2>
+            <p class="section-desc" style="margin-top: -2rem;" data-es="Ejemplos de perfiles; la nómina definitiva y los temas por sala se publicarán al confirmar el programa." data-ru="Примеры профилей; окончательный список и темы по залам будут опубликованы после подтверждения программы.">
+                Ejemplos de perfiles; la nómina definitiva y los temas por sala se publicarán al confirmar el programa.
+            </p>
         </div>
 
         <div class="speakers-grid">
             <div class="speaker-card fade-in">
                 <div class="speaker-avatar">ML</div>
                 <h3 class="speaker-name" data-es="Dra. María López" data-ru="Д-р Мария Лопес">Dra. María López</h3>
-                <p class="speaker-role" data-es="Argentina" data-ru="Аргентина">Argentina</p>
-                <p class="speaker-bio" data-es="Especialista en psicología corporal y trauma. Directora del Instituto de Psicomotricidad Relacional de Buenos Aires." data-ru="Специалист по телесной психологии и травме. Директор Института реляционной психомоторики в Буэнос-Айресе.">
-                    Especialista en psicología corporal y trauma. Directora del Instituto de Psicomotricidad Relacional de Buenos Aires.
+                <p class="speaker-role" data-es="Gestalt — Argentina" data-ru="Гештальт — Аргентина">Gestalt — Argentina</p>
+                <p class="speaker-bio" data-es="Terapeuta gestalt y supervisora. Enfoque en trauma, contacto y trabajo relacional en contextos latinoamericanos." data-ru="Гештальт-терапевт и супервизор. Травма, контакт и реляционная работа в латиноамериканских контекстах.">
+                    Terapeuta gestalt y supervisora. Enfoque en trauma, contacto y trabajo relacional en contextos latinoamericanos.
                 </p>
             </div>
 
             <div class="speaker-card fade-in">
                 <div class="speaker-avatar">AI</div>
                 <h3 class="speaker-name" data-es="Dr. Alejandro Ibarra" data-ru="Д-р Алехандро Ибарра">Dr. Alejandro Ibarra</h3>
-                <p class="speaker-role" data-es="Uruguay" data-ru="Уругвай">Uruguay</p>
-                <p class="speaker-bio" data-es="Psicoanalista y docente universitario. Investigador sobre subjetividad en contextos latinoamericanos." data-ru="Психоаналитик и университетский преподаватель. Исследователь субъективности в латиноамериканских контекстах.">
-                    Psicoanalista y docente universitario. Investigador sobre subjetividad en contextos latinoamericanos.
+                <p class="speaker-role" data-es="Gestalt — Uruguay" data-ru="Гештальт — Уругвай">Gestalt — Uruguay</p>
+                <p class="speaker-bio" data-es="Psicólogo gestalt, docente y mediador de grupos. Interés en fenomenología del encuentro y práctica bilingüe." data-ru="Гештальт-психолог, преподаватель и медиатор групп. Феноменология встречи и билингвальная практика.">
+                    Psicólogo gestalt, docente y mediador de grupos. Interés en fenomenología del encuentro y práctica bilingüe.
                 </p>
             </div>
 
             <div class="speaker-card fade-in">
                 <div class="speaker-avatar">EK</div>
                 <h3 class="speaker-name" data-es="Dra. Elena Kovacs" data-ru="Д-р Елена Ковач">Dra. Elena Kovacs</h3>
-                <p class="speaker-role" data-es="Rusia / España" data-ru="Россия / Испания">Rusia / España</p>
-                <p class="speaker-bio" data-es="Psicóloga clínica formada en Moscú y Madrid. Experta en psicología del lenguaje y narrativa terapéutica." data-ru="Клинический психолог, обучавшаяся в Москве и Мадриде. Эксперт по психологии языка и нарративной терапии.">
-                    Psicóloga clínica formada en Moscú y Madrid. Experta en psicología del lenguaje y narrativa terapéutica.
+                <p class="speaker-role" data-es="Gestalt — Rusia / España" data-ru="Гештальт — Россия / Испания">Gestalt — Rusia / España</p>
+                <p class="speaker-bio" data-es="Formación en Moscú y Madrid. Integra teoría gestalt contemporánea, trabajo con migración y diálogo intercultural en la sesión." data-ru="Обучение в Москве и Мадриде. Современная гештальт-теория, работа с миграцией и межкультурный диалог в сессии.">
+                    Formación en Moscú y Madrid. Integra teoría gestalt contemporánea, trabajo con migración y diálogo intercultural en la sesión.
                 </p>
             </div>
 
             <div class="speaker-card fade-in">
                 <div class="speaker-avatar dark">DS</div>
                 <h3 class="speaker-name" data-es="Dr. Dmitri Sokolov" data-ru="Д-р Дмитрий Соколов">Dr. Dmitri Sokolov</h3>
-                <p class="speaker-role" data-es="Rusia / Alemania" data-ru="Россия / Германия">Rusia / Alemania</p>
-                <p class="speaker-bio" data-es="Psicoanalista lacaniano. Profesor emérito de la Universidad de San Petersburgo. Especialista en psicosis y creación." data-ru="Лаканианский психоаналитик. Профессор эмерит Санкт-Петербургского университета. Специалист по психозам и творчеству.">
-                    Psicoanalista lacaniano. Profesor emérito de la Universidad de San Petersburgo. Especialista en psicosis y creación.
+                <p class="speaker-role" data-es="Gestalt — Rusia / Alemania" data-ru="Гештальт — Россия / Германия">Gestalt — Rusia / Alemania</p>
+                <p class="speaker-bio" data-es="Terapeuta gestalt de orientación fenomenológica. Experiencia en grupos grandes, supervisión y enseñanza en Europa del Este." data-ru="Гештальт-терапевт феноменологической ориентации. Опыт больших групп, супервизии и преподавания в Восточной Европе.">
+                    Terapeuta gestalt de orientación fenomenológica. Experiencia en grupos grandes, supervisión y enseñanza en Europa del Este.
                 </p>
             </div>
         </div>
@@ -858,8 +1109,8 @@
     <section id="registro" class="fade-in">
         <div class="registration">
             <h2 data-es="Reserva tu Lugar" data-ru="Забронируйте своё место">Reserva tu Lugar</h2>
-            <p data-es="Cupos limitados para garantizar la intimidad del encuentro. Inscripciones abiertas hasta el 30 de septiembre o hasta agotar plazas." data-ru="Ограниченное количество мест для обеспечения интимности встречи. Регистрация открыта до 30 сентября или до исчерпания мест.">
-                Cupos limitados para garantizar la intimidad del encuentro.
+            <p data-es="Cupos limitados para tres salas en paralelo y buena experiencia en talleres. Inscripciones abiertas hasta el 30 de septiembre de 2026 o hasta agotar plazas." data-ru="Ограниченное число мест — три параллельных зала и качество работы в группах. Регистрация до 30 сентября 2026 или до заполнения.">
+                Cupos limitados para tres salas en paralelo y buena experiencia en talleres.
             </p>
             <a href="#" class="btn-light" data-es="Comenzar Inscripción" data-ru="Начать регистрацию">Comenzar Inscripción</a>
         </div>
@@ -867,7 +1118,7 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Escuela Latinoamericana</div>
+            <div class="footer-logo" data-es="Escuela Latina de Terapia Gestalt" data-ru="Латинская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</div>
             <div class="footer-links">
                 <a href="mailto:info@escuelalatinoamericana.org">info@escuelalatinoamericana.org</a>
                 <a href="#" data-es="Instagram" data-ru="Инстаграм">Instagram</a>
@@ -875,20 +1126,35 @@
                 <a href="#" data-es="YouTube" data-ru="Ютуб">YouTube</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Escuela Latinoamericana. <span data-es="Todos los derechos reservados." data-ru="Все права защищены.">Todos los derechos reservados.</span></p>
+                <p>&copy; 2026 <span data-es="Escuela Latina de Terapia Gestalt" data-ru="Латинская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</span>. <span data-es="Todos los derechos reservados." data-ru="Все права защищены.">Todos los derechos reservados.</span></p>
             </div>
         </div>
     </footer>
 
     <script>
-        function switchLang(lang) {
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+        function switchLang(lang, btn) {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
             document.querySelectorAll('[data-es][data-ru]').forEach(el => {
                 el.textContent = el.getAttribute('data-' + lang);
             });
             document.documentElement.lang = lang;
         }
+
+        document.querySelectorAll('.schedule-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const panelId = tab.getAttribute('data-panel');
+                document.querySelectorAll('.schedule-tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                document.querySelectorAll('.schedule-panel').forEach(p => p.classList.remove('active'));
+                const panel = document.getElementById(panelId);
+                if (panel) panel.classList.add('active');
+            });
+        });
 
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
