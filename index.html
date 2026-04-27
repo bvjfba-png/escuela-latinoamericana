@@ -454,6 +454,13 @@
             overflow: hidden;
         }
 
+        .speaker-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .speaker-avatar.dark {
             background: linear-gradient(135deg, #2C5F5D 0%, #1A3A38 100%);
             color: white;
@@ -1038,7 +1045,9 @@
 
         <div class="speakers-grid">
             <div class="speaker-card fade-in">
-                <div class="speaker-avatar">HS</div>
+                <div class="speaker-avatar">
+                    <img src="assets/hermann-schreck.png" alt="Hermann Schreck">
+                </div>
                 <h3 class="speaker-name" data-es="Hermann Schreck" data-ru="Херманн Шрек">Hermann Schreck</h3>
                 <p class="speaker-role" data-es="Gestalt — Uruguay" data-ru="Гештальт — Уругвай">Gestalt — Uruguay</p>
                 <p class="speaker-bio" data-es="Psicologo y Psicoterapeuta gestáltico con mas de 30 años de experiencia. Escritor, Supervisor y Docente Internacional. Presidente de la Asociación Gestáltica del Uruguay. Asesor Técnico de la Secretaría Nacional de Drogas de la Presidencia de la República de Uruguay." data-ru="Гештальт-психолог и психотерапевт с более чем 30-летним опытом. Писатель, супервизор и международный преподаватель. Президент Гештальт-ассоциации Уругвая. Технический советник Национального секретариата по наркотикам при Администрации Президента Республики Уругвай.">
@@ -1120,11 +1129,7 @@
         <div class="footer-content">
             <div class="footer-logo" data-es="Escuela Latina de Terapia Gestalt" data-ru="Латинская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</div>
             <div class="footer-links">
-                <a href="mailto:info@escuelalatinoamericana.org">info@escuelalatinoamericana.org</a>
                 <a href="mailto:gestalt.escuela.latinoamerica@gmail.com">gestalt.escuela.latinoamerica@gmail.com</a>
-                <a href="#" data-es="Instagram" data-ru="Инстаграм">Instagram</a>
-                <a href="#" data-es="LinkedIn" data-ru="Линкедин">LinkedIn</a>
-                <a href="#" data-es="YouTube" data-ru="Ютуб">YouTube</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 <span data-es="Escuela Latina de Terapia Gestalt" data-ru="Латинская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</span>. <span data-es="Todos los derechos reservados." data-ru="Все права защищены.">Todos los derechos reservados.</span></p>
