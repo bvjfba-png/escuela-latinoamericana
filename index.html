@@ -257,12 +257,6 @@
             color: var(--color-bg);
         }
 
-        button.btn-primary,
-        button.btn-secondary {
-            font-family: var(--font-main);
-            cursor: pointer;
-        }
-
         section {
             padding: 8rem 2rem;
             max-width: 1200px;
@@ -609,177 +603,6 @@
             box-shadow: 0 10px 30px rgba(255,255,255,0.15);
         }
 
-        .registration-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .btn-light-outline {
-            padding: 1.1rem 2.5rem;
-            background: transparent;
-            color: var(--color-bg);
-            font-family: var(--font-main);
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.02em;
-            border-radius: 50px;
-            border: 1px solid rgba(255,255,255,0.45);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-light-outline:hover {
-            background: rgba(255,255,255,0.12);
-            transform: translateY(-3px);
-        }
-
-        .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(26, 26, 26, 0.55);
-            backdrop-filter: blur(4px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            z-index: 200;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
-
-        .modal-overlay.open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .modal {
-            background: var(--color-bg);
-            color: var(--color-text);
-            border-radius: 20px;
-            width: 100%;
-            max-width: 520px;
-            max-height: 90vh;
-            overflow-y: auto;
-            padding: 2rem;
-            box-shadow: 0 24px 60px rgba(0,0,0,0.18);
-            position: relative;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            width: 2.25rem;
-            height: 2.25rem;
-            border: none;
-            background: transparent;
-            font-size: 1.5rem;
-            line-height: 1;
-            color: var(--color-muted);
-            cursor: pointer;
-            border-radius: 50%;
-            transition: background 0.2s ease, color 0.2s ease;
-        }
-
-        .modal-close:hover {
-            background: var(--color-accent-light);
-            color: var(--color-text);
-        }
-
-        .modal-title {
-            font-family: var(--font-main);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-            padding-right: 2rem;
-        }
-
-        .modal-desc {
-            color: var(--color-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.75rem;
-            line-height: 1.5;
-        }
-
-        .volunteer-form .form-group {
-            margin-bottom: 1.25rem;
-        }
-
-        .volunteer-form label {
-            display: block;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 0.4rem;
-        }
-
-        .volunteer-form label .required {
-            color: var(--color-secondary);
-        }
-
-        .volunteer-form input,
-        .volunteer-form textarea {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            font-family: var(--font-main);
-            font-size: 0.95rem;
-            border: 1px solid rgba(0,0,0,0.12);
-            border-radius: 10px;
-            background: white;
-            color: var(--color-text);
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .volunteer-form input:focus,
-        .volunteer-form textarea:focus {
-            outline: none;
-            border-color: var(--color-secondary);
-            box-shadow: 0 0 0 3px rgba(44, 95, 93, 0.12);
-        }
-
-        .volunteer-form textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .volunteer-form .btn-primary {
-            width: 100%;
-            border: none;
-            cursor: pointer;
-            margin-top: 0.5rem;
-        }
-
-        .volunteer-form .btn-primary:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .form-message {
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            padding: 0.75rem 1rem;
-            border-radius: 10px;
-            display: none;
-        }
-
-        .form-message.visible {
-            display: block;
-        }
-
-        .form-message.success {
-            background: rgba(44, 95, 93, 0.1);
-            color: var(--color-secondary);
-        }
-
-        .form-message.error {
-            background: rgba(180, 60, 60, 0.1);
-            color: #8b3030;
-        }
-
         footer {
             background: var(--color-text);
             color: var(--color-bg);
@@ -1017,7 +840,6 @@
             <div class="hero-cta">
                 <a href="#registro" class="btn-primary" data-es="Reservar Lugar" data-ru="Забронировать место">Reservar Lugar</a>
                 <a href="#programa" class="btn-secondary" data-es="Ver Programa" data-ru="Смотреть программу">Ver Programa</a>
-                <button type="button" class="btn-secondary open-volunteer-modal" data-es="Ser Voluntario" data-ru="Стать волонтером">Ser Voluntario</button>
             </div>
         </div>
     </section>
@@ -1299,58 +1121,9 @@
             <p data-es="Cupos limitados para tres salas en paralelo y buena experiencia en talleres. Inscripciones abiertas hasta el 30 de septiembre de 2026 o hasta agotar plazas." data-ru="Ограниченное число мест — три параллельных зала и качество работы в группах. Регистрация до 30 сентября 2026 или до заполнения.">
                 Cupos limitados para tres salas en paralelo y buena experiencia en talleres.
             </p>
-            <div class="registration-actions">
-                <a href="#" class="btn-light" data-es="Comenzar Inscripción" data-ru="Начать регистрацию">Comenzar Inscripción</a>
-                <button type="button" class="btn-light-outline open-volunteer-modal" data-es="Ser Voluntario" data-ru="Стать волонтером">Ser Voluntario</button>
-            </div>
+            <a href="#" class="btn-light" data-es="Comenzar Inscripción" data-ru="Начать регистрацию">Comenzar Inscripción</a>
         </div>
     </section>
-
-    <div id="volunteer-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="volunteer-modal-title" hidden>
-        <div class="modal">
-            <button type="button" class="modal-close" id="close-volunteer-modal" aria-label="Cerrar">&times;</button>
-            <h2 class="modal-title" id="volunteer-modal-title" data-es="Anketa de voluntario" data-ru="Анкета волонтера">Anketa de voluntario</h2>
-            <p class="modal-desc" data-es="Todos los campos son obligatorios. Enviaremos su solicitud a la organización." data-ru="Все поля обязательны. Мы отправим вашу заявку организаторам.">Todos los campos son obligatorios. Enviaremos su solicitud a la organización.</p>
-            <form id="volunteer-form" class="volunteer-form" novalidate>
-                <input type="hidden" name="_subject" value="Solicitud de voluntario — conferencia 2026">
-                <input type="hidden" name="_captcha" value="false">
-                <div class="form-group">
-                    <label for="volunteer-name">
-                        <span data-es="Nombre completo" data-ru="ФИО">Nombre completo</span>
-                        <span class="required" aria-hidden="true">*</span>
-                    </label>
-                    <input type="text" id="volunteer-name" name="nombre_completo" required autocomplete="name"
-                        data-es-placeholder="Apellido y nombre" data-ru-placeholder="Фамилия и имя" placeholder="Apellido y nombre">
-                </div>
-                <div class="form-group">
-                    <label for="volunteer-email">
-                        <span data-es="Email" data-ru="Email">Email</span>
-                        <span class="required" aria-hidden="true">*</span>
-                    </label>
-                    <input type="email" id="volunteer-email" name="email" required autocomplete="email"
-                        data-es-placeholder="correo@ejemplo.com" data-ru-placeholder="email@ejemplo.com" placeholder="correo@ejemplo.com">
-                </div>
-                <div class="form-group">
-                    <label for="volunteer-phone">
-                        <span data-es="Teléfono" data-ru="Телефон">Teléfono</span>
-                        <span class="required" aria-hidden="true">*</span>
-                    </label>
-                    <input type="tel" id="volunteer-phone" name="telefono" required autocomplete="tel"
-                        data-es-placeholder="+598 99 123 456" data-ru-placeholder="+7 999 123 45 67" placeholder="+598 99 123 456">
-                </div>
-                <div class="form-group">
-                    <label for="volunteer-participation">
-                        <span data-es="Cuéntenos cómo desea participar" data-ru="Расскажите, как вы хотите поучаствовать">Cuéntenos cómo desea participar</span>
-                        <span class="required" aria-hidden="true">*</span>
-                    </label>
-                    <textarea id="volunteer-participation" name="participacion" required
-                        data-es-placeholder="Por ejemplo: acogida, registro, traducción, logística…" data-ru-placeholder="Например: встреча гостей, регистрация, перевод, логистика…" placeholder="Por ejemplo: acogida, registro, traducción, logística…"></textarea>
-                </div>
-                <button type="submit" class="btn-primary" id="volunteer-submit" data-es="Enviar solicitud" data-ru="Отправить заявку">Enviar solicitud</button>
-                <p id="volunteer-form-message" class="form-message" role="status"></p>
-            </form>
-        </div>
-    </div>
 
     <footer>
         <div class="footer-content">
@@ -1365,114 +1138,14 @@
     </footer>
 
     <script>
-        const VOLUNTEER_EMAIL = 'gestalt.escuela.latinoamerica@gmail.com';
-        let currentLang = 'es';
-
         function switchLang(lang, btn) {
-            currentLang = lang;
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
             document.querySelectorAll('[data-es][data-ru]').forEach(el => {
                 el.textContent = el.getAttribute('data-' + lang);
             });
-            if (volunteerFormMessage.classList.contains('visible')) {
-                const type = volunteerFormMessage.classList.contains('success') ? 'success' : 'error';
-                volunteerFormMessage.textContent = volunteerMessages[lang][type];
-            }
-            if (volunteerSubmit && !volunteerSubmit.disabled) {
-                volunteerSubmit.textContent = volunteerSubmit.getAttribute('data-' + lang);
-            }
-            document.querySelectorAll('[data-es-placeholder][data-ru-placeholder]').forEach(el => {
-                el.placeholder = el.getAttribute('data-' + lang + '-placeholder');
-            });
             document.documentElement.lang = lang;
         }
-
-        const volunteerModal = document.getElementById('volunteer-modal');
-        const volunteerForm = document.getElementById('volunteer-form');
-        const volunteerFormMessage = document.getElementById('volunteer-form-message');
-        const volunteerSubmit = document.getElementById('volunteer-submit');
-
-        const volunteerMessages = {
-            es: {
-                success: '¡Gracias! Su solicitud fue enviada. Nos pondremos en contacto pronto.',
-                error: 'No se pudo enviar. Intente de nuevo o escríbanos directamente por correo.',
-                sending: 'Enviando…'
-            },
-            ru: {
-                success: 'Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.',
-                error: 'Не удалось отправить. Попробуйте снова или напишите нам на почту напрямую.',
-                sending: 'Отправка…'
-            }
-        };
-
-        function showVolunteerMessage(type, text) {
-            volunteerFormMessage.textContent = text;
-            volunteerFormMessage.className = 'form-message visible ' + type;
-        }
-
-        function openVolunteerModal() {
-            volunteerModal.hidden = false;
-            volunteerModal.classList.add('open');
-            document.body.style.overflow = 'hidden';
-            volunteerFormMessage.className = 'form-message';
-            volunteerFormMessage.textContent = '';
-            document.getElementById('volunteer-name').focus();
-        }
-
-        function closeVolunteerModal() {
-            volunteerModal.classList.remove('open');
-            volunteerModal.hidden = true;
-            document.body.style.overflow = '';
-        }
-
-        document.querySelectorAll('.open-volunteer-modal').forEach(btn => {
-            btn.addEventListener('click', openVolunteerModal);
-        });
-
-        document.getElementById('close-volunteer-modal').addEventListener('click', closeVolunteerModal);
-
-        volunteerModal.addEventListener('click', (e) => {
-            if (e.target === volunteerModal) closeVolunteerModal();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && volunteerModal.classList.contains('open')) closeVolunteerModal();
-        });
-
-        volunteerForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            if (!volunteerForm.checkValidity()) {
-                volunteerForm.reportValidity();
-                return;
-            }
-
-            const msg = volunteerMessages[currentLang];
-            volunteerSubmit.disabled = true;
-            volunteerSubmit.textContent = msg.sending;
-            volunteerFormMessage.className = 'form-message';
-
-            const formData = new FormData(volunteerForm);
-            formData.append('_replyto', formData.get('email'));
-
-            try {
-                const response = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(VOLUNTEER_EMAIL), {
-                    method: 'POST',
-                    headers: { 'Accept': 'application/json' },
-                    body: formData
-                });
-
-                if (!response.ok) throw new Error('submit failed');
-
-                showVolunteerMessage('success', msg.success);
-                volunteerForm.reset();
-            } catch {
-                showVolunteerMessage('error', msg.error);
-            } finally {
-                volunteerSubmit.disabled = false;
-                volunteerSubmit.textContent = volunteerSubmit.getAttribute('data-' + currentLang);
-            }
-        });
 
         document.querySelectorAll('.schedule-tab').forEach(tab => {
             tab.addEventListener('click', () => {
