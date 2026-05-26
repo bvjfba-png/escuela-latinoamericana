@@ -422,14 +422,14 @@
 
         .speakers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
             margin-top: 4rem;
         }
 
         .speaker-card {
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1.25rem;
             transition: transform 0.3s ease;
         }
 
@@ -488,6 +488,7 @@
             font-size: 0.9375rem;
             line-height: 1.6;
             font-weight: 400;
+            text-wrap: pretty;
         }
 
         .venue-content {
@@ -535,28 +536,23 @@
         }
 
         .venue-visual {
-            background: linear-gradient(135deg, #2C5F5D 0%, #1A3A38 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-family: var(--font-main);
-            font-size: 1.5rem;
-            font-weight: 300;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
             position: relative;
             overflow: hidden;
-            min-height: 400px;
+            min-height: 480px;
+            background: #1A3A38;
         }
 
-        .venue-visual::before {
-            content: '';
+        .venue-visual img {
             position: absolute;
-            width: 300px;
-            height: 300px;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 50%;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .venue-info p + p {
+            margin-top: 1rem;
         }
 
         .registration {
@@ -816,6 +812,7 @@
                 <li><a href="#concepto" data-es="Concepto" data-ru="Концепция">Concepto</a></li>
                 <li><a href="#programa" data-es="Programa" data-ru="Программа">Programa</a></li>
                 <li><a href="#ponentes" data-es="Ponentes" data-ru="Спикеры">Ponentes</a></li>
+                <li><a href="#organizadores" data-es="Organización" data-ru="Организаторы">Organización</a></li>
                 <li><a href="#lugar" data-es="Lugar" data-ru="Место">Lugar</a></li>
                 <li><a href="#registro" data-es="Registro" data-ru="Регистрация">Registro</a></li>
             </ul>
@@ -1049,36 +1046,51 @@
                     <img src="assets/hermann-schreck.png" alt="Hermann Schreck">
                 </div>
                 <h3 class="speaker-name" data-es="Hermann Schreck" data-ru="Херманн Шрек">Hermann Schreck</h3>
-                <p class="speaker-role" data-es="Gestalt — Uruguay" data-ru="Гештальт — Уругвай">Gestalt — Uruguay</p>
+                <p class="speaker-role" data-es="Uruguay" data-ru="Уругвай">Uruguay</p>
+                <p class="speaker-bio" data-es="Psicologo y Psicoterapeuta gestáltico con mas de 30 años de experiencia. Escritor, Supervisor y Docente Internacional. Presidente de la Asociación Gestáltica del Uruguay. Asesor Técnico de la Secretaría Nacional de Drogas de la Presidencia de la República de Uruguay." data-ru="Гештальт-психолог и психотерапевт с более чем 30-летним опытом. Писатель, супервизор и международный преподаватель. Президент Гештальт-ассоциации Уругвая. Технический советник Национального секретариата по наркотикам при Администрации Президента Республики Уругвай.">
+                    Psicologo y Psicoterapeuta gestáltico con mas de 30 años de experiencia. Escritor, Supervisor y Docente Internacional. Presidente de la Asociación Gestáltica del Uruguay. Asesor Técnico de la Secretaría Nacional de Drogas de la Presidencia de la República de Uruguay.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="organizadores" class="fade-in">
+        <div class="section-header">
+            <span class="section-tag" data-es="Equipo organizador" data-ru="Команда организаторов">Equipo organizador</span>
+            <h2 class="section-title" data-es="Quiénes hacen esta conferencia" data-ru="Кто делает эту конференцию">Quiénes hacen esta conferencia</h2>
+        </div>
+
+        <div class="speakers-grid">
+            <div class="speaker-card fade-in">
+                <div class="speaker-avatar">
+                    <img src="assets/hermann-schreck.png" alt="Hermann Schreck">
+                </div>
+                <h3 class="speaker-name" data-es="Hermann Schreck" data-ru="Херманн Шрек">Hermann Schreck</h3>
+                <p class="speaker-role" data-es="Uruguay" data-ru="Уругвай">Uruguay</p>
                 <p class="speaker-bio" data-es="Psicologo y Psicoterapeuta gestáltico con mas de 30 años de experiencia. Escritor, Supervisor y Docente Internacional. Presidente de la Asociación Gestáltica del Uruguay. Asesor Técnico de la Secretaría Nacional de Drogas de la Presidencia de la República de Uruguay." data-ru="Гештальт-психолог и психотерапевт с более чем 30-летним опытом. Писатель, супервизор и международный преподаватель. Президент Гештальт-ассоциации Уругвая. Технический советник Национального секретариата по наркотикам при Администрации Президента Республики Уругвай.">
                     Psicologo y Psicoterapeuta gestáltico con mas de 30 años de experiencia. Escritor, Supervisor y Docente Internacional. Presidente de la Asociación Gestáltica del Uruguay. Asesor Técnico de la Secretaría Nacional de Drogas de la Presidencia de la República de Uruguay.
                 </p>
             </div>
 
             <div class="speaker-card fade-in">
-                <div class="speaker-avatar">AI</div>
-                <h3 class="speaker-name" data-es="Dr. Alejandro Ibarra" data-ru="Д-р Алехандро Ибарра">Dr. Alejandro Ibarra</h3>
-                <p class="speaker-role" data-es="Gestalt — Uruguay" data-ru="Гештальт — Уругвай">Gestalt — Uruguay</p>
-                <p class="speaker-bio" data-es="Psicólogo gestalt, docente y mediador de grupos. Interés en fenomenología del encuentro y práctica bilingüe." data-ru="Гештальт-психолог, преподаватель и медиатор групп. Феноменология встречи и билингвальная практика.">
-                    Psicólogo gestalt, docente y mediador de grupos. Interés en fenomenología del encuentro y práctica bilingüe.
+                <div class="speaker-avatar">
+                    <img src="assets/lyubava-kobylitskaya.png" alt="Lyubava Kobylytska-Voshchuk" style="object-position: center top; transform: scale(1.35); transform-origin: center top;">
+                </div>
+                <h3 class="speaker-name" data-es="Lyubava Kobylytska-Voshchuk" data-ru="Любава Кобылицкая-Вощук">Lyubava Kobylytska-Voshchuk</h3>
+                <p class="speaker-role" data-es="Chile" data-ru="Чили">Chile</p>
+                <p class="speaker-bio" data-es="Psicóloga, especialista en crisis, trauma y terapia familiar<br>Terapeuta gestáltica, supervisora y entrenadora asociada<br>Especialidad: psicología familiar y psicoterapia de grupo<br>Terapeuta gestáltica y supervisora acreditada por la EAGT" data-ru="Психолог, специализации по кризисам, травмам и семейной терапии<br>Гештальт-терапевт, супервизор, ассоциированный тренер<br>Специализация: семейная психология и групповая психотерапия<br>Аккредитованный гештальт-терапевт и супервизор EAGT">
+                    Psicóloga, especialista en crisis, trauma y terapia familiar<br>Terapeuta gestáltica, supervisora y entrenadora asociada<br>Especialidad: psicología familiar y psicoterapia de grupo<br>Terapeuta gestáltica y supervisora acreditada por la EAGT
                 </p>
             </div>
 
             <div class="speaker-card fade-in">
-                <div class="speaker-avatar">EK</div>
-                <h3 class="speaker-name" data-es="Dra. Elena Kovacs" data-ru="Д-р Елена Ковач">Dra. Elena Kovacs</h3>
-                <p class="speaker-role" data-es="Gestalt — Rusia / España" data-ru="Гештальт — Россия / Испания">Gestalt — Rusia / España</p>
-                <p class="speaker-bio" data-es="Formación en Moscú y Madrid. Integra teoría gestalt contemporánea, trabajo con migración y diálogo intercultural en la sesión." data-ru="Обучение в Москве и Мадриде. Современная гештальт-теория, работа с миграцией и межкультурный диалог в сессии.">
-                    Formación en Moscú y Madrid. Integra teoría gestalt contemporánea, trabajo con migración y diálogo intercultural en la sesión.
-                </p>
-            </div>
-
-            <div class="speaker-card fade-in">
-                <div class="speaker-avatar dark">DS</div>
-                <h3 class="speaker-name" data-es="Dr. Dmitri Sokolov" data-ru="Д-р Дмитрий Соколов">Dr. Dmitri Sokolov</h3>
-                <p class="speaker-role" data-es="Gestalt — Rusia / Alemania" data-ru="Гештальт — Россия / Германия">Gestalt — Rusia / Alemania</p>
-                <p class="speaker-bio" data-es="Terapeuta gestalt de orientación fenomenológica. Experiencia en grupos grandes, supervisión y enseñanza en Europa del Este." data-ru="Гештальт-терапевт феноменологической ориентации. Опыт больших групп, супервизии и преподавания в Восточной Европе.">
-                    Terapeuta gestalt de orientación fenomenológica. Experiencia en grupos grandes, supervisión y enseñanza en Europa del Este.
+                <div class="speaker-avatar">
+                    <img src="assets/viktor-berezin.png" alt="Viktor Berezin">
+                </div>
+                <h3 class="speaker-name" data-es="Viktor Berezin" data-ru="Виктор Березин">Viktor Berezin</h3>
+                <p class="speaker-role" data-es="Argentina" data-ru="Аргентина">Argentina</p>
+                <p class="speaker-bio" data-es="Terapeuta Gestáltico, supervisor y coordinador de grupos<br>Especialidad: la dimensión existencial de la terapia gestáltica<br>Fundador del proyecto <a href='https://www.gestalt-global.com/' target='_blank' rel='noopener' style='color: var(--color-accent); text-decoration: none; border-bottom: 1px solid rgba(212, 165, 116, 0.5);'>Gestalt Global</a>" data-ru="Гештальт-терапевт, супервизор, ведущий групп<br>Специализация: экзистенциальное измерение гештальт-терапии<br>Основатель проекта <a href='https://www.gestalt-global.com/' target='_blank' rel='noopener' style='color: var(--color-accent); text-decoration: none; border-bottom: 1px solid rgba(212, 165, 116, 0.5);'>Gestalt Global</a>">
+                    Terapeuta Gestáltico, supervisor y coordinador de grupos<br>Especialidad: la dimensión existencial de la terapia gestáltica<br>Fundador del proyecto <a href="https://www.gestalt-global.com/" target="_blank" rel="noopener" style="color: var(--color-accent); text-decoration: none; border-bottom: 1px solid rgba(212, 165, 116, 0.5);">Gestalt Global</a>
                 </p>
             </div>
         </div>
@@ -1086,24 +1098,30 @@
 
     <section id="lugar" class="fade-in">
         <div class="section-header">
-            <span class="section-tag" data-es="Ubicación" data-ru="Локация">Ubicación</span>
-            <h2 class="section-title" data-es="Hotel Crystal Tower" data-ru="Отель Crystal Tower">Hotel Crystal Tower</h2>
+            <span class="section-tag" data-es="Lugar del evento" data-ru="Место проведения">Lugar del evento</span>
+            <h2 class="section-title" data-es="Crystal Tower Hotel" data-ru="Crystal Tower Hotel">Crystal Tower Hotel</h2>
         </div>
 
         <div class="venue-content">
             <div class="venue-info">
                 <h3 data-es="Montevideo, Uruguay" data-ru="Монтевидео, Уругвай">Montevideo, Uruguay</h3>
-                <p data-es="Un espacio elegante y contemplativo en el corazón de la ciudad, perfecto para el encuentro introspectivo que proponemos. Con vistas al Río de la Plata y salones diseñados para la intimidad grupal." data-ru="Элегантное и созерцательное пространство в сердце города, идеальное для предложенной нами интроспективной встречи. С видами на Рио-де-ла-Плата и залами, предназначенными для групповой интимности.">
-                    Un espacio elegante y contemplativo en el corazón de la ciudad.
+                <p data-es="Nuestra conferencia se llevará a cabo en el corazón de Montevideo, en el moderno y acogedor Crystal Tower Hotel. Es un espacio ideal que combina un ambiente de negocios, comodidad y una ubicación estratégica para todos los participantes." data-ru="Наша конференция пройдёт в самом сердце Монтевидео — в современном и уютном отеле Crystal Tower Hotel. Это идеальное пространство, сочетающее в себе деловую атмосферу, комфорт и удобное расположение для участников.">
+                    Nuestra conferencia se llevará a cabo en el corazón de Montevideo, en el moderno y acogedor Crystal Tower Hotel. Es un espacio ideal que combina un ambiente de negocios, comodidad y una ubicación estratégica para todos los participantes.
+                </p>
+                <p data-es="El hotel está ubicado en la zona céntrica (Centro), a solo un minuto a pie de la avenida principal de la ciudad, la Avenida 18 de Julio. A poca distancia a pie se encuentran los puntos culturales más emblemáticos de Montevideo: la Plaza Cagancha, la Plaza Independencia, el histórico Teatro Solís y la pintoresca Ciudad Vieja." data-ru="Отель находится в центральном районе (Centro), всего в минуте ходьбы от главной улицы города — Avenida 18 de Julio. В шаговой доступности расположены знаковые культурные точки Монтевидео: площадь Каганча, площадь Независимости, исторический театр Солис (Teatro Solís) и живописный старый город (Ciudad Vieja).">
+                    El hotel está ubicado en la zona céntrica (Centro), a solo un minuto a pie de la avenida principal de la ciudad, la Avenida 18 de Julio. A poca distancia a pie se encuentran los puntos culturales más emblemáticos de Montevideo: la Plaza Cagancha, la Plaza Independencia, el histórico Teatro Solís y la pintoresca Ciudad Vieja.
+                </p>
+                <p data-es="El trayecto en auto desde el aeropuerto internacional toma aproximadamente 25 minutos, mientras que los principales centros de transporte (la terminal de autobuses Tres Cruces y el puerto) se encuentran a solo unos 2 km de distancia." data-ru="Дорога от международного аэропорта на машине займёт около 25 минут, а до главных транспортных узлов (автовокзал Трес Крусес и порт) — всего около 2 км.">
+                    El trayecto en auto desde el aeropuerto internacional toma aproximadamente 25 minutos, mientras que los principales centros de transporte (la terminal de autobuses Tres Cruces y el puerto) se encuentran a solo unos 2 km de distancia.
                 </p>
                 <div class="venue-details">
                     <div class="venue-detail">
                         <span>📍</span>
-                        <span data-es="Rambla República del Perú 1479, Montevideo" data-ru="Рамбла Республика дель Перу 1479, Монтевидео">Rambla República del Perú 1479, Montevideo</span>
+                        <span data-es="Aquiles R. Lanza 1323, esq. 18 de Julio, Montevideo" data-ru="Aquiles R. Lanza 1323, угол с 18 de Julio, Монтевидео">Aquiles R. Lanza 1323, esq. 18 de Julio, Montevideo</span>
                     </div>
                     <div class="venue-detail">
                         <span>🚗</span>
-                        <span data-es="20 minutos del Aeropuerto Internacional de Carrasco" data-ru="20 минут от международного аэропорта Карраско">20 minutos del Aeropuerto Internacional de Carrasco</span>
+                        <span data-es="≈ 25 min en auto desde el Aeropuerto Internacional de Carrasco" data-ru="≈ 25 минут на машине от международного аэропорта Карраско">≈ 25 min en auto desde el Aeropuerto Internacional de Carrasco</span>
                     </div>
                     <div class="venue-detail">
                         <span>🏨</span>
@@ -1111,7 +1129,9 @@
                     </div>
                 </div>
             </div>
-            <div class="venue-visual">Crystal Tower</div>
+            <div class="venue-visual">
+                <img src="assets/crystal-tower.jpg" alt="Crystal Tower Hotel — Montevideo">
+            </div>
         </div>
     </section>
 
@@ -1142,7 +1162,12 @@
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
             document.querySelectorAll('[data-es][data-ru]').forEach(el => {
-                el.textContent = el.getAttribute('data-' + lang);
+                const content = el.getAttribute('data-' + lang);
+                if (content.indexOf('<') !== -1) {
+                    el.innerHTML = content;
+                } else {
+                    el.textContent = content;
+                }
             });
             document.documentElement.lang = lang;
         }
