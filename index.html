@@ -311,6 +311,37 @@
             font-weight: 400;
         }
 
+        .concept-intro {
+            margin-bottom: 1.5rem;
+        }
+
+        .concept-list {
+            list-style: none;
+            padding-left: 0;
+            line-height: 1.6;
+        }
+
+        .concept-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .concept-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .concept-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.4em;
+            width: 3px;
+            height: 0.85em;
+            background: var(--color-accent);
+            border-radius: 2px;
+        }
+
         .concept-visual {
             position: relative;
             height: 500px;
@@ -655,6 +686,19 @@
             .timeline-item { grid-template-columns: 1fr; gap: 0.75rem; }
             .registration { padding: 3rem 1.5rem; }
             .venue-info { padding: 2.5rem; }
+            .concept-text {
+                font-size: 1rem;
+                line-height: 1.65;
+            }
+            .concept-intro {
+                margin-bottom: 1rem;
+            }
+            .concept-list {
+                line-height: 1.5;
+            }
+            .concept-list li {
+                margin-bottom: 0.75rem;
+            }
         }
 
         .fade-in {
@@ -854,9 +898,14 @@
 
         <div class="concept-grid">
             <div class="concept-text">
-                <p data-es="Esta conferencia nace como un espacio de encuentro entre terapeutas Gestalt y profesionales de la psicología de Latinoamérica, Europa del Este y el espacio rusoparlante.<br><br>Un espacio para el diálogo profesional vivo: sobre la práctica clínica, la formación, la supervisión, el trabajo con grupos y los desafíos actuales de la terapia Gestalt.<br><br>Durante dos días, la conferencia reunirá charlas plenarias, mesas redondas y talleres prácticos en salas paralelas. El formato bilingüe permitirá que cada expositor/a sea escuchado/a y pueda entrar en diálogo sin perder profundidad, matices ni singularidad, más allá de las diferencias de idioma.<br><br>La conferencia está dirigida a psicólogos/as, psicoterapeutas, terapeutas Gestalt, estudiantes de programas de formación en terapia Gestalt, supervisores/as y profesionales interesados/as en el trabajo clínico desde una perspectiva relacional, fenomenológica y de campo." data-ru="В программе — лекции, мастер-классы, круглые столы и пространства клинического обмена. Конференция открыта для специалистов и участников, говорящих на испанском или русском языке, которые хотят включиться в живой профессиональный диалог между культурами, опытом и разными способами понимать гештальт-подход.<br><br>Эта конференция создаётся как пространство встречи между гештальт-терапевтами и психологами из Латинской Америки и Восточной Европы. Пространство для живого профессионального диалога: о клинической практике, обучении, супервизии, работе с группами и современных вызовах гештальт-терапии.<br><br>В течение двух дней конференция объединит пленарные выступления, круглые столы и практические мастерские в параллельных залах. Двуязычный формат позволит каждому спикеру быть услышанным и вступить в разговор без потери глубины и своеобразия несмотря на разный язык.<br><br>Конференция адресована психологам, психотерапевтам, гештальт-терапевтам, студентам программ по гештальт-терапии, супервизорам и специалистам, которым интересна клиническая работа в реляционной, феноменологической и полевой перспективе.">
-                    Esta conferencia nace como un espacio de encuentro entre terapeutas Gestalt y profesionales de la psicología de Latinoamérica, Europa del Este y el espacio rusoparlante.<br><br>Un espacio para el diálogo profesional vivo: sobre la práctica clínica, la formación, la supervisión, el trabajo con grupos y los desafíos actuales de la terapia Gestalt.<br><br>Durante dos días, la conferencia reunirá charlas plenarias, mesas redondas y talleres prácticos en salas paralelas. El formato bilingüe permitirá que cada expositor/a sea escuchado/a y pueda entrar en diálogo sin perder profundidad, matices ni singularidad, más allá de las diferencias de idioma.<br><br>La conferencia está dirigida a psicólogos/as, psicoterapeutas, terapeutas Gestalt, estudiantes de programas de formación en terapia Gestalt, supervisores/as y profesionales interesados/as en el trabajo clínico desde una perspectiva relacional, fenomenológica y de campo.
+                <p class="concept-intro" data-es="Esta conferencia nace como un espacio de encuentro entre terapeutas Gestalt y profesionales de la psicología de Latinoamérica, Europa del Este y el espacio rusoparlante." data-ru="Эта конференция создаётся как пространство встречи между гештальт-терапевтами и психологами из Латинской Америки, Восточной Европы и русскоязычного пространства.">
+                    Esta conferencia nace como un espacio de encuentro entre terapeutas Gestalt y profesionales de la psicología de Latinoamérica, Europa del Este y el espacio rusoparlante.
                 </p>
+                <ul class="concept-list" data-i18n-list>
+                    <li data-es="Un espacio para el diálogo profesional vivo: práctica clínica, formación, supervisión, trabajo con grupos y los desafíos actuales de la terapia Gestalt." data-ru="Пространство для живого профессионального диалога: клиническая практика, обучение, супервизия, работа с группами и современные вызовы гештальт-терапии."></li>
+                    <li data-es="Dos días de charlas plenarias, mesas redondas y talleres prácticos en salas paralelas, en formato bilingüe." data-ru="Два дня пленарных выступлений, круглых столов и практических мастерских в параллельных залах, в двуязычном формате."></li>
+                    <li data-es="Dirigida a psicólogos/as, psicoterapeutas, terapeutas Gestalt, estudiantes, supervisores/as y profesionales del trabajo clínico relacional, fenomenológico y de campo." data-ru="Для психологов, психотерапевтов, гештальт-терапевтов, студентов, супервизоров и специалистов, которым интересна реляционная, феноменологическая и полевая клиническая работа."></li>
+                </ul>
             </div>
             <div class="concept-visual"></div>
         </div>
@@ -1164,6 +1213,7 @@
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
             document.querySelectorAll('[data-es][data-ru]').forEach(el => {
+                if (el.closest('[data-i18n-list]')) return;
                 const content = el.getAttribute('data-' + lang);
                 if (content.indexOf('<') !== -1) {
                     el.innerHTML = content;
@@ -1171,8 +1221,24 @@
                     el.textContent = content;
                 }
             });
+            document.querySelectorAll('[data-i18n-list]').forEach(list => {
+                const templates = Array.from(list.querySelectorAll('li')).map(li => ({
+                    es: li.getAttribute('data-es') || '',
+                    ru: li.getAttribute('data-ru') || ''
+                }));
+                list.innerHTML = '';
+                templates.forEach(t => {
+                    const li = document.createElement('li');
+                    li.setAttribute('data-es', t.es);
+                    li.setAttribute('data-ru', t.ru);
+                    li.textContent = lang === 'ru' ? t.ru : t.es;
+                    list.appendChild(li);
+                });
+            });
             document.documentElement.lang = lang;
         }
+
+        switchLang('es', document.querySelector('.lang-btn.active'));
 
         document.querySelectorAll('.schedule-tab').forEach(tab => {
             tab.addEventListener('click', () => {
