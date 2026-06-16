@@ -744,8 +744,8 @@
                     <label data-es="¿Cómo quieres participar? *" data-ru="Как вы хотите участвовать? *"></label>
                     <div class="checkbox-group">
                         <label>
-                            <input type="checkbox" name="roles" value="ponente">
-                            <span data-es="🎤 Ponente — charla o presentación" data-ru="🎤 Спикер — доклад или презентация"></span>
+                            <input type="checkbox" name="roles" value="expositor">
+                            <span data-es="🎤 Expositor — charla o presentación" data-ru="🎤 Спикер — доклад или презентация"></span>
                         </label>
                         <label>
                             <input type="checkbox" name="roles" value="taller">
@@ -1034,7 +1034,7 @@
         document.querySelectorAll('input[name="roles"]').forEach(cb => {
             cb.addEventListener('change', () => {
                 const speakerSelected = [...document.querySelectorAll('input[name="roles"]:checked')]
-                    .some(el => el.value === 'ponente' || el.value === 'taller');
+                    .some(el => el.value === 'expositor' || el.value === 'taller');
                 document.getElementById('speaker-block').style.display =
                     speakerSelected ? 'flex' : 'none';
             });
