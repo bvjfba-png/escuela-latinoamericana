@@ -509,6 +509,169 @@
             .price-card.inactive { transform: none; }
             .payment-options { grid-template-columns: 1fr; }
             .page { padding-top: 6.5rem; }
+            #registro { padding: 0 0 3rem; }
+        }
+
+        #registro {
+            max-width: 640px;
+            margin: 0 auto 4rem;
+            scroll-margin-top: 6rem;
+        }
+
+        #payment-step {
+            scroll-margin-top: 6rem;
+        }
+
+        #payment-step[hidden] {
+            display: none !important;
+        }
+
+        .flow-steps {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .flow-step {
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: rgba(0,0,0,0.05);
+            color: var(--color-muted);
+        }
+
+        .flow-step.active {
+            background: var(--color-secondary);
+            color: white;
+        }
+
+        .flow-step.done {
+            background: var(--color-accent-light);
+            color: var(--color-text);
+        }
+
+        .registration-complete {
+            background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(253,252,248,0.95) 100%);
+            border-left: 4px solid var(--color-secondary);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        #registration-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group > label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select,
+        .form-group textarea {
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: rgba(255,255,255,0.7);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.12);
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 400;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #speaker-block {
+            border-left: 3px solid var(--color-accent);
+            padding-left: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-message--error {
+            color: #c0392b;
+            font-size: 0.9rem;
+            padding: 0.75rem 1rem;
+            background: rgba(192,57,43,0.08);
+            border-radius: 8px;
+        }
+
+        .field-error {
+            color: #c0392b;
+            font-size: 0.85rem;
+            margin-top: 0.15rem;
+        }
+
+        .form-group input.is-invalid {
+            border-color: #c0392b;
+            box-shadow: 0 0 0 3px rgba(192,57,43,0.12);
+        }
+
+        .btn-primary {
+            padding: 1rem 2.5rem;
+            background: var(--color-text);
+            color: var(--color-bg);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-main);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
         }
     </style>
 </head>
@@ -520,7 +683,7 @@
             <a href="index.html" class="back-link" data-es="← Volver al sitio" data-ru="← Вернуться на сайт">← Volver al sitio</a>
         </div>
         <div class="nav-right">
-            <a href="#tarifas" class="nav-cta" data-es="Registrarse" data-ru="Зарегистрироваться">Registrarse</a>
+            <a href="#registro" class="nav-cta" id="nav-cta" data-es="Registrarse" data-ru="Зарегистрироваться">Registrarse</a>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" onclick="switchLang('es', this)">ES</button>
                 <button type="button" class="lang-btn" onclick="switchLang('ru', this)">RU</button>
@@ -529,13 +692,155 @@
     </nav>
 
     <main class="page">
-        <div class="section-header">
-            <span class="section-tag" data-es="Inscripción" data-ru="Регистрация">Inscripción</span>
-            <h1 class="section-title" data-es="Participación" data-ru="Участие">Participación</h1>
-            <p class="section-desc" data-es="Tarifas de participación en la conferencia bilingüe de terapia Gestalt. El precio depende de la fecha de inscripción." data-ru="Стоимость участия в двуязычной конференции по гештальт-терапии. Цена зависит от даты регистрации.">
-                Tarifas de participación en la conferencia bilingüe de terapia Gestalt. El precio depende de la fecha de inscripción.
-            </p>
+        <div class="flow-steps" id="flow-steps">
+            <span class="flow-step active" id="flow-step-1" data-es="1. Registro" data-ru="1. Регистрация"></span>
+            <span class="flow-step" id="flow-step-2" data-es="2. Pago" data-ru="2. Оплата"></span>
         </div>
+
+        <section id="registro">
+            <div class="section-header">
+                <span class="section-tag" data-es="Inscripción" data-ru="Регистрация"></span>
+                <h1 class="section-title" data-es="¿Listo para participar?" data-ru="Готовы участвовать?"></h1>
+                <p class="section-desc" data-es="Completa el formulario de inscripción. Después podrás elegir la tarifa y la forma de pago." data-ru="Заполните форму регистрации. После этого вы сможете выбрать тариф и способ оплаты."></p>
+            </div>
+
+            <form id="registration-form" novalidate>
+                <div class="form-group">
+                    <label data-es="Nombre y apellido *" data-ru="Имя и фамилия *"></label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-es="Email *" data-ru="Email *"></label>
+                    <input type="email" name="email" required autocomplete="email">
+                    <div id="email-field-error" class="field-error" style="display:none" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label data-es="Telegram o WhatsApp" data-ru="Telegram или WhatsApp"></label>
+                    <input type="text" name="messenger">
+                </div>
+
+                <div class="form-group">
+                    <label data-es="País de residencia *" data-ru="Страна проживания *"></label>
+                    <input type="text" name="country" required>
+                </div>
+
+                <div class="form-group">
+                    <label data-es="Idioma preferido *" data-ru="Предпочитаемый язык *"></label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="language" value="es" required>
+                            <span data-es="Español" data-ru="Испанский"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="language" value="ru">
+                            <span data-es="Русский" data-ru="Русский"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-es="¿Cómo quieres participar? *" data-ru="Как вы хотите участвовать? *"></label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="roles" value="ponente">
+                            <span data-es="🎤 Ponente — charla o presentación" data-ru="🎤 Спикер — доклад или презентация"></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="roles" value="taller">
+                            <span data-es="🧪 Taller / Masterclass — espacio práctico" data-ru="🧪 Мастер-класс — практическое пространство"></span>
+                        </label>
+                        <label>
+                            <input type="checkbox" name="roles" value="participante">
+                            <span data-es="👂 Participante — oyente" data-ru="👂 Участник — слушатель"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="speaker-block" style="display:none">
+                    <div class="form-group">
+                        <label data-es="Tema de la presentación" data-ru="Тема выступления"></label>
+                        <input type="text" name="talk_title">
+                    </div>
+
+                    <div class="form-group">
+                        <label data-es="Descripción breve (2–3 frases)" data-ru="Краткое описание (2–3 предложения)"></label>
+                        <textarea name="talk_description" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-es="Duración" data-ru="Продолжительность"></label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="talk_duration" value="30">
+                                <span>30 мин</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="talk_duration" value="60">
+                                <span>60 мин</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="talk_duration" value="90">
+                                <span>90 мин</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-es="Idioma de presentación" data-ru="Язык выступления"></label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="talk_language" value="es">
+                                <span data-es="Español" data-ru="Испанский"></span>
+                            </label>
+                            <label>
+                                <input type="radio" name="talk_language" value="ru">
+                                <span data-es="Русский" data-ru="Русский"></span>
+                            </label>
+                            <label>
+                                <input type="radio" name="talk_language" value="both">
+                                <span data-es="Ambos" data-ru="Оба"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-es="¿Cómo se enteró de la conferencia?" data-ru="Как вы узнали о конференции?"></label>
+                    <select name="source">
+                        <option value="" data-es="— Seleccionar —" data-ru="— Выбрать —"></option>
+                        <option value="instagram" data-es="Instagram" data-ru="Instagram"></option>
+                        <option value="telegram" data-es="Telegram" data-ru="Telegram"></option>
+                        <option value="colegas" data-es="Colegas / recomendación" data-ru="Коллеги / рекомендация"></option>
+                        <option value="gestalt-global" data-es="Gestalt Global" data-ru="Gestalt Global"></option>
+                        <option value="otro" data-es="Otro" data-ru="Другое"></option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label data-es="Comentario o pregunta" data-ru="Комментарий или вопрос"></label>
+                    <textarea name="comment" rows="3"></textarea>
+                </div>
+
+                <div id="form-error" style="display:none" class="form-message form-message--error"></div>
+
+                <button type="submit" id="submit-btn" class="btn-primary">
+                    <span id="submit-text" data-es="Enviar inscripción" data-ru="Отправить регистрацию"></span>
+                </button>
+            </form>
+        </section>
+
+        <section id="payment-step" hidden>
+            <div id="registration-complete-notice" class="registration-complete"
+                 data-es="¡Registro completado! Elige tu tarifa y completa el pago para confirmar tu participación."
+                 data-ru="Регистрация завершена! Выберите тариф и оплатите участие, чтобы подтвердить регистрацию."></div>
+
+            <div class="section-header">
+                <span class="section-tag" data-es="Tarifas" data-ru="Тарифы"></span>
+                <h2 class="section-title" data-es="Participación" data-ru="Участие"></h2>
+                <p class="section-desc" data-es="El precio depende de la fecha de inscripción." data-ru="Цена зависит от даты регистрации."></p>
+            </div>
 
         <div class="pricing-grid" id="tarifas">
             <div class="price-card active" data-tier-end="2026-07-15">
@@ -625,6 +930,7 @@
                 </div>
             </div>
         </div>
+        </section>
     </main>
 
     <footer>
@@ -684,6 +990,175 @@
         }
 
         setActiveTier();
+
+        const STORAGE_KEY = 'conference_registered';
+
+        function showPaymentStep(options = {}) {
+            const { alreadyRegistered = false, scroll = true } = options;
+            const lang = document.documentElement.lang || 'es';
+
+            document.getElementById('registro').hidden = true;
+            document.getElementById('payment-step').hidden = false;
+
+            document.getElementById('flow-step-1').classList.remove('active');
+            document.getElementById('flow-step-1').classList.add('done');
+            document.getElementById('flow-step-2').classList.add('active');
+
+            const notice = document.getElementById('registration-complete-notice');
+            if (alreadyRegistered) {
+                notice.setAttribute('data-es', 'Este email ya está registrado. Puedes continuar con el pago.');
+                notice.setAttribute('data-ru', 'Этот email уже зарегистрирован. Вы можете перейти к оплате.');
+            }
+            notice.textContent = notice.getAttribute('data-' + lang);
+
+            const navCta = document.getElementById('nav-cta');
+            navCta.href = '#tarifas';
+            navCta.setAttribute('data-es', 'Ver tarifas');
+            navCta.setAttribute('data-ru', 'Тарифы');
+            navCta.textContent = navCta.getAttribute('data-' + lang);
+
+            sessionStorage.setItem(STORAGE_KEY, '1');
+            setActiveTier();
+
+            if (scroll) {
+                document.getElementById('tarifas').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        switchLang('es', document.querySelector('.lang-btn.active'));
+
+        if (sessionStorage.getItem(STORAGE_KEY)) {
+            showPaymentStep({ scroll: location.hash === '#tarifas' || location.hash === '#pago' });
+        }
+
+        document.querySelectorAll('input[name="roles"]').forEach(cb => {
+            cb.addEventListener('change', () => {
+                const speakerSelected = [...document.querySelectorAll('input[name="roles"]:checked')]
+                    .some(el => el.value === 'ponente' || el.value === 'taller');
+                document.getElementById('speaker-block').style.display =
+                    speakerSelected ? 'flex' : 'none';
+            });
+        });
+
+        function isValidEmail(email) {
+            return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+        }
+
+        function getEmailErrorMessage(lang) {
+            return lang === 'ru'
+                ? 'Введите корректный email (например: nombre@gmail.com).'
+                : 'Introduce un email válido (ejemplo: nombre@gmail.com).';
+        }
+
+        function showEmailError(emailInput, emailErrorEl, lang) {
+            emailInput.classList.add('is-invalid');
+            emailErrorEl.textContent = getEmailErrorMessage(lang);
+            emailErrorEl.style.display = 'block';
+        }
+
+        function clearEmailError(emailInput, emailErrorEl) {
+            emailInput.classList.remove('is-invalid');
+            emailErrorEl.textContent = '';
+            emailErrorEl.style.display = 'none';
+        }
+
+        const emailInput = document.querySelector('#registration-form input[name="email"]');
+        const emailErrorEl = document.getElementById('email-field-error');
+
+        emailInput.addEventListener('input', () => clearEmailError(emailInput, emailErrorEl));
+
+        emailInput.addEventListener('blur', () => {
+            const lang = document.documentElement.lang || 'es';
+            const email = emailInput.value.trim();
+            if (email && !isValidEmail(email)) {
+                showEmailError(emailInput, emailErrorEl, lang);
+            }
+        });
+
+        document.getElementById('registration-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const btn = document.getElementById('submit-btn');
+            const submitText = document.getElementById('submit-text');
+            const errorEl = document.getElementById('form-error');
+            const lang = document.documentElement.lang || 'es';
+            const activeLangBtn = document.querySelector('.lang-btn.active');
+
+            errorEl.style.display = 'none';
+            clearEmailError(emailInput, emailErrorEl);
+
+            const email = form.elements.email.value.trim();
+            if (!email || !isValidEmail(email)) {
+                showEmailError(emailInput, emailErrorEl, lang);
+                emailInput.focus();
+                return;
+            }
+
+            btn.disabled = true;
+            submitText.textContent = lang === 'ru' ? 'Отправка...' : 'Enviando...';
+
+            const roles = [...form.querySelectorAll('input[name="roles"]:checked')]
+                .map(el => el.value);
+
+            const data = {
+                name: form.elements.name.value.trim() || null,
+                email: email,
+                messenger: form.elements.messenger.value.trim() || null,
+                country: form.elements.country.value.trim() || null,
+                language: form.elements.language.value || null,
+                roles: roles.length ? roles : [],
+                talk_title: form.elements.talk_title?.value.trim() || null,
+                talk_description: form.elements.talk_description?.value.trim() || null,
+                talk_duration: form.elements.talk_duration?.value || null,
+                talk_language: form.elements.talk_language?.value || null,
+                source: form.elements.source.value || null,
+                comment: form.elements.comment.value.trim() || null,
+            };
+
+            try {
+                const res = await fetch('https://pfkcukagmuliwyrjykql.supabase.co/rest/v1/registrations', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': 'sb_publishable_280xYCZpvzKIKV_d_DAOjQ_15scTCmx',
+                        'Authorization': 'Bearer sb_publishable_280xYCZpvzKIKV_d_DAOjQ_15scTCmx',
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (res.status === 201) {
+                    showPaymentStep();
+                    return;
+                }
+
+                const err = await res.json();
+                if (err.code === '23505') {
+                    showPaymentStep({ alreadyRegistered: true });
+                    return;
+                }
+
+                let msg = lang === 'ru'
+                    ? 'Что-то пошло не так. Попробуйте снова.'
+                    : 'Algo salió mal. Por favor, intenta de nuevo.';
+                errorEl.textContent = msg;
+                errorEl.style.display = 'block';
+                btn.disabled = false;
+                submitText.setAttribute('data-es', 'Enviar inscripción');
+                submitText.setAttribute('data-ru', 'Отправить регистрацию');
+                switchLang(lang, activeLangBtn);
+            } catch {
+                errorEl.textContent = lang === 'ru'
+                    ? 'Ошибка сети. Проверьте соединение.'
+                    : 'Error de red. Verifica tu conexión.';
+                errorEl.style.display = 'block';
+                btn.disabled = false;
+                submitText.setAttribute('data-es', 'Enviar inscripción');
+                submitText.setAttribute('data-ru', 'Отправить регистрацию');
+                switchLang(lang, activeLangBtn);
+            }
+        });
     </script>
 </body>
 </html>
