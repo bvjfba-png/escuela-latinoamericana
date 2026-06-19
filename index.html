@@ -374,6 +374,10 @@
             font-weight: 400;
         }
 
+        .section-desc:empty {
+            display: none;
+        }
+
         .concept-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -861,6 +865,38 @@
             font-size: 0.8125rem;
         }
 
+        .price-card-btn {
+            align-self: stretch;
+            margin-top: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.8125rem;
+            text-align: center;
+        }
+
+        .price-card.active .price-card-btn {
+            background: var(--color-secondary);
+            border-color: var(--color-secondary);
+        }
+
+        .price-card.active .price-card-btn:hover {
+            background: transparent;
+            color: var(--color-secondary);
+        }
+
+        .price-card.inactive .price-card-btn {
+            padding: 0.6rem 1rem;
+            font-size: 0.75rem;
+            background: transparent;
+            color: var(--color-text);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .price-card.inactive .price-card-btn:hover {
+            background: var(--color-text);
+            color: var(--color-bg);
+            border-color: var(--color-text);
+        }
+
         .pricing-note {
             max-width: 640px;
             margin: 0 auto;
@@ -1154,7 +1190,7 @@
         <div class="hero-pattern"></div>
         <div class="hero-content">
             <p class="hero-subtitle" data-es="Encuentro internacional de terapia gestalt" data-ru="Международная гештальт-конференция">Encuentro internacional de terapia gestalt</p>
-            <p class="hero-kicker" data-es="Diálogo gestáltico entre Europa del Este y Latinoamérica" data-ru="Гештальт-диалог между Восточной Европой и Латинской Америкой">Diálogo gestáltico entre Europa del Este y Latinoamérica</p>
+            <p class="hero-kicker" data-es="Diálogo entre Europa del Este y Latinoamérica" data-ru="Диалог между Восточной Европой и Латинской Америкой">Diálogo entre Europa del Este y Latinoamérica</p>
             <h1 class="hero-title">
                 <span data-es="Donde Dos Mundos" data-ru="Где два мира">Donde Dos Mundos</span>
                 <span data-es="se Encuentran" data-ru="встречаются">se Encuentran</span>
@@ -1171,16 +1207,12 @@
         <div class="section-header">
             <span class="section-tag" data-es="Nuestra Esencia" data-ru="Наша суть">Nuestra Esencia</span>
             <h2 class="section-title" data-es="Gestalt en diálogo: Europa del Este y Latinoamérica" data-ru="Гештальт в диалоге: встреча Восточной Европы и Латинской Америки">Gestalt en diálogo: Europa del Este y Latinoamérica</h2>
-            <p class="section-desc" data-es="El primer encuentro bilingüe de terapia Gestalt entre Latinoamérica y Europa del Este. Charlas, talleres, mesas redondas e intercambio clínico en un espacio abierto para profesionales y participantes de habla hispana y rusa que desean encontrarse, compartir experiencia y construir diálogo." data-ru="Первая двуязычная конференция для профессионалов гештальт-терапии, объединяющая гештальт-сообщества Латинской Америки, Восточной Европы и русскоязычного пространства.">
-                El primer encuentro bilingüe de terapia Gestalt entre Latinoamérica y Europa del Este. Charlas, talleres, mesas redondas e intercambio clínico en un espacio abierto para profesionales y participantes de habla hispana y rusa que desean encontrarse, compartir experiencia y construir diálogo.
-            </p>
+            <p class="section-desc" data-es="" data-ru=""></p>
         </div>
 
         <div class="concept-grid">
             <div class="concept-text">
-                <p class="concept-intro" data-es="Esta conferencia nace como un espacio de encuentro entre terapeutas Gestalt y profesionales de la psicología de Latinoamérica, Europa del Este y el espacio rusoparlante." data-ru="Эта конференция создаётся как пространство встречи между гештальт-терапевтами и психологами из Латинской Америки, Восточной Европы и русскоязычного пространства.">
-                    Esta conferencia nace como un espacio de encuentro entre terapeutas Gestalt y profesionales de la psicología de Latinoamérica, Europa del Este y el espacio rusoparlante.
-                </p>
+                <p class="concept-intro" data-es="<strong>Esta primera conferencia bilingüe se crea como un espacio de encuentro entre terapeutas Gestalt y psicólogos de Latinoamérica, Europa del Este y el espacio rusoparlante.</strong>" data-ru="<strong>Эта первая двуязычная конференция создаётся как пространство встречи между гештальт-терапевтами и психологами из Латинской Америки, Восточной Европы и русскоязычного пространства.</strong>"></p>
                 <ul class="concept-list" data-i18n-list>
                     <li data-es="Un espacio para el diálogo profesional vivo: práctica clínica, formación, supervisión, trabajo con grupos y los desafíos actuales de la terapia Gestalt." data-ru="Пространство для живого профессионального диалога: клиническая практика, обучение, супервизия, работа с группами и современные вызовы гештальт-терапии."></li>
                     <li data-es="Dos días de charlas plenarias, mesas redondas y talleres prácticos en salas paralelas, en formato bilingüe." data-ru="Два дня пленарных выступлений, круглых столов и практических мастерских в параллельных залах, в двуязычном формате."></li>
@@ -1494,6 +1526,7 @@
                 <p class="price-label" data-es="Early Bird" data-ru="Предпродажа"></p>
                 <p class="price-amount">$120 <span>USD</span></p>
                 <p class="price-note" data-es="Tarifa más conveniente mientras confirmamos el programa." data-ru="Самая выгодная цена, пока мы формируем программу."></p>
+                <a href="pago.html#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
 
             <div class="price-card inactive" data-tier-end="2026-08-31">
@@ -1506,6 +1539,7 @@
                 <p class="price-label" data-es="Es momento de sumarte" data-ru="Самое время присоединиться"></p>
                 <p class="price-amount">$160 <span>USD</span></p>
                 <p class="price-note" data-es="Precio intermedio antes del cierre de inscripciones." data-ru="Промежуточная цена до закрытия регистрации."></p>
+                <a href="pago.html#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
 
             <div class="price-card inactive" data-tier-end="2026-09-30">
@@ -1518,6 +1552,7 @@
                 <p class="price-label" data-es="Última llamada" data-ru="Последний шанс"></p>
                 <p class="price-amount">$190 <span>USD</span></p>
                 <p class="price-note" data-es="Última oportunidad para inscribirse en la conferencia." data-ru="Последняя возможность зарегистрироваться на конференцию."></p>
+                <a href="pago.html#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
         </div>
 

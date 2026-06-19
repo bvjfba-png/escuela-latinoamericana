@@ -158,6 +158,10 @@
             line-height: 1.7;
         }
 
+        .section-desc:empty {
+            display: none;
+        }
+
         #tarifas {
             scroll-margin-top: 6rem;
         }
@@ -289,6 +293,39 @@
 
         .price-card.inactive .price-note {
             font-size: 0.8125rem;
+        }
+
+        .price-card-btn {
+            align-self: stretch;
+            margin-top: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.8125rem;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .price-card.active .price-card-btn {
+            background: var(--color-secondary);
+            border-color: var(--color-secondary);
+        }
+
+        .price-card.active .price-card-btn:hover {
+            background: transparent;
+            color: var(--color-secondary);
+        }
+
+        .price-card.inactive .price-card-btn {
+            padding: 0.6rem 1rem;
+            font-size: 0.75rem;
+            background: transparent;
+            color: var(--color-text);
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .price-card.inactive .price-card-btn:hover {
+            background: var(--color-text);
+            color: var(--color-bg);
+            border-color: var(--color-text);
         }
 
         .agu-discount {
@@ -853,6 +890,7 @@
                 <p class="price-label" data-es="Early Bird" data-ru="Предпродажа">Early Bird</p>
                 <p class="price-amount">$120 <span>USD</span></p>
                 <p class="price-note" data-es="Tarifa más conveniente mientras confirmamos el programa." data-ru="Самая выгодная цена, пока мы формируем программу.">Tarifa más conveniente mientras confirmamos el programa.</p>
+                <a href="#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
 
             <div class="price-card inactive" data-tier-end="2026-08-31">
@@ -865,6 +903,7 @@
                 <p class="price-label" data-es="Es momento de sumarte" data-ru="Самое время присоединиться">Es momento de sumarte</p>
                 <p class="price-amount">$160 <span>USD</span></p>
                 <p class="price-note" data-es="Precio intermedio antes del cierre de inscripciones." data-ru="Промежуточная цена до закрытия регистрации.">Precio intermedio antes del cierre de inscripciones.</p>
+                <a href="#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
 
             <div class="price-card inactive" data-tier-end="2026-09-30">
@@ -877,6 +916,7 @@
                 <p class="price-label" data-es="Última llamada" data-ru="Последний шанс">Última llamada</p>
                 <p class="price-amount">$190 <span>USD</span></p>
                 <p class="price-note" data-es="Última oportunidad para inscribirse en la conferencia." data-ru="Последняя возможность зарегистрироваться на конференцию.">Última oportunidad para inscribirse en la conferencia.</p>
+                <a href="#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
         </div>
 
