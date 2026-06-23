@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Participación — Escuela Latina de Terapia Gestalt</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -58,6 +61,32 @@
             letter-spacing: -0.02em;
             text-decoration: none;
             color: var(--color-text);
+        }
+
+        .logo-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .footer-logo-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer-logo-brand .logo-img {
+            width: 48px;
+            height: 48px;
         }
 
         .back-link {
@@ -539,6 +568,8 @@
 
         @media (max-width: 768px) {
             nav { padding: 1rem 1.25rem; }
+            .logo-brand { gap: 0.5rem; max-width: 55%; }
+            .logo-img { width: 32px; height: 32px; }
             .back-link { display: none; }
             .nav-cta { padding: 0.55rem 1rem; font-size: 0.8rem; }
             .pricing-grid { grid-template-columns: 1fr; }
@@ -685,6 +716,12 @@
             box-shadow: 0 0 0 3px rgba(192,57,43,0.12);
         }
 
+        .checkbox-group.is-invalid {
+            padding: 0.75rem;
+            border-radius: 8px;
+            box-shadow: 0 0 0 2px rgba(192,57,43,0.35);
+        }
+
         .btn-primary {
             padding: 1rem 2.5rem;
             background: var(--color-text);
@@ -716,7 +753,10 @@
 
     <nav>
         <div class="nav-left">
-            <a href="index.html" class="logo" data-es="Escuela Latina de Terapia Gestalt" data-ru="Латиноамериканская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</a>
+            <a href="index.html" class="logo logo-brand">
+                <img src="assets/logo.png" alt="" class="logo-img" width="40" height="40">
+                <span data-es="Escuela Latina de Terapia Gestalt" data-ru="Латиноамериканская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</span>
+            </a>
             <a href="index.html" class="back-link" data-es="← Volver al sitio" data-ru="← Вернуться на сайт">← Volver al sitio</a>
         </div>
         <div class="nav-right">
@@ -778,8 +818,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label data-es="¿Cómo quieres participar? *" data-ru="Как вы хотите участвовать? *"></label>
-                    <div class="checkbox-group">
+                    <label data-es="¿Cómo quieres participar? *" data-ru="В каком качестве вы регистрируетесь? *"></label>
+                    <div class="checkbox-group" id="roles-checkbox-group">
                         <label>
                             <input type="checkbox" name="roles" value="expositor">
                             <span data-es="🎤 Expositor — charla o presentación" data-ru="🎤 Спикер — доклад или презентация"></span>
@@ -793,6 +833,7 @@
                             <span data-es="👂 Participante — oyente" data-ru="👂 Участник — слушатель"></span>
                         </label>
                     </div>
+                    <div id="roles-field-error" class="field-error" style="display:none" role="alert"></div>
                 </div>
 
                 <div id="speaker-block" style="display:none">
@@ -974,7 +1015,10 @@
     </main>
 
     <footer>
-        <div class="footer-logo" data-es="Escuela Latina de Terapia Gestalt" data-ru="Латиноамериканская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</div>
+        <div class="footer-logo footer-logo-brand">
+            <img src="assets/logo.png" alt="" class="logo-img" width="48" height="48">
+            <span data-es="Escuela Latina de Terapia Gestalt" data-ru="Латиноамериканская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</span>
+        </div>
         <div class="footer-contact">
             <a href="mailto:gestalt.escuela.latinoamerica@gmail.com" class="footer-contact-btn" data-es="Contáctanos" data-ru="Связаться с нами">Contáctanos</a>
         </div>
@@ -1032,6 +1076,24 @@
         setActiveTier();
 
         const STORAGE_KEY = 'conference_registered';
+        const SUPABASE_URL = 'https://pfkcukagmuliwyrjykql.supabase.co';
+        const SUPABASE_ANON_KEY = 'sb_publishable_280xYCZpvzKIKV_d_DAOjQ_15scTCmx';
+
+        async function sendRegistrationEmails(data) {
+            try {
+                await fetch(`${SUPABASE_URL}/functions/v1/send-registration-emails`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    },
+                    body: JSON.stringify(data),
+                });
+            } catch (err) {
+                console.error('Registration email failed:', err);
+            }
+        }
 
         function showPaymentStep(options = {}) {
             const { alreadyRegistered = false, scroll = true } = options;
@@ -1071,12 +1133,18 @@
             showPaymentStep({ scroll: location.hash === '#tarifas' || location.hash === '#pago' });
         }
 
+        const rolesGroupEl = document.getElementById('roles-checkbox-group');
+        const rolesErrorEl = document.getElementById('roles-field-error');
+
         document.querySelectorAll('input[name="roles"]').forEach(cb => {
             cb.addEventListener('change', () => {
                 const speakerSelected = [...document.querySelectorAll('input[name="roles"]:checked')]
                     .some(el => el.value === 'expositor' || el.value === 'taller');
                 document.getElementById('speaker-block').style.display =
                     speakerSelected ? 'flex' : 'none';
+                if ([...document.querySelectorAll('input[name="roles"]:checked')].length) {
+                    clearRolesError(rolesGroupEl, rolesErrorEl);
+                }
             });
         });
 
@@ -1100,6 +1168,24 @@
             emailInput.classList.remove('is-invalid');
             emailErrorEl.textContent = '';
             emailErrorEl.style.display = 'none';
+        }
+
+        function getRolesErrorMessage(lang) {
+            return lang === 'ru'
+                ? 'Выберите хотя бы один вариант — в каком качестве вы регистрируетесь.'
+                : 'Selecciona al menos una opción sobre cómo quieres participar.';
+        }
+
+        function showRolesError(rolesGroupEl, rolesErrorEl, lang) {
+            rolesGroupEl.classList.add('is-invalid');
+            rolesErrorEl.textContent = getRolesErrorMessage(lang);
+            rolesErrorEl.style.display = 'block';
+        }
+
+        function clearRolesError(rolesGroupEl, rolesErrorEl) {
+            rolesGroupEl.classList.remove('is-invalid');
+            rolesErrorEl.textContent = '';
+            rolesErrorEl.style.display = 'none';
         }
 
         const emailInput = document.querySelector('#registration-form input[name="email"]');
@@ -1127,6 +1213,7 @@
 
             errorEl.style.display = 'none';
             clearEmailError(emailInput, emailErrorEl);
+            clearRolesError(rolesGroupEl, rolesErrorEl);
 
             const email = form.elements.email.value.trim();
             if (!email || !isValidEmail(email)) {
@@ -1135,11 +1222,16 @@
                 return;
             }
 
-            btn.disabled = true;
-            submitText.textContent = lang === 'ru' ? 'Отправка...' : 'Enviando...';
-
             const roles = [...form.querySelectorAll('input[name="roles"]:checked')]
                 .map(el => el.value);
+            if (!roles.length) {
+                showRolesError(rolesGroupEl, rolesErrorEl, lang);
+                rolesGroupEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            btn.disabled = true;
+            submitText.textContent = lang === 'ru' ? 'Отправка...' : 'Enviando...';
 
             const data = {
                 name: form.elements.name.value.trim() || null,
@@ -1169,6 +1261,7 @@
                 });
 
                 if (res.status === 201) {
+                    sendRegistrationEmails(data);
                     showPaymentStep();
                     return;
                 }
