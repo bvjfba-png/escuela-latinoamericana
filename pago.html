@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Participación — Escuela Latina de Terapia Gestalt</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=2">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=2">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -75,6 +76,16 @@
             border-radius: 50%;
             object-fit: cover;
             flex-shrink: 0;
+        }
+
+        .logo-full-img {
+            height: 42px;
+            width: auto;
+            display: block;
+        }
+
+        .footer-logo-full {
+            height: 48px;
         }
 
         .footer-logo-brand {
@@ -568,8 +579,10 @@
 
         @media (max-width: 768px) {
             nav { padding: 1rem 1.25rem; }
-            .logo-brand { gap: 0.5rem; max-width: 55%; }
+            .logo-brand { gap: 0.5rem; max-width: 70%; }
             .logo-img { width: 32px; height: 32px; }
+            .logo-full-img { height: auto; max-height: 34px; max-width: 100%; }
+            .footer-logo-full { height: auto; max-height: 42px; }
             .back-link { display: none; }
             .nav-cta { padding: 0.55rem 1rem; font-size: 0.8rem; }
             .pricing-grid { grid-template-columns: 1fr; }
@@ -753,9 +766,8 @@
 
     <nav>
         <div class="nav-left">
-            <a href="index.html" class="logo logo-brand">
-                <img src="assets/logo.png" alt="" class="logo-img" width="40" height="40">
-                <span data-es="Escuela Latina de Terapia Gestalt" data-ru="Латиноамериканская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</span>
+            <a href="index.html" class="logo logo-brand" aria-label="Donde Dos Mundos se Encuentran — International Gestalt Therapy Conference">
+                <img src="assets/logo-full.png" alt="Donde Dos Mundos se Encuentran — International Gestalt Therapy Conference" class="logo-full-img">
             </a>
             <a href="index.html" class="back-link" data-es="← Volver al sitio" data-ru="← Вернуться на сайт">← Volver al sitio</a>
         </div>
@@ -1016,8 +1028,7 @@
 
     <footer>
         <div class="footer-logo footer-logo-brand">
-            <img src="assets/logo.png" alt="" class="logo-img" width="48" height="48">
-            <span data-es="Escuela Latina de Terapia Gestalt" data-ru="Латиноамериканская школа гештальт-терапии">Escuela Latina de Terapia Gestalt</span>
+            <img src="assets/logo-full.png" alt="Donde Dos Mundos se Encuentran — International Gestalt Therapy Conference" class="logo-full-img footer-logo-full">
         </div>
         <div class="footer-contact">
             <a href="mailto:gestalt.escuela.latinoamerica@gmail.com" class="footer-contact-btn" data-es="Contáctanos" data-ru="Связаться с нами">Contáctanos</a>
