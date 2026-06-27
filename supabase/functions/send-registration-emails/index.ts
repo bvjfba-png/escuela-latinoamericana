@@ -386,7 +386,7 @@ Deno.serve(async (req) => {
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
     const adminEmails = parseAdminEmails(
       Deno.env.get("ADMIN_EMAIL") ??
-        "gestalt.escuela.latinoamerica@gmail.com,lubavusshka@gmail.com",
+        "gestalt.escuela.latinoamerica@gmail.com,lubavusshka@gmail.com,darifadeevauy@gmail.com",
     );
     const fromEmail = Deno.env.get("FROM_EMAIL") ??
       "Escuela Latina <onboarding@resend.dev>";
