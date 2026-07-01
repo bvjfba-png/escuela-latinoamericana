@@ -402,25 +402,24 @@
             margin: 0 auto;
         }
 
-        .agu-prices {
-            display: flex;
+        .agu-contact-btn {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 1.25rem;
-            font-size: 0.9375rem;
-            opacity: 0.85;
-        }
-
-        .agu-prices span {
-            opacity: 0.45;
-            transition: opacity 0.3s ease;
-        }
-
-        .agu-prices span.active {
-            opacity: 1;
+            margin-top: 1.5rem;
+            padding: 0.85rem 1.5rem;
+            background: white;
+            color: var(--color-secondary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 0.9rem;
             font-weight: 700;
-            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+        }
+
+        .agu-contact-btn:hover {
+            background: var(--color-accent-light);
+            transform: translateY(-2px);
         }
 
         .payment-methods {
@@ -632,7 +631,7 @@
         }
 
         #payment-step {
-            scroll-margin-top: 6rem;
+            scroll-margin-top: 9rem;
         }
 
         #payment-step[hidden] {
@@ -674,6 +673,48 @@
             margin-bottom: 2.5rem;
             font-size: 1rem;
             line-height: 1.6;
+        }
+
+        .registration-complete--action {
+            text-align: center;
+            padding: 2rem 2.25rem;
+            font-size: 1.05rem;
+        }
+
+        .registration-complete--action strong {
+            display: block;
+            margin-bottom: 0.65rem;
+            color: var(--color-secondary);
+            font-size: clamp(1.45rem, 3vw, 2rem);
+            line-height: 1.2;
+        }
+
+        .registration-complete--action span {
+            display: block;
+            max-width: 720px;
+            margin: 0 auto 1.25rem;
+        }
+
+        .registration-complete--action a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.5rem;
+            background: var(--color-secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .registration-complete--action a:hover {
+            background: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        #payment-step .price-card-btn {
+            display: none;
         }
 
         #registration-form {
@@ -1032,14 +1073,10 @@
 
         <div class="agu-discount">
             <h3 data-es="20% de descuento para miembros de AGU" data-ru="Скидка 20% для членов AGU">20% de descuento para miembros de AGU</h3>
-            <p data-es="Los miembros de la Asociación Gestáltica del Uruguay (AGU) reciben un 20% de descuento sobre la tarifa vigente al momento de la inscripción." data-ru="Члены Гештальт-ассоциации Уругвая (AGU) получают скидку 20% от действующего тарифа на момент регистрации.">
-                Los miembros de la Asociación Gestáltica del Uruguay (AGU) reciben un 20% de descuento sobre la tarifa vigente al momento de la inscripción.
+            <p data-es="Si eres miembro de la Asociación Gestáltica del Uruguay (AGU), escríbenos y te enviaremos una factura individual con el descuento correspondiente." data-ru="Если вы член Гештальт-ассоциации Уругвая (AGU), напишите нам, и мы выставим вам индивидуальный счёт с соответствующей скидкой.">
+                Si eres miembro de la Asociación Gestáltica del Uruguay (AGU), escríbenos y te enviaremos una factura individual con el descuento correspondiente.
             </p>
-            <div class="agu-prices">
-                <span data-tier="0" class="active"><span data-es="Early Bird" data-ru="Предпродажа">Early Bird</span> — $96</span>
-                <span data-tier="1"><span data-es="Es momento de sumarte" data-ru="Самое время присоединиться">Es momento de sumarte</span> — $128</span>
-                <span data-tier="2"><span data-es="Última llamada" data-ru="Последний шанс">Última llamada</span> — $152</span>
-            </div>
+            <a href="mailto:gestalt.escuela.latinoamerica@gmail.com?subject=Descuento%20AGU%20para%20la%20conferencia" class="agu-contact-btn" data-es="Solicitar descuento AGU" data-ru="Запросить скидку AGU">Solicitar descuento AGU</a>
         </div>
 
         <div class="payment-methods" id="pago">
@@ -1137,10 +1174,6 @@
                     if (text) deadline.textContent = text;
                 }
             });
-
-            document.querySelectorAll('.agu-prices [data-tier]').forEach(el => {
-                el.classList.toggle('active', parseInt(el.dataset.tier, 10) === activeIdx);
-            });
         }
 
         setActiveTier();
@@ -1215,13 +1248,19 @@
                 notice.setAttribute('data-es', 'Este email ya está registrado. Puedes continuar con el pago.');
                 notice.setAttribute('data-ru', 'Этот email уже зарегистрирован. Вы можете перейти к оплате.');
             } else if (registrationRequired) {
-                notice.setAttribute('data-es', 'Si todavía no completaste la inscripción, primero registrate en el formulario y después realizá el pago. Si ya te registraste antes, podés elegir la tarifa y pagar aquí.');
-                notice.setAttribute('data-ru', 'Если вы ещё не заполнили регистрацию, сначала зарегистрируйтесь в форме, а потом оплатите участие. Если вы уже регистрировались раньше, выберите тариф и оплатите здесь.');
+                notice.setAttribute('data-es', '<strong>Primero completa la inscripción</strong><span>Si todavía no te registraste, completa el formulario antes de pagar. Si ya te registraste antes, puedes bajar y elegir la forma de pago.</span><a href="#registro">Ir al formulario de inscripción</a>');
+                notice.setAttribute('data-ru', '<strong>Сначала зарегистрируйтесь</strong><span>Если вы ещё не заполнили форму регистрации, сделайте это перед оплатой. Если вы уже регистрировались раньше, можете ниже выбрать способ оплаты.</span><a href="#registro">Перейти к регистрации</a>');
             } else {
                 notice.setAttribute('data-es', '¡Registro completado! Elige tu tarifa y completa el pago para confirmar tu participación.');
                 notice.setAttribute('data-ru', 'Регистрация завершена! Выберите тариф и оплатите участие, чтобы подтвердить регистрацию.');
             }
-            notice.textContent = notice.getAttribute('data-' + lang);
+            notice.classList.toggle('registration-complete--action', registrationRequired);
+            const noticeContent = notice.getAttribute('data-' + lang);
+            if (noticeContent.indexOf('<') !== -1) {
+                notice.innerHTML = noticeContent;
+            } else {
+                notice.textContent = noticeContent;
+            }
 
             const navCta = document.getElementById('nav-cta');
             navCta.href = '#tarifas';
@@ -1236,7 +1275,11 @@
             updatePriceCardButtons();
 
             if (scroll) {
-                document.getElementById(scrollTarget).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const target = document.getElementById(scrollTarget);
+                const scrollToTarget = () => target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                scrollToTarget();
+                window.setTimeout(scrollToTarget, 100);
+                window.setTimeout(scrollToTarget, 300);
             }
         }
 
@@ -1263,7 +1306,8 @@
         if (hasStoredRegistration()) {
             showPaymentStep({ scroll: paymentHashRequested, scrollTarget: paymentScrollTarget });
         } else if (paymentHashRequested) {
-            showPaymentStep({ registrationRequired: true, scroll: true, scrollTarget: paymentScrollTarget });
+            history.replaceState(null, '', `${location.pathname}${location.search}#payment-step`);
+            showPaymentStep({ registrationRequired: true, scroll: true, scrollTarget: 'payment-step' });
         } else {
             updatePriceCardButtons();
         }
@@ -1402,20 +1446,20 @@
         document.getElementById('nav-payment-cta').addEventListener('click', (e) => {
             if (document.getElementById('payment-step').hidden) {
                 e.preventDefault();
+                const isRegistered = hasStoredRegistration();
                 showPaymentStep({
-                    registrationRequired: !hasStoredRegistration(),
-                    scrollTarget: 'pago',
+                    registrationRequired: !isRegistered,
+                    scrollTarget: isRegistered ? 'pago' : 'payment-step',
                 });
             }
         });
 
-        document.querySelectorAll('a[href="#registro"]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (link.getAttribute('href') === '#registro' && document.getElementById('registro').hidden) {
-                    e.preventDefault();
-                    showRegistrationStep();
-                }
-            });
+        document.addEventListener('click', (e) => {
+            const registrationLink = e.target.closest('a[href="#registro"]');
+            if (registrationLink && document.getElementById('registro').hidden) {
+                e.preventDefault();
+                showRegistrationStep();
+            }
         });
 
         emailInput.addEventListener('blur', () => {
