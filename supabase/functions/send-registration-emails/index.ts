@@ -13,6 +13,7 @@ type Registration = {
   messenger: string | null;
   country: string | null;
   language: string | null;
+  payment_method: string | null;
   roles: string[];
   talk_title: string | null;
   talk_description: string | null;
@@ -34,6 +35,13 @@ const SOURCE_LABELS: Record<string, string> = {
   colegas: "Colegas / recomendación",
   "gestalt-global": "Gestalt Global",
   otro: "Otro",
+};
+
+const PAYMENT_METHOD_LABELS: Record<string, string> = {
+  paypal: "PayPal / USD",
+  rub: "Rublos / transferencia",
+  mercado_pago: "Mercado Pago",
+  consultation: "Necesita consultar la forma más conveniente",
 };
 
 function formatRoles(roles: string[], lang: string): string {
@@ -275,6 +283,9 @@ function buildParticipantEmail(reg: Registration) {
 function buildAdminEmail(reg: Registration) {
   const roles = formatRoles(reg.roles ?? [], "es");
   const source = reg.source ? (SOURCE_LABELS[reg.source] ?? reg.source) : "—";
+  const paymentMethod = reg.payment_method
+    ? (PAYMENT_METHOD_LABELS[reg.payment_method] ?? reg.payment_method)
+    : "—";
   const speakerBlock =
     reg.talk_title || reg.talk_description
       ? `
@@ -299,6 +310,7 @@ function buildAdminEmail(reg: Registration) {
           <li><strong>Telegram / WhatsApp:</strong> ${escapeHtml(reg.messenger ?? "—")}</li>
           <li><strong>País:</strong> ${escapeHtml(reg.country ?? "—")}</li>
           <li><strong>Idioma preferido:</strong> ${escapeHtml(reg.language ?? "—")}</li>
+          <li><strong>Forma de pago preferida:</strong> ${escapeHtml(paymentMethod)}</li>
           <li><strong>Forma de participación:</strong> ${escapeHtml(roles || "—")}</li>
           <li><strong>¿Cómo se enteró?:</strong> ${escapeHtml(source)}</li>
           ${reg.comment ? `<li><strong>Comentario:</strong> ${escapeHtml(reg.comment)}</li>` : ""}

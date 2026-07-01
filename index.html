@@ -1033,13 +1033,16 @@
             color: var(--color-muted);
         }
 
-        .final-cta {
-            text-align: center;
-            padding: 4rem 2rem 6rem;
+        .pricing-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         footer {
-            background: var(--color-accent-light);
+            background: var(--color-bg);
             color: var(--color-text);
             padding: 4rem 2rem 2rem;
             text-align: center;
@@ -1333,6 +1336,7 @@
             <p class="hero-date" data-es="2—3 de octubre, 2026 • Montevideo, Uruguay" data-ru="2—3 октября 2026 • Монтевидео, Уругвай">2—3 de octubre, 2026 • Montevideo, Uruguay</p>
             <div class="hero-cta">
                 <a href="pago.html#registro" class="btn-primary" data-es="Quiero participar" data-ru="Хочу участвовать">Quiero participar</a>
+                <a href="pago.html#pago" class="btn-secondary" data-es="Pagar participación" data-ru="Оплатить участие">Pagar participación</a>
                 <a href="#programa" class="btn-secondary" data-es="Conocer el programa" data-ru="Познакомиться с программой">Conocer el programa</a>
             </div>
         </div>
@@ -1746,6 +1750,9 @@
         </div>
 
         <p class="pricing-note" data-es="Puedes elegir la forma de pago (PayPal, rublos o Mercado Pago) después de completar el formulario de inscripción." data-ru="Способ оплаты (PayPal, рубли или Mercado Pago) вы сможете выбрать после заполнения регистрационной анкеты."></p>
+        <div class="pricing-actions">
+            <a href="pago.html#pago" class="btn-secondary" data-es="Ir al pago" data-ru="Перейти к оплате"></a>
+        </div>
     </section>
 
     <section id="faq" class="fade-in">
@@ -1817,10 +1824,6 @@
         </div>
     </section>
 
-    <section class="final-cta fade-in">
-        <a href="pago.html#registro" class="btn-primary" data-es="Quiero participar" data-ru="Хочу участвовать"></a>
-    </section>
-
     <footer>
         <div class="footer-content">
             <div class="footer-logo footer-logo-brand">
@@ -1836,6 +1839,24 @@
     </footer>
 
     <script>
+        const STORAGE_KEY = 'conference_registered';
+
+        function hasStoredRegistration() {
+            return localStorage.getItem(STORAGE_KEY) === '1' || sessionStorage.getItem(STORAGE_KEY) === '1';
+        }
+
+        function updatePriceCardButtons() {
+            const lang = document.documentElement.lang || 'es';
+            const isRegistered = hasStoredRegistration();
+
+            document.querySelectorAll('.price-card-btn').forEach(btn => {
+                btn.href = isRegistered ? 'pago.html#pago' : 'pago.html#registro';
+                btn.setAttribute('data-es', isRegistered ? 'Pagar' : 'Registrarse');
+                btn.setAttribute('data-ru', isRegistered ? 'Оплатить' : 'Зарегистрироваться');
+                btn.textContent = btn.getAttribute('data-' + lang);
+            });
+        }
+
         function switchLang(lang, btn) {
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
@@ -1864,6 +1885,7 @@
             });
             document.documentElement.lang = lang;
             setActiveTier();
+            updatePriceCardButtons();
             if (typeof updateSpeakerInfoLabels === 'function') updateSpeakerInfoLabels();
         }
 
@@ -1894,6 +1916,7 @@
         }
 
         switchLang('es', document.querySelector('.lang-btn.active'));
+        updatePriceCardButtons();
 
         const navMenuBtn = document.getElementById('nav-menu-btn');
         const mobileNavDropdown = document.getElementById('mobile-nav-dropdown');

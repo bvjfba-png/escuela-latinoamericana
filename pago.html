@@ -135,6 +135,17 @@
             transform: translateY(-1px);
         }
 
+        .nav-cta--secondary {
+            background: transparent;
+            color: var(--color-text);
+            border: 1px solid rgba(0, 0, 0, 0.18);
+        }
+
+        .nav-cta--secondary:hover {
+            background: var(--color-text);
+            color: var(--color-bg);
+        }
+
         .lang-switch {
             display: flex;
             gap: 0.5rem;
@@ -436,6 +447,27 @@
             margin: 0 auto;
         }
 
+        .payment-confirmation {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.65rem;
+            margin-top: 1.25rem;
+            padding: 0.85rem 1.5rem;
+            background: var(--color-secondary);
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .payment-confirmation:hover {
+            background: var(--color-text);
+            transform: translateY(-2px);
+        }
+
         .payment-options {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -534,8 +566,8 @@
         }
 
         footer {
-            background: var(--color-text);
-            color: var(--color-bg);
+            background: var(--color-bg);
+            color: var(--color-text);
             padding: 3rem 2rem 2rem;
             text-align: center;
             margin-top: 4rem;
@@ -554,8 +586,8 @@
         .footer-contact-btn {
             display: inline-block;
             padding: 1rem 2.5rem;
-            background: var(--color-bg);
-            color: var(--color-text);
+            background: var(--color-text);
+            color: var(--color-bg);
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 600;
@@ -566,14 +598,14 @@
 
         .footer-contact-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,255,255,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .footer-bottom {
             padding-top: 2rem;
             margin-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.4);
+            border-top: 1px solid rgba(0,0,0,0.1);
+            color: rgba(26,26,26,0.5);
             font-size: 0.875rem;
         }
 
@@ -729,6 +761,7 @@
             box-shadow: 0 0 0 3px rgba(192,57,43,0.12);
         }
 
+        .radio-group.is-invalid,
         .checkbox-group.is-invalid {
             padding: 0.75rem;
             border-radius: 8px;
@@ -773,6 +806,7 @@
         </div>
         <div class="nav-right">
             <a href="#registro" class="nav-cta" id="nav-cta" data-es="Registrarse" data-ru="Зарегистрироваться">Registrarse</a>
+            <a href="#pago" class="nav-cta nav-cta--secondary" id="nav-payment-cta" data-es="Pagar" data-ru="Оплатить">Pagar</a>
             <div class="lang-switch">
                 <button type="button" class="lang-btn active" onclick="switchLang('es', this)">ES</button>
                 <button type="button" class="lang-btn" onclick="switchLang('ru', this)">RU</button>
@@ -827,6 +861,29 @@
                             <span data-es="Русский" data-ru="Русский"></span>
                         </label>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label data-es="¿Cómo prefieres pagar? *" data-ru="Как вам удобнее оплатить? *"></label>
+                    <div class="radio-group" id="payment-method-radio-group">
+                        <label>
+                            <input type="radio" name="payment_method" value="paypal" required>
+                            <span data-es="PayPal / USD" data-ru="PayPal / USD"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="payment_method" value="rub">
+                            <span data-es="Rublos / transferencia" data-ru="Рубли / перевод"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="payment_method" value="mercado_pago">
+                            <span data-es="Mercado Pago" data-ru="Mercado Pago"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="payment_method" value="consultation">
+                            <span data-es="Necesito consultar la forma más conveniente" data-ru="Нужно уточнить самый удобный способ"></span>
+                        </label>
+                    </div>
+                    <div id="payment-method-field-error" class="field-error" style="display:none" role="alert"></div>
                 </div>
 
                 <div class="form-group">
@@ -987,13 +1044,14 @@
 
         <div class="payment-methods" id="pago">
             <h3 data-es="Formas de pago" data-ru="Способы оплаты">Formas de pago</h3>
-            <p data-es="Puedes completar tu inscripción pagando en dólares estadounidenses (USD) con PayPal, en rublos (RUB) o con Mercado Pago, según la tarifa vigente." data-ru="Вы можете оплатить участие в долларах США (USD) через PayPal, в рублях (RUB) или через Mercado Pago по действующему тарифу.">
-                Puedes completar tu inscripción pagando en dólares estadounidenses (USD) con PayPal, en rublos (RUB) o con Mercado Pago, según la tarifa vigente.
+            <p data-es="Paga de la forma que te resulte más cómoda y envíanos el comprobante para confirmar tu participación." data-ru="Оплатите удобным способом и отправьте нам подтверждение, чтобы мы подтвердили ваше участие.">
+                Paga de la forma que te resulte más cómoda y envíanos el comprobante para confirmar tu participación.
             </p>
+            <a href="mailto:gestalt.escuela.latinoamerica@gmail.com?subject=Comprobante%20de%20pago%20-%20Conferencia%20Gestalt" class="payment-confirmation" data-es="Enviar comprobante" data-ru="Отправить подтверждение">Enviar comprobante</a>
             <div class="payment-options">
                 <div class="payment-option">
                     <span class="payment-option-label" data-es="Pago en USD" data-ru="Оплата в USD">Pago en USD</span>
-                    <a href="https://paypal.me/LubavaKV" class="payment-btn paypal-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://paypal.me/LubavaKV/120" class="payment-btn paypal-btn" target="_blank" rel="noopener noreferrer">
                         <img src="assets/paypal-logo.png" alt="PayPal">
                         <span data-es="Pagar en USD" data-ru="Оплатить в USD">Pagar en USD</span>
                     </a>
@@ -1052,6 +1110,7 @@
             });
             document.documentElement.lang = lang;
             setActiveTier();
+            if (typeof updatePriceCardButtons === 'function') updatePriceCardButtons();
         }
 
         function setActiveTier() {
@@ -1089,6 +1148,40 @@
         const STORAGE_KEY = 'conference_registered';
         const SUPABASE_URL = 'https://pfkcukagmuliwyrjykql.supabase.co';
         const SUPABASE_ANON_KEY = 'sb_publishable_280xYCZpvzKIKV_d_DAOjQ_15scTCmx';
+        const PAYMENT_METHOD_LABELS = {
+            paypal: { es: 'PayPal / USD', ru: 'PayPal / USD' },
+            rub: { es: 'Rublos / transferencia', ru: 'Рубли / перевод' },
+            mercado_pago: { es: 'Mercado Pago', ru: 'Mercado Pago' },
+            consultation: {
+                es: 'Necesito consultar la forma más conveniente',
+                ru: 'Нужно уточнить самый удобный способ',
+            },
+        };
+
+        if (sessionStorage.getItem(STORAGE_KEY)) {
+            localStorage.setItem(STORAGE_KEY, '1');
+        }
+
+        function hasStoredRegistration() {
+            return localStorage.getItem(STORAGE_KEY) === '1' || sessionStorage.getItem(STORAGE_KEY) === '1';
+        }
+
+        function rememberRegistration() {
+            localStorage.setItem(STORAGE_KEY, '1');
+            sessionStorage.setItem(STORAGE_KEY, '1');
+        }
+
+        function updatePriceCardButtons() {
+            const lang = document.documentElement.lang || 'es';
+            const isRegistered = hasStoredRegistration();
+
+            document.querySelectorAll('.price-card-btn').forEach(btn => {
+                btn.href = isRegistered ? '#pago' : '#registro';
+                btn.setAttribute('data-es', isRegistered ? 'Pagar' : 'Registrarse');
+                btn.setAttribute('data-ru', isRegistered ? 'Оплатить' : 'Зарегистрироваться');
+                btn.textContent = btn.getAttribute('data-' + lang);
+            });
+        }
 
         async function sendRegistrationEmails(data) {
             try {
@@ -1107,20 +1200,26 @@
         }
 
         function showPaymentStep(options = {}) {
-            const { alreadyRegistered = false, scroll = true } = options;
+            const { alreadyRegistered = false, registrationRequired = false, scroll = true, scrollTarget = 'tarifas' } = options;
             const lang = document.documentElement.lang || 'es';
 
             document.getElementById('registro').hidden = true;
             document.getElementById('payment-step').hidden = false;
 
             document.getElementById('flow-step-1').classList.remove('active');
-            document.getElementById('flow-step-1').classList.add('done');
+            document.getElementById('flow-step-1').classList.toggle('done', !registrationRequired);
             document.getElementById('flow-step-2').classList.add('active');
 
             const notice = document.getElementById('registration-complete-notice');
             if (alreadyRegistered) {
                 notice.setAttribute('data-es', 'Este email ya está registrado. Puedes continuar con el pago.');
                 notice.setAttribute('data-ru', 'Этот email уже зарегистрирован. Вы можете перейти к оплате.');
+            } else if (registrationRequired) {
+                notice.setAttribute('data-es', 'Si todavía no completaste la inscripción, primero registrate en el formulario y después realizá el pago. Si ya te registraste antes, podés elegir la tarifa y pagar aquí.');
+                notice.setAttribute('data-ru', 'Если вы ещё не заполнили регистрацию, сначала зарегистрируйтесь в форме, а потом оплатите участие. Если вы уже регистрировались раньше, выберите тариф и оплатите здесь.');
+            } else {
+                notice.setAttribute('data-es', '¡Registro completado! Elige tu tarifa y completa el pago para confirmar tu participación.');
+                notice.setAttribute('data-ru', 'Регистрация завершена! Выберите тариф и оплатите участие, чтобы подтвердить регистрацию.');
             }
             notice.textContent = notice.getAttribute('data-' + lang);
 
@@ -1130,22 +1229,49 @@
             navCta.setAttribute('data-ru', 'Тарифы');
             navCta.textContent = navCta.getAttribute('data-' + lang);
 
-            sessionStorage.setItem(STORAGE_KEY, '1');
+            if (!registrationRequired) {
+                rememberRegistration();
+            }
             setActiveTier();
+            updatePriceCardButtons();
 
             if (scroll) {
-                document.getElementById('tarifas').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.getElementById(scrollTarget).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function showRegistrationStep(options = {}) {
+            const { scroll = true } = options;
+
+            document.getElementById('registro').hidden = false;
+            document.getElementById('payment-step').hidden = true;
+            document.getElementById('flow-step-1').classList.add('active');
+            document.getElementById('flow-step-1').classList.remove('done');
+            document.getElementById('flow-step-2').classList.remove('active');
+            updatePriceCardButtons();
+
+            if (scroll) {
+                document.getElementById('registro').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
 
         switchLang('es', document.querySelector('.lang-btn.active'));
 
-        if (sessionStorage.getItem(STORAGE_KEY)) {
-            showPaymentStep({ scroll: location.hash === '#tarifas' || location.hash === '#pago' });
+        const paymentHashRequested = location.hash === '#tarifas' || location.hash === '#pago';
+        const paymentScrollTarget = location.hash === '#pago' ? 'pago' : 'tarifas';
+
+        if (hasStoredRegistration()) {
+            showPaymentStep({ scroll: paymentHashRequested, scrollTarget: paymentScrollTarget });
+        } else if (paymentHashRequested) {
+            showPaymentStep({ registrationRequired: true, scroll: true, scrollTarget: paymentScrollTarget });
+        } else {
+            updatePriceCardButtons();
         }
 
         const rolesGroupEl = document.getElementById('roles-checkbox-group');
         const rolesErrorEl = document.getElementById('roles-field-error');
+        const paymentMethodGroupEl = document.getElementById('payment-method-radio-group');
+        const paymentMethodErrorEl = document.getElementById('payment-method-field-error');
 
         document.querySelectorAll('input[name="roles"]').forEach(cb => {
             cb.addEventListener('change', () => {
@@ -1163,15 +1289,21 @@
             return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
         }
 
-        function getEmailErrorMessage(lang) {
+        function getEmailErrorMessage(lang, type = 'invalid') {
+            if (type === 'duplicate') {
+                return lang === 'ru'
+                    ? 'Эта почта уже зарегистрирована. Повторная регистрация невозможна. Если вы уже регистрировались, перейдите к оплате по отдельной кнопке.'
+                    : 'Este email ya está registrado. No es posible inscribirse de nuevo. Si ya completaste tu inscripción, usa el botón de pago.';
+            }
+
             return lang === 'ru'
                 ? 'Введите корректный email (например: nombre@gmail.com).'
                 : 'Introduce un email válido (ejemplo: nombre@gmail.com).';
         }
 
-        function showEmailError(emailInput, emailErrorEl, lang) {
+        function showEmailError(emailInput, emailErrorEl, lang, type = 'invalid') {
             emailInput.classList.add('is-invalid');
-            emailErrorEl.textContent = getEmailErrorMessage(lang);
+            emailErrorEl.textContent = getEmailErrorMessage(lang, type);
             emailErrorEl.style.display = 'block';
         }
 
@@ -1199,10 +1331,92 @@
             rolesErrorEl.style.display = 'none';
         }
 
+        function getPaymentMethodErrorMessage(lang) {
+            return lang === 'ru'
+                ? 'Выберите, как вам удобнее оплатить участие.'
+                : 'Selecciona cómo prefieres pagar tu participación.';
+        }
+
+        function showPaymentMethodError(groupEl, errorEl, lang) {
+            groupEl.classList.add('is-invalid');
+            errorEl.textContent = getPaymentMethodErrorMessage(lang);
+            errorEl.style.display = 'block';
+        }
+
+        function clearPaymentMethodError(groupEl, errorEl) {
+            groupEl.classList.remove('is-invalid');
+            errorEl.textContent = '';
+            errorEl.style.display = 'none';
+        }
+
+        function getPaymentMethodLabel(value, lang) {
+            return PAYMENT_METHOD_LABELS[value]?.[lang === 'ru' ? 'ru' : 'es'] || value;
+        }
+
+        function buildStoredComment(paymentMethod, comment, lang) {
+            const paymentLine = lang === 'ru'
+                ? `Предпочтительный способ оплаты: ${getPaymentMethodLabel(paymentMethod, lang)}`
+                : `Forma de pago preferida: ${getPaymentMethodLabel(paymentMethod, lang)}`;
+            return [paymentLine, comment].filter(Boolean).join('\n\n');
+        }
+
+        async function isEmailAlreadyRegistered(email) {
+            try {
+                const params = new URLSearchParams({
+                    select: 'email',
+                    email: `eq.${email}`,
+                    limit: '1',
+                });
+                const res = await fetch(`${SUPABASE_URL}/rest/v1/registrations?${params.toString()}`, {
+                    headers: {
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                    },
+                });
+
+                if (!res.ok) return false;
+
+                const rows = await res.json();
+                return Array.isArray(rows) && rows.length > 0;
+            } catch {
+                return false;
+            }
+        }
+
+        function resetSubmitButton(btn, submitText, lang, activeLangBtn) {
+            btn.disabled = false;
+            submitText.setAttribute('data-es', 'Enviar inscripción');
+            submitText.setAttribute('data-ru', 'Отправить регистрацию');
+            switchLang(lang, activeLangBtn);
+        }
+
         const emailInput = document.querySelector('#registration-form input[name="email"]');
         const emailErrorEl = document.getElementById('email-field-error');
 
         emailInput.addEventListener('input', () => clearEmailError(emailInput, emailErrorEl));
+
+        document.querySelectorAll('input[name="payment_method"]').forEach(radio => {
+            radio.addEventListener('change', () => clearPaymentMethodError(paymentMethodGroupEl, paymentMethodErrorEl));
+        });
+
+        document.getElementById('nav-payment-cta').addEventListener('click', (e) => {
+            if (document.getElementById('payment-step').hidden) {
+                e.preventDefault();
+                showPaymentStep({
+                    registrationRequired: !hasStoredRegistration(),
+                    scrollTarget: 'pago',
+                });
+            }
+        });
+
+        document.querySelectorAll('a[href="#registro"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('href') === '#registro' && document.getElementById('registro').hidden) {
+                    e.preventDefault();
+                    showRegistrationStep();
+                }
+            });
+        });
 
         emailInput.addEventListener('blur', () => {
             const lang = document.documentElement.lang || 'es';
@@ -1225,11 +1439,19 @@
             errorEl.style.display = 'none';
             clearEmailError(emailInput, emailErrorEl);
             clearRolesError(rolesGroupEl, rolesErrorEl);
+            clearPaymentMethodError(paymentMethodGroupEl, paymentMethodErrorEl);
 
             const email = form.elements.email.value.trim();
             if (!email || !isValidEmail(email)) {
                 showEmailError(emailInput, emailErrorEl, lang);
                 emailInput.focus();
+                return;
+            }
+
+            const paymentMethod = form.elements.payment_method.value;
+            if (!paymentMethod) {
+                showPaymentMethodError(paymentMethodGroupEl, paymentMethodErrorEl, lang);
+                paymentMethodGroupEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
 
@@ -1244,12 +1466,20 @@
             btn.disabled = true;
             submitText.textContent = lang === 'ru' ? 'Отправка...' : 'Enviando...';
 
+            if (await isEmailAlreadyRegistered(email)) {
+                showEmailError(emailInput, emailErrorEl, lang, 'duplicate');
+                emailInput.focus();
+                resetSubmitButton(btn, submitText, lang, activeLangBtn);
+                return;
+            }
+
             const data = {
                 name: form.elements.name.value.trim() || null,
                 email: email,
                 messenger: form.elements.messenger.value.trim() || null,
                 country: form.elements.country.value.trim() || null,
                 language: form.elements.language.value || null,
+                payment_method: paymentMethod,
                 roles: roles.length ? roles : [],
                 talk_title: form.elements.talk_title?.value.trim() || null,
                 talk_description: form.elements.talk_description?.value.trim() || null,
@@ -1258,6 +1488,8 @@
                 source: form.elements.source.value || null,
                 comment: form.elements.comment.value.trim() || null,
             };
+            const registrationData = { ...data, comment: buildStoredComment(paymentMethod, data.comment, lang) };
+            delete registrationData.payment_method;
 
             try {
                 const res = await fetch('https://pfkcukagmuliwyrjykql.supabase.co/rest/v1/registrations', {
@@ -1268,7 +1500,7 @@
                         'Authorization': 'Bearer sb_publishable_280xYCZpvzKIKV_d_DAOjQ_15scTCmx',
                         'Prefer': 'return=minimal'
                     },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify(registrationData)
                 });
 
                 if (res.status === 201) {
@@ -1279,7 +1511,9 @@
 
                 const err = await res.json();
                 if (err.code === '23505') {
-                    showPaymentStep({ alreadyRegistered: true });
+                    showEmailError(emailInput, emailErrorEl, lang, 'duplicate');
+                    emailInput.focus();
+                    resetSubmitButton(btn, submitText, lang, activeLangBtn);
                     return;
                 }
 
@@ -1288,19 +1522,13 @@
                     : 'Algo salió mal. Por favor, intenta de nuevo.';
                 errorEl.textContent = msg;
                 errorEl.style.display = 'block';
-                btn.disabled = false;
-                submitText.setAttribute('data-es', 'Enviar inscripción');
-                submitText.setAttribute('data-ru', 'Отправить регистрацию');
-                switchLang(lang, activeLangBtn);
+                resetSubmitButton(btn, submitText, lang, activeLangBtn);
             } catch {
                 errorEl.textContent = lang === 'ru'
                     ? 'Ошибка сети. Проверьте соединение.'
                     : 'Error de red. Verifica tu conexión.';
                 errorEl.style.display = 'block';
-                btn.disabled = false;
-                submitText.setAttribute('data-es', 'Enviar inscripción');
-                submitText.setAttribute('data-ru', 'Отправить регистрацию');
-                switchLang(lang, activeLangBtn);
+                resetSubmitButton(btn, submitText, lang, activeLangBtn);
             }
         });
     </script>
