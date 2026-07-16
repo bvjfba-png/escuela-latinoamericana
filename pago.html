@@ -1088,7 +1088,7 @@
             <div class="payment-options">
                 <div class="payment-option">
                     <span class="payment-option-label" data-es="Pago en USD" data-ru="Оплата в USD">Pago en USD</span>
-                    <a href="https://paypal.me/LubavaKV/120" class="payment-btn paypal-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://paypal.me/LubavaKV/160" class="payment-btn paypal-btn" target="_blank" rel="noopener noreferrer">
                         <img src="assets/paypal-logo.png" alt="PayPal">
                         <span data-es="Pagar en USD" data-ru="Оплатить в USD">Pagar en USD</span>
                     </a>
@@ -1098,7 +1098,7 @@
                 </div>
                 <div class="payment-option">
                     <span class="payment-option-label" data-es="Pago en RUB" data-ru="Оплата в RUB">Pago en RUB</span>
-                    <a href="https://l-kv.com/montevideo" class="payment-btn rub-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://l-kv.com/1montevideo" class="payment-btn rub-btn" target="_blank" rel="noopener noreferrer">
                         <img src="assets/sbp-icon.png" alt="">
                         <span data-es="Pagar en rublos" data-ru="Оплатить в рублях">Pagar en rublos</span>
                     </a>
@@ -1214,6 +1214,10 @@
                 btn.setAttribute('data-ru', isRegistered ? 'Оплатить' : 'Зарегистрироваться');
                 btn.textContent = btn.getAttribute('data-' + lang);
             });
+        }
+
+        function getRegistrationSuccessScrollTarget() {
+            return window.matchMedia('(max-width: 768px)').matches ? 'pago' : 'tarifas';
         }
 
         async function sendRegistrationEmails(data) {
@@ -1549,7 +1553,7 @@
 
                 if (res.status === 201) {
                     sendRegistrationEmails(data);
-                    showPaymentStep();
+                    showPaymentStep({ scrollTarget: getRegistrationSuccessScrollTarget() });
                     return;
                 }
 
