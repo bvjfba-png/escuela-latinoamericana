@@ -1,0 +1,7 @@
+# Allow all crawlers, including AI agents
+User-agent: *
+Allow: /
+
+# Machine-readable site content for LLMs
+# https://llmstxt.org/
+Sitemap: https://gestalt-latam.com/sitemap.xml

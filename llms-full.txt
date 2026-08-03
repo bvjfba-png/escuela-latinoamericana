@@ -1,0 +1,419 @@
+# Escuela Latina de Terapia Gestalt — Full site content for AI agents
+
+> Bilingual (ES/RU) international Gestalt therapy conference
+> "Donde Dos Mundos se Encuentran" / "Где два мира встречаются"
+> October 2–3, 2026 · Montevideo, Uruguay
+> Website: https://gestalt-latam.com
+> Contact: gestalt.escuela.latinoamerica@gmail.com
+> Registration & payment: https://gestalt-latam.com/pago.html
+
+Last generated: 2026-08-03
+
+---
+
+## Event summary
+
+### Title
+
+**ES:** Donde Dos Mundos se Encuentran — Encuentro internacional de terapia gestalt
+
+**RU:** Где два мира встречаются — Международная гештальт-конференция
+
+
+
+### Subtitle
+
+**ES:** Diálogo entre Europa del Este y Latinoamérica
+
+**RU:** Диалог между Восточной Европой и Латинской Америкой
+
+
+
+### Dates & place
+
+**ES:** 2—3 de octubre, 2026 • Montevideo, Uruguay
+
+**RU:** 2—3 октября 2026 • Монтевидео, Уругвай
+
+
+
+### Concept intro
+
+**ES:** Esta primera conferencia bilingüe se crea como un espacio de encuentro entre terapeutas Gestalt y psicólogos de Latinoamérica, Europa del Este y el espacio rusoparlante.
+
+**RU:** Эта первая двуязычная конференция создаётся как пространство встречи между гештальт-терапевтами и психологами из Латинской Америки, Восточной Европы и русскоязычного пространства.
+
+
+
+### Concept bullet 1
+
+**ES:** Un espacio para el diálogo profesional vivo: práctica clínica, formación, supervisión, trabajo con grupos y los desafíos actuales de la terapia Gestalt.
+
+**RU:** Пространство для живого профессионального диалога: клиническая практика, обучение, супервизия, работа с группами и современные вызовы гештальт-терапии.
+
+
+
+### Concept bullet 2
+
+**ES:** Dos días de charlas plenarias, mesas redondas y talleres prácticos en salas paralelas, en formato bilingüe.
+
+**RU:** Два дня пленарных выступлений, круглых столов и практических мастерских в параллельных залах, в двуязычном формате.
+
+
+
+### Concept bullet 3
+
+**ES:** Dirigida a psicólogos/as, psicoterapeutas, terapeutas Gestalt, estudiantes, supervisores/as y profesionales del trabajo clínico relacional, fenomenológico y de campo.
+
+**RU:** Для психологов, психотерапевтов, гештальт-терапевтов, студентов, супервизоров и специалистов, которым интересна реляционная, феноменологическая и полевая клиническая работа.
+
+
+
+## Participation roles
+
+### Expositor / Speaker
+
+**ES:** Comparte tu enfoque clínico, una investigación o un caso de trabajo en una charla plenaria o presentación temática.
+
+**RU:** Поделитесь своим клиническим подходом, исследованием или случаем из практики в пленарном докладе или тематическом выступлении.
+
+
+
+### Taller / Masterclass
+
+**ES:** Propón un espacio práctico y experiencial: una técnica, un ejercicio o una vivencia que el grupo pueda explorar contigo.
+
+**RU:** Предложите практическое пространство опыта: технику, упражнение или процесс, который группа может исследовать вместе с вами.
+
+
+
+### Participante / Participant
+
+**ES:** Súmate como oyente y participa de charlas, talleres y espacios de intercambio clínico entre las dos comunidades.
+
+**RU:** Присоединяйтесь как слушатель и участвуйте в выступлениях, мастер-классах и пространствах клинического обмена между двумя сообществами.
+
+
+
+---
+
+## Schedule — Day 1 (October 2)
+
+### 8:30–9:30
+
+- **ES:** Registro y acreditación de participantes
+
+### 10:00–10:15
+
+- **ES:** Apertura de la conferencia: presentación de expositores e invitados
+
+### 10:15–11:00
+
+- **ES:** Kirill Khlomov
+Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje de oportunidades' data-ru='Кирилл Хломов
+Психотерапевтические отношения — возможности терапевта как ландшафт аффордансов'>Kirill Khlomov
+Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje de oportunidades
+
+### 11:00–11:15
+
+- **ES:** Presentación de talleres / mesas redondas (3 actividades)
+
+### 11:15–11:30
+
+- **ES:** Pausa para café
+
+### 11:30–13:30
+
+- **ES:** Antonio Martínez Ribes
+¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.' data-ru='Антонио Мартинес Рибес
+Что делает психотерапию Gestalt эффективной? Феноменология и понимающая диагностика как основа клинической практики.'>Antonio Martínez Ribes
+¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.
+- **ES:** Mesa redonda 1
+- **ES:** Mesa redonda 2
+
+### 13:30–14:30
+
+- **ES:** Almuerzo
+
+### 14:30–15:00
+
+- **ES:** Presentación de talleres y talleres prácticos (6 actividades)
+
+### 15:00–16:30
+
+- **ES:** Alejandro Corchs
+El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.' data-ru='Алехандро Корчс
+Путь прощения. Глубокое понимание, чтобы терапевт мог понимать и сопровождать состояние сознания своего пациента.'>Alejandro Corchs
+El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.
+- **ES:** Nora Guinsburg
+Sobre la importancia del trabajo profundo en sí mismo. Diálogo con órganos.' data-ru='Нора Гинсбург
+О важности глубокой работы с самим собой. Диалог с органами.'>Nora Guinsburg
+Sobre la importancia del trabajo profundo en sí mismo. Diálogo con órganos.
+- **ES:** Maria Silvia Dameno
+Duelo migratorio' data-ru='Мария Сильвия Дамeno
+Миграционное горевание'>Maria Silvia Dameno
+Duelo migratorio
+
+### 16:30–17:00
+
+- **ES:** Pausa para café
+
+### 17:00–18:30
+
+- **ES:** María Allende y Fernando Bianchi
+El posicionamiento del terapeuta desde el enfoque EcoGestalt' data-ru='Мария Альенде и Fernando Bianchi
+Позиционирование терапевта с точки зрения подхода EcoGestalt'>María Allende y Fernando Bianchi
+El posicionamiento del terapeuta desde el enfoque EcoGestalt
+- **ES:** Hugo B. Partucci
+Pensar de forma integral ciencias sociales y Gestalt para políticas públicas…' data-ru='Hugo B. Partucci
+Интегральное мышление: социальные науки и Gestalt для публичной политики…'>Hugo B. Partucci
+Pensar de forma integral ciencias sociales y Gestalt para políticas públicas…
+- **ES:** Svetlana Ovchinnik
+Una conexión que surge antes de las palabras.' data-ru='Светлана Овчинник
+Связь, которая возникает раньше слов.'>Svetlana Ovchinnik
+Una conexión que surge antes de las palabras.
+
+## Schedule — Day 2 (October 3)
+
+### 10:00–10:45
+
+- **ES:** Hermann Schreck
+El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia' data-ru='Hermann Schreck
+Язык присутствия: уроки латиноамериканского гештальтиста в России'>Hermann Schreck
+El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia
+
+### 10:45–11:00
+
+- **ES:** Pausa para café
+
+### 11:00–13:00
+
+- **ES:** Viktor Berezin, Liubava Kobylinskaia-Vashchuk' data-ru='Виктор Березин, Любава Кобылинская-Ващук'>Viktor Berezin, Liubava Kobylinskaia-Vashchuk
+- **ES:** Mesa redonda 3
+- **ES:** Mesa redonda 4
+
+### 13:00–14:00
+
+- **ES:** Almuerzo
+
+### 13:30–15:00
+
+- **ES:** Marina Varas Schnake
+¿Qué puede aportar la enfermedad al proceso terapéutico?' data-ru='Марина Варас Шнаке
+Что может принести болезнь в терапевтический процесс?'>Marina Varas Schnake
+¿Qué puede aportar la enfermedad al proceso terapéutico?
+- **ES:** Anaclara Falco
+Herramientas para el acompañamiento terapéutico de mujeres' data-ru='Анаклара Фалько
+Инструменты для терапевтического сопровождения женщин'>Anaclara Falco
+Herramientas para el acompañamiento terapéutico de mujeres
+- **ES:** Tatiana Ermoshina
+El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas' data-ru='Татьяна Ермошина
+Язык эмоций и язык тела. Когда эмоции не находят слов: как культура формирует путь от эмоций к симптомам'>Tatiana Ermoshina
+El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas
+
+### 14:00–14:30
+
+- **ES:** Presentación de los talleres
+
+### 15:00–15:30
+
+- **ES:** Pausa para café
+
+### 15:30–17:00
+
+- **ES:** Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira
+Del barro a la luz' data-ru='Соня Солари, Летиция Коста, Габриэла Ачур, Хулиета Басса и Мариана Ногейра
+От глины к свету'>Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira
+Del barro a la luz
+- **ES:** Carlos María Gatti
+Exploración vivencial del sí mismo. Diálogo con órganos' data-ru='Кarlos María Gatti
+Экзистенциальное исследование себя. Диалог с органами'>Carlos María Gatti
+Exploración vivencial del sí mismo. Diálogo con órganos
+- **ES:** Melisa Vazquez
+Adicciones y Gestalt: consumos problemáticos y adicciones conductuales' data-ru='Мелиса Васкес
+Зависимости и гештальт: проблемное употребление и поведенческие аддикции'>Melisa Vazquez
+Adicciones y Gestalt: consumos problemáticos y adicciones conductuales
+
+### 17:00–17:15
+
+- **ES:** Pausa para café
+
+### 17:15–18:00
+
+- **ES:** Cierre de la conferencia: impresiones, agradecimientos y despedida
+
+## Organizers
+
+### Hermann Schreck
+
+### Bio
+
+**ES:** Psicologo y Psicoterapeuta gestáltico con mas de 30 años de experiencia. Escritor, Supervisor y Docente Internacional. Presidente de la Asociación Gestáltica del Uruguay. Asesor Técnico de la Secretaría Nacional de Drogas de la Presidencia de la República de Uruguay.
+
+**RU:** Гештальт-психолог и психотерапевт с более чем 30-летним опытом. Писатель, супервизор и международный преподаватель. Президент Гештальт-ассоциации Уругвая. Технический советник Национального секретариата по наркотикам при Администрации Президента Республики Уругвай.
+
+### Liubava Kobylinskaia-Vashchuk
+
+### Viktor Berezin
+
+## Speakers
+
+### Hermann Schreck
+
+### Bio
+
+**ES:** Psicologo y Psicoterapeuta gestáltico con mas de 30 años de experiencia. Escritor, Supervisor y Docente Internacional. Presidente de la Asociación Gestáltica del Uruguay. Asesor Técnico de la Secretaría Nacional de Drogas de la Presidencia de la República de Uruguay.
+
+**RU:** Гештальт-психолог и психотерапевт с более чем 30-летним опытом. Писатель, супервизор и международный преподаватель. Президент Гештальт-ассоциации Уругвая. Технический советник Национального секретариата по наркотикам при Администрации Президента Республики Уругвай.
+
+### Marina Varas Schnake
+
+### Antonio Martínez Ribes
+
+### Kirill Khlomov
+
+### Alejandro Corchs
+
+## Venue — Crystal Tower Hotel
+
+### Address
+
+**ES:** Aquiles R. Lanza 1323, esq. 18 de Julio, Montevideo
+
+**RU:** Aquiles R. Lanza 1323, угол с 18 de Julio, Монтевидео
+
+### Airport
+
+**ES:** ≈ 25 min en auto desde el Aeropuerto Internacional de Carrasco
+
+**RU:** ≈ 25 минут на машине от международного аэропорта Карраско
+
+### Hotel note
+
+**ES:** Tarifas especiales para participantes de la conferencia
+
+**RU:** Специальные тарифы для участников конференции
+
+## Pricing (USD)
+
+- **Early Bird:** $120 — until July 15, 2026
+- **Standard:** $160 — July 16 – August 31, 2026
+- **Last call:** $190 — September 1–30, 2026
+- **AGU members:** 20% discount (contact gestalt.escuela.latinoamerica@gmail.com)
+
+## Payment methods
+
+- PayPal (USD): https://paypal.me/LubavaKV/160 — enter amount per current tier
+- RUB (SBP): https://l-kv.com/1montevideo
+- Mercado Pago: https://mpago.la/1sgjuwZ — enter amount per current tier
+- Payment proof email: gestalt.escuela.latinoamerica@gmail.com
+
+## Registration flow
+
+1. Fill form at https://gestalt-latam.com/pago.html#registro
+2. Choose role(s): expositor, taller/masterclass, participante
+3. Select preferred payment method
+4. After registration, choose tier and pay
+
+## FAQ
+
+### Q (ES): ¿Qué pasa si no hablo español o ruso?
+
+**RU:** Что если я не говорю на испанском или русском?
+
+### Answer
+
+**ES:** Todas las charlas y talleres contarán con traducción simultánea o consecutiva. El formato bilingüe está pensado justamente para que el idioma no sea una barrera.
+
+**RU:** На всех лекциях и мастер-классах будет синхронный или последовательный перевод. Двуязычный формат конференции создан именно для того, чтобы язык не был барьером.
+
+### Q (ES): No soy psicólogo/a ni terapeuta Gestalt, ¿puedo participar?
+
+**RU:** Я не психолог и не гештальт-терапевт, могу ли я участвовать?
+
+### Answer
+
+**ES:** Sí, claro. Si quieres acercarte al mundo de la psicología, participando en los talleres podrás vivir la experiencia en primera persona y ver cómo trabajan profesionales de distintos países.
+
+**RU:** Да, конечно. Если вы хотите познакомиться с миром психологии, участие в мастер-классах позволит получить личный опыт и увидеть, как работают специалисты из разных стран.
+
+### Q (ES): ¿Necesito experiencia previa en Gestalt para entender las charlas?
+
+**RU:** Нужен ли мне опыт в гештальт-терапии, чтобы понимать выступления?
+
+### Answer
+
+**ES:** No es necesario. Habrá contenidos para distintos niveles, desde introducciones accesibles hasta espacios de intercambio clínico más específico para profesionales en formación o en ejercicio.
+
+**RU:** Нет, это не обязательно. Будет контент для разных уровней — от доступных вступительных тем до более специализированных пространств клинического обмена для практикующих специалистов и тех, кто проходит обучение.
+
+### Q (ES): ¿Las charlas y talleres son en formato presencial?
+
+**RU:** Конференция проходит очно?
+
+### Answer
+
+**ES:** Sí, la conferencia es presencial, en Montevideo, Uruguay, los días 2 y 3 de octubre de 2026.
+
+**RU:** Да, конференция проходит очно, в Монтевидео, Уругвай, 2–3 октября 2026 года.
+
+### Q (ES): ¿Cómo me inscribo y cuándo se abre el registro?
+
+**RU:** Как зарегистрироваться и когда открывается регистрация?
+
+### Answer
+
+**ES:** En la página de participación (enlace Registro). Completa el formulario, indica tu rol y, tras registrarte, elige la tarifa y la forma de pago.
+
+**RU:** На странице участия (ссылка «Регистрация»). Заполните форму, укажите свою роль и после регистрации выберите тариф и способ оплаты.
+
+### Q (ES): ¿Cuánto cuesta participar?
+
+**RU:** Сколько стоит участие?
+
+### Answer
+
+**ES:** La información sobre costos, formas de pago y posibles descuentos estará disponible en el formulario de inscripción.
+
+**RU:** Информация о стоимости, способах оплаты и возможных скидках будет доступна в форме регистрации.
+
+### Q (ES): ¿El alojamiento está incluido o hay recomendaciones de hospedaje?
+
+**RU:** Включено ли проживание или есть рекомендации по жилью?
+
+### Answer
+
+**ES:** El alojamiento no está incluido, pero los participantes de la conferencia tendrán condiciones especiales en el hotel sede, Crystal Tower Hotel. Al reservar la habitación, indica que participas en la conferencia para acceder a la tarifa con descuento. Compartiremos más información y recomendaciones de hospedaje cercano antes del evento.
+
+**RU:** Проживание не включено, но для участников конференции будут действовать специальные условия в отеле Crystal Tower Hotel, где проходит мероприятие. При бронировании номера укажите, что вы участник конференции, чтобы получить скидку. Дополнительную информацию и рекомендации по жилью рядом мы поделимся ближе к дате события.
+
+### Q (ES): ¿Voy a recibir un certificado de participación?
+
+**RU:** Получу ли я сертификат участника?
+
+### Answer
+
+**ES:** Sí, todos los participantes recibirán un certificado de asistencia al finalizar la conferencia.
+
+**RU:** Да, все участники получат сертификат об участии по завершении конференции.
+
+### Q (ES): ¿Necesito visa para viajar a Uruguay?
+
+**RU:** Нужна ли виза для поездки в Уругвай?
+
+### Answer
+
+**ES:** Depende de tu país de origen. Te recomendamos consultar los requisitos de ingreso a Uruguay según tu nacionalidad con suficiente anticipación.
+
+**RU:** Это зависит от вашей страны. Рекомендуем заранее уточнить визовые требования для въезда в Уругвай в зависимости от вашего гражданства.
+
+### Q (ES): ¿Puedo proponer una charla o taller después de inscribirme como participante?
+
+**RU:** Могу ли я предложить доклад или мастер-класс, если уже зарегистрировался как участник?
+
+### Answer
+
+**ES:** Sí, los roles no son excluyentes: podrás indicar tu interés en proponer una charla o taller a través del formulario, incluso si ya te inscribiste como participante.
+
+**RU:** Да, роли не взаимоисключающие: вы можете указать в форме своё желание выступить с докладом или мастер-классом, даже если уже зарегистрировались как участник.
+

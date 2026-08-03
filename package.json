@@ -1,0 +1,7 @@
+{
+  "name": "escuela-latinoamericana",
+  "private": true,
+  "scripts": {
+    "generate:llms": "node scripts/generate-llms.mjs"
+  }
+}

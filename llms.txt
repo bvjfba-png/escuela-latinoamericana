@@ -1,0 +1,29 @@
+# Escuela Latina de Terapia Gestalt
+
+> International bilingual Gestalt therapy conference in Montevideo, Uruguay (ES + RU).
+> October 2–3, 2026 · Crystal Tower Hotel · Contact: gestalt.escuela.latinoamerica@gmail.com
+
+This file helps AI agents and crawlers find structured information about the conference.
+For complete bilingual content (schedule, speakers, FAQ, pricing, registration), read llms-full.txt.
+
+## Key pages
+
+- [Home](https://gestalt-latam.com/): concept, program, organizers, speakers, venue, pricing, FAQ
+- [Registration & payment](https://gestalt-latam.com/pago.html): registration form, tiers, payment links
+- [Full content for agents](https://gestalt-latam.com/llms-full.txt): complete ES/RU text extracted from the site
+
+## Quick facts
+
+- **Event:** Donde Dos Mundos se Encuentran / Где два мира встречаются
+- **Dates:** 2–3 October 2026
+- **City:** Montevideo, Uruguay
+- **Venue:** Crystal Tower Hotel, Aquiles R. Lanza 1323
+- **Languages:** Spanish & Russian with interpretation
+- **Format:** In-person, 3 parallel rooms
+- **Price:** $120 / $160 / $190 USD (early bird → last call)
+- **Register:** https://gestalt-latam.com/pago.html#registro
+- **Email:** gestalt.escuela.latinoamerica@gmail.com
+
+## Optional
+
+- [Sitemap](https://gestalt-latam.com/sitemap.xml)
