@@ -28,6 +28,18 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5.5rem;
+        }
+
+        [id$="-contenido"],
+        #tarifas,
+        #pago,
+        #registration-form {
+            scroll-margin-top: 5.5rem;
+        }
+
         body {
             font-family: var(--font-main);
             background-color: var(--color-bg);
@@ -211,10 +223,6 @@
 
         .section-desc:empty {
             display: none;
-        }
-
-        #tarifas {
-            scroll-margin-top: 6rem;
         }
 
         .pricing-grid {
@@ -627,11 +635,6 @@
         #registro {
             max-width: 640px;
             margin: 0 auto 4rem;
-            scroll-margin-top: 6rem;
-        }
-
-        #payment-step {
-            scroll-margin-top: 9rem;
         }
 
         #payment-step[hidden] {
@@ -1134,6 +1137,30 @@
     </footer>
 
     <script>
+        function getNavOffset() {
+            const navbar = document.querySelector('nav');
+            return navbar ? navbar.offsetHeight + 12 : 72;
+        }
+
+        function resolveAnchorTarget(hashOrId) {
+            const hash = hashOrId.startsWith('#') ? hashOrId : `#${hashOrId}`;
+            if (!hash || hash === '#') return null;
+            const id = hash.slice(1);
+            if (id === 'registro') {
+                return document.getElementById('registration-form');
+            }
+            if (id === 'payment-step') {
+                return document.getElementById('tarifas') || document.getElementById('payment-step');
+            }
+            return document.getElementById(`${id}-contenido`) || document.getElementById(id);
+        }
+
+        function scrollToAnchor(target, smooth = true) {
+            if (!target) return;
+            const top = target.getBoundingClientRect().top + window.scrollY - getNavOffset();
+            window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' });
+        }
+
         function switchLang(lang, btn) {
             document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
@@ -1279,11 +1306,11 @@
             updatePriceCardButtons();
 
             if (scroll) {
-                const target = document.getElementById(scrollTarget);
-                const scrollToTarget = () => target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                scrollToTarget();
-                window.setTimeout(scrollToTarget, 100);
-                window.setTimeout(scrollToTarget, 300);
+                const target = resolveAnchorTarget(scrollTarget);
+                const doScroll = () => scrollToAnchor(target);
+                doScroll();
+                window.setTimeout(doScroll, 100);
+                window.setTimeout(doScroll, 300);
             }
         }
 
@@ -1298,7 +1325,7 @@
             updatePriceCardButtons();
 
             if (scroll) {
-                document.getElementById('registro').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                scrollToAnchor(resolveAnchorTarget('#registro'));
             }
         }
 
@@ -1314,7 +1341,25 @@
             showPaymentStep({ registrationRequired: true, scroll: true, scrollTarget: 'payment-step' });
         } else {
             updatePriceCardButtons();
+            if (location.hash) {
+                const target = resolveAnchorTarget(location.hash);
+                if (target) {
+                    requestAnimationFrame(() => scrollToAnchor(target, false));
+                }
+            }
         }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
+                if (href === '#registro' && document.getElementById('registro').hidden) return;
+                const target = resolveAnchorTarget(href);
+                if (!target) return;
+                e.preventDefault();
+                scrollToAnchor(target);
+            });
+        });
 
         const rolesGroupEl = document.getElementById('roles-checkbox-group');
         const rolesErrorEl = document.getElementById('roles-field-error');

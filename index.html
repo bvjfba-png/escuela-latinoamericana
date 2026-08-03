@@ -30,9 +30,18 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 5.5rem;
             width: 100%;
             margin: 0;
             padding: 0;
+        }
+
+        section[id] {
+            scroll-margin-top: 5.5rem;
+        }
+
+        [id$="-contenido"] {
+            scroll-margin-top: 5.5rem;
         }
 
         body {
@@ -1375,7 +1384,7 @@
             <p class="section-desc" data-es="" data-ru=""></p>
         </div>
 
-        <div class="concept-grid">
+        <div id="concepto-contenido" class="concept-grid">
             <div class="concept-text">
                 <p class="concept-intro" data-es="<strong>Esta primera conferencia bilingüe se crea como un espacio de encuentro entre terapeutas Gestalt y psicólogos de Latinoamérica, Europa del Este y el espacio rusoparlante.</strong>" data-ru="<strong>Эта первая двуязычная конференция создаётся как пространство встречи между гештальт-терапевтами и психологами из Латинской Америки, Восточной Европы и русскоязычного пространства.</strong>"></p>
                 <ul class="concept-list" data-i18n-list>
@@ -1424,6 +1433,7 @@
                 Los temas definitivos, los nombres de los talleres y la distribución por salas serán publicados después de la confirmación del programa completo y de los expositores de la conferencia. Las actividades se realizarán de manera paralela en tres salas. Al finalizar el segundo día, tendremos un espacio común para compartir impresiones, cerrar la experiencia y expresar agradecimientos.
             </p>
 
+            <div id="programa-contenido" class="schedule-content">
             <div class="schedule-day-tabs" role="tablist">
                 <button type="button" class="schedule-tab active" role="tab" aria-selected="true" data-panel="day1" data-es="2 de octubre" data-ru="2 октября">2 de octubre</button>
                 <button type="button" class="schedule-tab" role="tab" aria-selected="false" data-panel="day2" data-es="3 de octubre" data-ru="3 октября">3 de octubre</button>
@@ -1441,10 +1451,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="schedule-time">8:00</td>
-                                <td class="schedule-plenary" colspan="3" data-es='Supervisión del área de registro e inspección de las salas' data-ru='Контроль зоны регистрации и осмотр залов'>Supervisión del área de registro e inspección de las salas</td>
-                            </tr>
                             <tr>
                                 <td class="schedule-time">8:30–9:30</td>
                                 <td class="schedule-plenary" colspan="3" data-es='Registro y acreditación de participantes' data-ru='Регистрация и аккредитация участников'>Registro y acreditación de participantes</td>
@@ -1513,10 +1519,6 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="schedule-time">9:30</td>
-                                <td class="schedule-plenary" colspan="3" data-es="Supervisión del área de registro e inspección de las salas" data-ru="Контроль зоны регистрации и осмотр залов">Supervisión del área de registro e inspección de las salas</td>
-                            </tr>
-                            <tr>
                                 <td class="schedule-time">10:00–10:45</td>
                                                                 <td class="schedule-plenary" colspan="3" data-es='<strong class="schedule-speaker">Hermann Schreck</strong><br><span class="schedule-title">El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia</span>' data-ru='<strong class="schedule-speaker">Hermann Schreck</strong><br><span class="schedule-title">Язык присутствия: уроки латиноамериканского гештальтиста в России</span>'><strong class="schedule-speaker">Hermann Schreck</strong><br><span class="schedule-title">El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia</span></td>
                             </tr>
@@ -1566,6 +1568,7 @@
                     </table>
                 </div>
             </div>
+            </div>
 
             <p class="schedule-note" data-es="El comité organizador evaluará las propuestas para mesas redondas y talleres solo de aquellas personas que hayan completado su inscripción y realizado el pago de participación en la conferencia.<br><br>Mientras se define el programa de la conferencia, la organización se reserva el derecho de ajustar la duración de las actividades; por ejemplo, reducir los talleres a 90 minutos o ampliar la duración de la charla principal." data-ru="Оргкомитет рассматривает заявки на проведение круглых столов и мастер-классов только от участников, которые зарегистрировались и оплатили участие в конференции.<br><br>Пока программа конференции формируется, организаторы оставляют за собой право корректировать продолжительность мероприятий: например, сократить мастер-классы до 90 минут или увеличить время основной лекции.">
                 El comité organizador evaluará las propuestas para mesas redondas y talleres solo de aquellas personas que hayan completado su inscripción y realizado el pago de participación en la conferencia.<br><br>Mientras se define el programa de la conferencia, la organización se reserva el derecho de ajustar la duración de las actividades; por ejemplo, reducir los talleres a 90 minutos o ampliar la duración de la charla principal.
@@ -1579,7 +1582,7 @@
             <h2 class="section-title" data-es="Quiénes hacen esta conferencia" data-ru="Кто делает эту конференцию">Quiénes hacen esta conferencia</h2>
         </div>
 
-        <div class="speakers-grid">
+        <div id="organizadores-contenido" class="speakers-grid">
             <div class="speaker-card fade-in">
                 <div class="speaker-avatar">
                     <img src="assets/hermann-schreck.png" alt="Hermann Schreck">
@@ -1624,7 +1627,7 @@
             </p>
         </div>
 
-        <div class="speakers-grid">
+        <div id="expositores-contenido" class="speakers-grid">
             <div class="speaker-card fade-in">
                 <div class="speaker-avatar">
                     <img src="assets/hermann-schreck.png" alt="Hermann Schreck">
@@ -1698,7 +1701,7 @@
             <h2 class="section-title" data-es="Crystal Tower Hotel" data-ru="Crystal Tower Hotel">Crystal Tower Hotel</h2>
         </div>
 
-        <div class="venue-content">
+        <div id="lugar-contenido" class="venue-content">
             <div class="venue-info">
                 <h3 data-es="Montevideo, Uruguay" data-ru="Монтевидео, Уругвай">Montevideo, Uruguay</h3>
                 <p data-es="Nuestra conferencia se llevará a cabo en el corazón de Montevideo, en el moderno y acogedor Crystal Tower Hotel. Es un espacio ideal que combina un ambiente de negocios, comodidad y una ubicación estratégica para todos los participantes." data-ru="Наша конференция пройдёт в самом сердце Монтевидео — в современном и уютном отеле Crystal Tower Hotel. Это идеальное пространство, сочетающее в себе деловую атмосферу, комфорт и удобное расположение для участников.">
@@ -2005,13 +2008,38 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+        function getNavOffset() {
+            const navbar = document.getElementById('navbar');
+            return navbar ? navbar.offsetHeight + 12 : 72;
+        }
+
+        function resolveAnchorTarget(hash) {
+            if (!hash || hash === '#') return null;
+            const id = hash.slice(1);
+            return document.getElementById(`${id}-contenido`) || document.getElementById(id);
+        }
+
+        function scrollToAnchor(target, smooth = true) {
+            const top = target.getBoundingClientRect().top + window.scrollY - getNavOffset();
+            window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' });
+        }
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const target = resolveAnchorTarget(href);
+                if (target) scrollToAnchor(target);
             });
         });
+
+        if (location.hash) {
+            const target = resolveAnchorTarget(location.hash);
+            if (target) {
+                requestAnimationFrame(() => scrollToAnchor(target, false));
+            }
+        }
     </script>
 </body>
 </html>
