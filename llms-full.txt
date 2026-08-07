@@ -7,7 +7,7 @@
 > Contact: gestalt.escuela.latinoamerica@gmail.com
 > Registration & payment: https://gestalt-latam.com/pago.html
 
-Last generated: 2026-08-03
+Last generated: 2026-08-07
 
 ---
 
@@ -120,20 +120,20 @@ Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje 
 
 ### 11:15–11:30
 
-- **ES:** Pausa para café
+- **ES:** Pausa para café (15 min)
 
 ### 11:30–13:30
 
-- **ES:** Antonio Martínez Ribes
-¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.' data-ru='Антонио Мартинес Рибес
-Что делает психотерапию Gestalt эффективной? Феноменология и понимающая диагностика как основа клинической практики.'>Antonio Martínez Ribes
-¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.
+- **ES:** Marina Varas Schnake
+¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.' data-ru='Марина Варас Шнаке
+Что может принести болезнь в терапевтический процесс? Диалог с больным органом как путь личностной интеграции.'>Marina Varas Schnake
+¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.
 - **ES:** Mesa redonda 1
 - **ES:** Mesa redonda 2
 
 ### 13:30–14:30
 
-- **ES:** Almuerzo
+- **ES:** Almuerzo (60 min)
 
 ### 14:30–15:00
 
@@ -156,7 +156,7 @@ Duelo migratorio
 
 ### 16:30–17:00
 
-- **ES:** Pausa para café
+- **ES:** Pausa para café (30 min)
 
 ### 17:00–18:30
 
@@ -184,24 +184,31 @@ El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia
 
 ### 10:45–11:00
 
-- **ES:** Pausa para café
+- **ES:** Pausa para café (15 min)
 
 ### 11:00–13:00
 
-- **ES:** Viktor Berezin, Liubava Kobylinskaia-Vashchuk' data-ru='Виктор Березин, Любава Кобылинская-Ващук'>Viktor Berezin, Liubava Kobylinskaia-Vashchuk
+- **ES:** Viktor Berezin, Liubava Kobylinskaia-Vashchuk
+Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este' data-ru='Виктор Березин, Любава Кобылинская-Ващук
+Преподавание и развитие гештальт-терапии: диалог Латинской Америки и Восточной Европы'>Viktor Berezin, Liubava Kobylinskaia-Vashchuk
+Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este
 - **ES:** Mesa redonda 3
 - **ES:** Mesa redonda 4
 
 ### 13:00–14:00
 
-- **ES:** Almuerzo
+- **ES:** Almuerzo (60 min)
 
-### 13:30–15:00
+### 14:00–14:30
 
-- **ES:** Marina Varas Schnake
-¿Qué puede aportar la enfermedad al proceso terapéutico?' data-ru='Марина Варас Шнаке
-Что может принести болезнь в терапевтический процесс?'>Marina Varas Schnake
-¿Qué puede aportar la enfermedad al proceso terapéutico?
+- **ES:** Presentación de los talleres (6 actividades)
+
+### 14:30–16:00
+
+- **ES:** Antonio Martínez Ribes
+¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.' data-ru='Антонио Мартинес Рибес
+Что делает психотерапию Gestalt эффективной? Феноменология и понимающая диагностика как основа клинической практики.'>Antonio Martínez Ribes
+¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.
 - **ES:** Anaclara Falco
 Herramientas para el acompañamiento terapéutico de mujeres' data-ru='Анаклара Фалько
 Инструменты для терапевтического сопровождения женщин'>Anaclara Falco
@@ -211,22 +218,18 @@ El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no e
 Язык эмоций и язык тела. Когда эмоции не находят слов: как культура формирует путь от эмоций к симптомам'>Tatiana Ermoshina
 El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas
 
-### 14:00–14:30
+### 16:00–16:15
 
-- **ES:** Presentación de los talleres
+- **ES:** Pausa para café (15 min)
 
-### 15:00–15:30
-
-- **ES:** Pausa para café
-
-### 15:30–17:00
+### 16:15–17:45
 
 - **ES:** Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira
 Del barro a la luz' data-ru='Соня Солари, Летиция Коста, Габриэла Ачур, Хулиета Басса и Мариана Ногейра
 От глины к свету'>Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira
 Del barro a la luz
 - **ES:** Carlos María Gatti
-Exploración vivencial del sí mismo. Diálogo con órganos' data-ru='Кarlos María Gatti
+Exploración vivencial del sí mismo. Diálogo con órganos' data-ru='Карлос Мария Гатти
 Экзистенциальное исследование себя. Диалог с органами'>Carlos María Gatti
 Exploración vivencial del sí mismo. Diálogo con órganos
 - **ES:** Melisa Vazquez
@@ -234,11 +237,11 @@ Adicciones y Gestalt: consumos problemáticos y adicciones conductuales' data-ru
 Зависимости и гештальт: проблемное употребление и поведенческие аддикции'>Melisa Vazquez
 Adicciones y Gestalt: consumos problemáticos y adicciones conductuales
 
-### 17:00–17:15
+### 17:45–18:00
 
-- **ES:** Pausa para café
+- **ES:** Pausa para café (15 min)
 
-### 17:15–18:00
+### 18:00–18:30
 
 - **ES:** Cierre de la conferencia: impresiones, agradecimientos y despedida
 
