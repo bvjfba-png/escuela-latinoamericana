@@ -1312,6 +1312,98 @@
         }
 
 
+
+        .schedule-clickable {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.2em;
+            text-decoration-color: rgba(14, 122, 118, 0.35);
+            transition: color 0.2s ease, text-decoration-color 0.2s ease;
+        }
+
+        .schedule-speaker.schedule-clickable:hover,
+        .schedule-speaker.schedule-clickable:focus-visible {
+            color: #0a5c59;
+            text-decoration-color: rgba(14, 122, 118, 0.8);
+            outline: none;
+        }
+
+        .schedule-title.schedule-clickable:hover,
+        .schedule-title.schedule-clickable:focus-visible {
+            color: var(--color-secondary);
+            text-decoration-color: rgba(44, 95, 93, 0.7);
+            outline: none;
+        }
+
+        .schedule-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem;
+        }
+
+        .schedule-modal[hidden] {
+            display: none;
+        }
+
+        .schedule-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(20, 35, 34, 0.55);
+        }
+
+        .schedule-modal-dialog {
+            position: relative;
+            z-index: 1;
+            width: min(640px, 100%);
+            max-height: min(80vh, 720px);
+            overflow: auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+            padding: 1.75rem 1.5rem 1.5rem;
+        }
+
+        .schedule-modal-close {
+            position: absolute;
+            top: 0.65rem;
+            right: 0.75rem;
+            border: none;
+            background: transparent;
+            font-size: 1.75rem;
+            line-height: 1;
+            color: var(--color-muted);
+            cursor: pointer;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .schedule-modal-close:hover {
+            color: var(--color-text);
+        }
+
+        .schedule-modal-title {
+            margin: 0 2rem 1rem 0;
+            font-size: 1.25rem;
+            line-height: 1.35;
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+
+        .schedule-modal-body {
+            color: var(--color-text);
+            line-height: 1.65;
+            font-size: 0.975rem;
+            white-space: pre-wrap;
+        }
+
+        body.schedule-modal-open {
+            overflow: hidden;
+        }
+
         .schedule-speaker {
             font-weight: 700;
             color: #0E7A76;
@@ -1489,7 +1581,7 @@
                             </tr>
                             <tr>
                                 <td class="schedule-time">10:15–11:00</td>
-                                <td class="schedule-plenary" colspan="3" data-es='<strong class="schedule-speaker">Kirill Khlomov</strong><br><span class="schedule-title">Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje de oportunidades</span>' data-ru='<strong class="schedule-speaker">Кирилл Хломов</strong><br><span class="schedule-title">Психотерапевтические отношения — возможности терапевта как ландшафт аффордансов</span>'><strong class="schedule-speaker">Kirill Khlomov</strong><br><span class="schedule-title">Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje de oportunidades</span></td>
+                                <td class="schedule-plenary" colspan="3" data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="kirill-khlomov" data-detail-type="bio">Kirill Khlomov</strong><br><span class="schedule-title">Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje de oportunidades</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="kirill-khlomov" data-detail-type="bio">Кирилл Хломов</strong><br><span class="schedule-title">Психотерапевтические отношения — возможности терапевта как ландшафт аффордансов</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="kirill-khlomov" data-detail-type="bio">Kirill Khlomov</strong><br><span class="schedule-title">Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje de oportunidades</span></td>
                             </tr>
                             <tr>
                                 <td class="schedule-time">11:00–11:15</td>
@@ -1501,7 +1593,7 @@
                             </tr>
                             <tr>
                                 <td class="schedule-time">11:30–13:30</td>
-                                <td data-es='<strong class="schedule-speaker">Marina Varas Schnake</strong><br><span class="schedule-title">¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.</span>' data-ru='<strong class="schedule-speaker">Марина Варас Шнаке</strong><br><span class="schedule-title">Что может принести болезнь в терапевтический процесс? Диалог с больным органом как путь личностной интеграции.</span>'><strong class="schedule-speaker">Marina Varas Schnake</strong><br><span class="schedule-title">¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.</span></td>
+                                <td data-es='<strong class="schedule-speaker">Marina Varas Schnake</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.</span>' data-ru='<strong class="schedule-speaker">Марина Варас Шнаке</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">Что может принести болезнь в терапевтический процесс? Диалог с больным органом как путь личностной интеграции.</span>'><strong class="schedule-speaker">Marina Varas Schnake</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.</span></td>
                                 <td data-es='<strong class="schedule-speaker">Alejandro Corchs</strong><br><span class="schedule-title">El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.</span>' data-ru='<strong class="schedule-speaker">Алехандро Корчс</strong><br><span class="schedule-title">Путь прощения. Глубокое понимание, чтобы терапевт мог понимать и сопровождать состояние сознания своего пациента.</span>'><strong class="schedule-speaker">Alejandro Corchs</strong><br><span class="schedule-title">El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.</span></td>
                                 <td></td>
                             </tr>
@@ -1515,9 +1607,9 @@
                             </tr>
                             <tr>
                                 <td class="schedule-time">15:00–16:30</td>
-                                <td data-es='<strong class="schedule-speaker">Ana Rabino</strong><br><span class="schedule-title">Gestión de la ira</span>' data-ru='<strong class="schedule-speaker">Ана Рабино</strong><br><span class="schedule-title">Управление гневом</span>'><strong class="schedule-speaker">Ana Rabino</strong><br><span class="schedule-title">Gestión de la ira</span></td>
-                                <td data-es='<strong class="schedule-speaker">Nora Guinsburg</strong><br><span class="schedule-title">Sobre la importancia del trabajo profundo en sí mismo. Diálogo con órganos.</span>' data-ru='<strong class="schedule-speaker">Нора Гинсбург</strong><br><span class="schedule-title">О важности глубокой работы с самим собой. Диалог с органами.</span>'><strong class="schedule-speaker">Nora Guinsburg</strong><br><span class="schedule-title">Sobre la importancia del trabajo profundo en sí mismo. Diálogo con órganos.</span></td>
-                                <td data-es='<strong class="schedule-speaker">Maria Silvia Dameno</strong><br><span class="schedule-title">Duelo migratorio. Reseñando más de 25 años de experiencia e investigación en la aplicación de la terapia gestáltica y el trabajo a distancia, con personas que han migrado</span>' data-ru='<strong class="schedule-speaker">Мария Сильвия Дамено</strong><br><span class="schedule-title">Миграционное горевание. Обзор более чем 25 лет опыта и исследований в применении гештальт-терапии и дистанционной работы с людьми, пережившими миграцию</span>'><strong class="schedule-speaker">Maria Silvia Dameno</strong><br><span class="schedule-title">Duelo migratorio. Reseñando más de 25 años de experiencia e investigación en la aplicación de la terapia gestáltica y el trabajo a distancia, con personas que han migrado</span></td>
+                                <td data-es='<strong class="schedule-speaker">Ana Rabino</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="ana-rabino" data-detail-type="event">Gestión de la ira</span>' data-ru='<strong class="schedule-speaker">Ана Рабино</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="ana-rabino" data-detail-type="event">Управление гневом</span>'><strong class="schedule-speaker">Ana Rabino</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="ana-rabino" data-detail-type="event">Gestión de la ira</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="nora-guinsburg" data-detail-type="bio">Nora Guinsburg</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="nora-guinsburg" data-detail-type="event">Sobre la importancia del trabajo profundo en sí mismo. Diálogo con órganos.</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="nora-guinsburg" data-detail-type="bio">Нора Гинсбург</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="nora-guinsburg" data-detail-type="event">О важности глубокой работы с самим собой. Диалог с органами.</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="nora-guinsburg" data-detail-type="bio">Nora Guinsburg</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="nora-guinsburg" data-detail-type="event">Sobre la importancia del trabajo profundo en sí mismo. Diálogo con órganos.</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="maria-silvia-dameno" data-detail-type="bio">Maria Silvia Dameno</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="maria-silvia-dameno" data-detail-type="event">Duelo migratorio. Reseñando más de 25 años de experiencia e investigación en la aplicación de la terapia gestáltica y el trabajo a distancia, con personas que han migrado</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="maria-silvia-dameno" data-detail-type="bio">Мария Сильвия Дамено</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="maria-silvia-dameno" data-detail-type="event">Миграционное горевание. Обзор более чем 25 лет опыта и исследований в применении гештальт-терапии и дистанционной работы с людьми, пережившими миграцию</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="maria-silvia-dameno" data-detail-type="bio">Maria Silvia Dameno</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="maria-silvia-dameno" data-detail-type="event">Duelo migratorio. Reseñando más de 25 años de experiencia e investigación en la aplicación de la terapia gestáltica y el trabajo a distancia, con personas que han migrado</span></td>
                             </tr>
                             <tr>
                                 <td class="schedule-time">16:30–17:00</td>
@@ -1525,8 +1617,8 @@
                             </tr>
                             <tr>
                                 <td class="schedule-time">17:00–18:30</td>
-                                <td data-es='<strong class="schedule-speaker">María Allende y Fernando Bianchi</strong><br><span class="schedule-title">El posicionamiento del terapeuta desde el enfoque EcoGestalt</span>' data-ru='<strong class="schedule-speaker">Мария Альенде и Фернандо Бьянки</strong><br><span class="schedule-title">Позиционирование терапевта с точки зрения подхода EcoGestalt</span>'><strong class="schedule-speaker">María Allende y Fernando Bianchi</strong><br><span class="schedule-title">El posicionamiento del terapeuta desde el enfoque EcoGestalt</span></td>
-                                <td data-es='<strong class="schedule-speaker">Hugo B. Partucci</strong><br><span class="schedule-title">Pensar de forma integral ciencias sociales y gestáltica para el diseño de políticas públicas para la gestión de riesgo agroclimático.</span>' data-ru='<strong class="schedule-speaker">Hugo B. Partucci</strong><br><span class="schedule-title">Интегральное мышление: социальные науки и гештальт для разработки публичной политики в управлении агроклиматическими рисками.</span>'><strong class="schedule-speaker">Hugo B. Partucci</strong><br><span class="schedule-title">Pensar de forma integral ciencias sociales y gestáltica para el diseño de políticas públicas para la gestión de riesgo agroclimático.</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="maria-allende" data-detail-type="bio">María Allende y Fernando Bianchi</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="maria-allende" data-detail-type="event">El posicionamiento del terapeuta desde el enfoque EcoGestalt</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="maria-allende" data-detail-type="bio">Мария Альенде и Фернандо Бьянки</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="maria-allende" data-detail-type="event">Позиционирование терапевта с точки зрения подхода EcoGestalt</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="maria-allende" data-detail-type="bio">María Allende y Fernando Bianchi</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="maria-allende" data-detail-type="event">El posicionamiento del terapeuta desde el enfoque EcoGestalt</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="hugo-partucci" data-detail-type="bio">Hugo B. Partucci</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="hugo-partucci" data-detail-type="event">Pensar de forma integral ciencias sociales y gestáltica para el diseño de políticas públicas para la gestión de riesgo agroclimático.</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="hugo-partucci" data-detail-type="bio">Hugo B. Partucci</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="hugo-partucci" data-detail-type="event">Интегральное мышление: социальные науки и гештальт для разработки публичной политики в управлении агроклиматическими рисками.</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="hugo-partucci" data-detail-type="bio">Hugo B. Partucci</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="hugo-partucci" data-detail-type="event">Pensar de forma integral ciencias sociales y gestáltica para el diseño de políticas públicas para la gestión de riesgo agroclimático.</span></td>
                                 <td data-es='<strong class="schedule-speaker">Daria Fadeeva</strong><br><span class="schedule-title">La crisis como espacio de «no saber»: una indagación desde la terapia Gestalt sobre el espacio entre quien fui y quien aún no he llegado a ser.</span>' data-ru='<strong class="schedule-speaker">Дарья Фадеева</strong><br><span class="schedule-title">Кризис как пространство «незнания»: исследование в гештальт-терапии пространства между тем, кем я был(а), и тем, кем ещё не стал(а).</span>'><strong class="schedule-speaker">Daria Fadeeva</strong><br><span class="schedule-title">La crisis como espacio de «no saber»: una indagación desde la terapia Gestalt sobre el espacio entre quien fui y quien aún no he llegado a ser.</span></td>
                             </tr>
                         </tbody>
@@ -1548,7 +1640,7 @@
                         <tbody>
                             <tr>
                                 <td class="schedule-time">10:00–10:45</td>
-                                <td class="schedule-plenary" colspan="3" data-es='<strong class="schedule-speaker">Hermann Schreck</strong><br><span class="schedule-title">El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia</span>' data-ru='<strong class="schedule-speaker">Hermann Schreck</strong><br><span class="schedule-title">Язык присутствия: уроки латиноамериканского гештальтиста в России</span>'><strong class="schedule-speaker">Hermann Schreck</strong><br><span class="schedule-title">El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia</span></td>
+                                <td class="schedule-plenary" colspan="3" data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="hermann-schreck" data-detail-type="bio">Hermann Schreck</strong><br><span class="schedule-title">El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="hermann-schreck" data-detail-type="bio">Hermann Schreck</strong><br><span class="schedule-title">Язык присутствия: уроки латиноамериканского гештальтиста в России</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="hermann-schreck" data-detail-type="bio">Hermann Schreck</strong><br><span class="schedule-title">El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia</span></td>
                             </tr>
                             <tr>
                                 <td class="schedule-time">10:45–11:00</td>
@@ -1557,7 +1649,7 @@
                             <tr>
                                 <td class="schedule-time">11:00–13:00</td>
                                 <td data-es='<strong class="schedule-speaker">Viktor Berezin, Liubava Kobylinskaia-Vashchuk</strong><br><span class="schedule-title">Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este</span>' data-ru='<strong class="schedule-speaker">Виктор Березин, Любава Кобылинская-Ващук</strong><br><span class="schedule-title">Преподавание и развитие гештальт-терапии: диалог Латинской Америки и Восточной Европы</span>'><strong class="schedule-speaker">Viktor Berezin, Liubava Kobylinskaia-Vashchuk</strong><br><span class="schedule-title">Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este</span></td>
-                                <td data-es='<strong class="schedule-speaker">Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira</strong><br><span class="schedule-title">Del barro a la luz</span>' data-ru='<strong class="schedule-speaker">Соня Солари, Летиция Коста, Габриэла Ачур, Хулиета Басса и Мариана Ногейра</strong><br><span class="schedule-title">От глины к свету</span>'><strong class="schedule-speaker">Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira</strong><br><span class="schedule-title">Del barro a la luz</span></td>
+                                <td data-es='<strong class="schedule-speaker">Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="sonia-solari" data-detail-type="event">Del barro a la luz</span>' data-ru='<strong class="schedule-speaker">Соня Солари, Летиция Коста, Габриэла Ачур, Хулиета Басса и Мариана Ногейра</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="sonia-solari" data-detail-type="event">От глины к свету</span>'><strong class="schedule-speaker">Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="sonia-solari" data-detail-type="event">Del barro a la luz</span></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -1570,9 +1662,9 @@
                             </tr>
                             <tr>
                                 <td class="schedule-time">14:30–16:00</td>
-                                <td data-es='<strong class="schedule-speaker">Antonio Martínez Ribes</strong><br><span class="schedule-title">¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.</span>' data-ru='<strong class="schedule-speaker">Антонио Мартинес Рибес</strong><br><span class="schedule-title">Что делает психотерапию Gestalt эффективной? Феноменология и понимающая диагностика как основа клинической практики.</span>'><strong class="schedule-speaker">Antonio Martínez Ribes</strong><br><span class="schedule-title">¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.</span></td>
-                                <td data-es='<strong class="schedule-speaker">Anaclara Falco</strong><br><span class="schedule-title">Herramientas para el acompañamiento terapéutico de mujeres</span>' data-ru='<strong class="schedule-speaker">Анаклара Фалько</strong><br><span class="schedule-title">Инструменты для терапевтического сопровождения женщин</span>'><strong class="schedule-speaker">Anaclara Falco</strong><br><span class="schedule-title">Herramientas para el acompañamiento terapéutico de mujeres</span></td>
-                                <td data-es='<strong class="schedule-speaker">Tatiana Ermoshina</strong><br><span class="schedule-title">El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas</span>' data-ru='<strong class="schedule-speaker">Татьяна Ермошина</strong><br><span class="schedule-title">Язык эмоций и язык тела. Когда эмоции не находят слов: как культура формирует путь от эмоций к симптомам</span>'><strong class="schedule-speaker">Tatiana Ermoshina</strong><br><span class="schedule-title">El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas</span></td>
+                                <td data-es='<strong class="schedule-speaker">Antonio Martínez Ribes</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.</span>' data-ru='<strong class="schedule-speaker">Антонио Мартинес Рибес</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">Что делает психотерапию Gestalt эффективной? Феноменология и понимающая диагностика как основа клинической практики.</span>'><strong class="schedule-speaker">Antonio Martínez Ribes</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="bio">Anaclara Falco</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="event">Herramientas para el acompañamiento terapéutico de mujeres</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="bio">Анаклара Фалько</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="event">Инструменты для терапевтического сопровождения женщин</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="bio">Anaclara Falco</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="event">Herramientas para el acompañamiento terapéutico de mujeres</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="bio">Tatiana Ermoshina</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="event">El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="bio">Татьяна Ермошина</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="event">Язык эмоций и язык тела. Когда эмоции не находят слов: как культура формирует путь от эмоций к симптомам</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="bio">Tatiana Ermoshina</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="event">El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas</span></td>
                             </tr>
                             <tr>
                                 <td class="schedule-time">16:00–16:15</td>
@@ -1581,8 +1673,8 @@
                             <tr>
                                 <td class="schedule-time">16:15–17:45</td>
                                 <td data-es='<strong class="schedule-speaker">Andrei Sirota</strong><br><span class="schedule-title">Por confirmar</span>' data-ru='<strong class="schedule-speaker">Андрей Сирота</strong><br><span class="schedule-title">Уточняется</span>'><strong class="schedule-speaker">Andrei Sirota</strong><br><span class="schedule-title">Por confirmar</span></td>
-                                <td data-es='<strong class="schedule-speaker">Carlos María Gatti</strong><br><span class="schedule-title">Exploración vivencial del sí mismo. Diálogo con órganos</span>' data-ru='<strong class="schedule-speaker">Карлос Мария Гатти</strong><br><span class="schedule-title">Экзистенциальное исследование себя. Диалог с органами</span>'><strong class="schedule-speaker">Carlos María Gatti</strong><br><span class="schedule-title">Exploración vivencial del sí mismo. Diálogo con órganos</span></td>
-                                <td data-es='<strong class="schedule-speaker">Melisa Vazquez</strong><br><span class="schedule-title">Adicciones y Gestalt: consumos problemáticos y adicciones conductuales</span>' data-ru='<strong class="schedule-speaker">Мелиса Васкес</strong><br><span class="schedule-title">Зависимости и гештальт: проблемное употребление и поведенческие аддикции</span>'><strong class="schedule-speaker">Melisa Vazquez</strong><br><span class="schedule-title">Adicciones y Gestalt: consumos problemáticos y adicciones conductuales</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="carlos-gatti" data-detail-type="bio">Carlos María Gatti</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="carlos-gatti" data-detail-type="event">Exploración vivencial del sí mismo. Diálogo con órganos</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="carlos-gatti" data-detail-type="bio">Карлос Мария Гатти</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="carlos-gatti" data-detail-type="event">Экзистенциальное исследование себя. Диалог с органами</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="carlos-gatti" data-detail-type="bio">Carlos María Gatti</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="carlos-gatti" data-detail-type="event">Exploración vivencial del sí mismo. Diálogo con órganos</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="melisa-vazquez" data-detail-type="bio">Melisa Vazquez</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="melisa-vazquez" data-detail-type="event">Adicciones y Gestalt: consumos problemáticos y adicciones conductuales</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="melisa-vazquez" data-detail-type="bio">Мелиса Васкес</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="melisa-vazquez" data-detail-type="event">Зависимости и гештальт: проблемное употребление и поведенческие аддикции</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="melisa-vazquez" data-detail-type="bio">Melisa Vazquez</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="melisa-vazquez" data-detail-type="event">Adicciones y Gestalt: consumos problemáticos y adicciones conductuales</span></td>
                             </tr>
                             <tr>
                                 <td class="schedule-time">17:45–18:00</td>
@@ -1885,6 +1977,16 @@
         </div>
     </section>
 
+
+    <div id="schedule-modal" class="schedule-modal" hidden aria-hidden="true">
+        <div class="schedule-modal-backdrop" data-close-modal></div>
+        <div class="schedule-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="schedule-modal-title">
+            <button type="button" class="schedule-modal-close" data-close-modal aria-label="Cerrar">&times;</button>
+            <h3 id="schedule-modal-title" class="schedule-modal-title"></h3>
+            <div id="schedule-modal-body" class="schedule-modal-body"></div>
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-logo footer-logo-brand">
@@ -1899,6 +2001,7 @@
         </div>
     </footer>
 
+    <script src="assets/schedule-details.js"></script>
     <script>
         const STORAGE_KEY = 'conference_registered';
 
@@ -1948,6 +2051,7 @@
             setActiveTier();
             updatePriceCardButtons();
             if (typeof updateSpeakerInfoLabels === 'function') updateSpeakerInfoLabels();
+            if (typeof window.refreshScheduleModal === 'function') window.refreshScheduleModal();
         }
 
         function setActiveTier() {
@@ -2068,6 +2172,90 @@
                 requestAnimationFrame(() => scrollToAnchor(target, false));
             }
         }
+
+        (function initScheduleModal() {
+            const modal = document.getElementById('schedule-modal');
+            const titleEl = document.getElementById('schedule-modal-title');
+            const bodyEl = document.getElementById('schedule-modal-body');
+            if (!modal || !window.SCHEDULE_DETAILS) return;
+
+            let lastFocus = null;
+            let openDetail = null;
+
+            function currentLang() {
+                return document.documentElement.lang === 'ru' ? 'ru' : 'es';
+            }
+
+            function getText(obj, lang) {
+                if (!obj) return '';
+                return (obj[lang] || obj.es || obj.ru || '').trim();
+            }
+
+            function openModal(detailId, type) {
+                const entry = window.SCHEDULE_DETAILS[detailId];
+                if (!entry) return;
+                const lang = currentLang();
+                let title = '';
+                let body = '';
+                if (type === 'bio') {
+                    body = getText(entry.bio, lang);
+                    if (!body) return;
+                    title = getText(entry.name, lang);
+                } else {
+                    body = getText(entry.eventDesc, lang);
+                    if (!body) return;
+                    title = getText(entry.eventTitle, lang) || getText(entry.name, lang);
+                }
+                openDetail = { detailId, type };
+                lastFocus = document.activeElement;
+                titleEl.textContent = title;
+                bodyEl.textContent = body;
+                modal.hidden = false;
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('schedule-modal-open');
+                const closeBtn = modal.querySelector('.schedule-modal-close');
+                if (closeBtn) closeBtn.focus();
+            }
+
+            function closeModal() {
+                modal.hidden = true;
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('schedule-modal-open');
+                openDetail = null;
+                if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+            }
+
+            function refreshOpenModal() {
+                if (!openDetail || modal.hidden) return;
+                openModal(openDetail.detailId, openDetail.type);
+            }
+
+            document.getElementById('programa-contenido')?.addEventListener('click', (e) => {
+                const target = e.target.closest('.schedule-clickable');
+                if (!target) return;
+                e.preventDefault();
+                openModal(target.getAttribute('data-detail'), target.getAttribute('data-detail-type'));
+            });
+
+            document.getElementById('programa-contenido')?.addEventListener('keydown', (e) => {
+                if (e.key !== 'Enter' && e.key !== ' ') return;
+                const target = e.target.closest('.schedule-clickable');
+                if (!target) return;
+                e.preventDefault();
+                openModal(target.getAttribute('data-detail'), target.getAttribute('data-detail-type'));
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target.closest('[data-close-modal]')) closeModal();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.hidden) closeModal();
+            });
+
+            window.refreshScheduleModal = refreshOpenModal;
+        })();
+
     </script>
 </body>
 </html>
