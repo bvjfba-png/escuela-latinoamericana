@@ -113,8 +113,8 @@ window.SCHEDULE_DETAILS = {
       "ru": "Антонио Мартинес Рибес"
     },
     "bio": {
-      "es": "",
-      "ru": ""
+      "es": "Antonio Martínez Ribes es psicólogo y psicoterapeuta Gestalt. Codirector del Centro de Psicoterapia Gestalt de Santiago (Chile) y cofundador del Institut Gestalt de Barcelona. Cuenta con más de treinta años de experiencia en la formación de psicoterapeutas en Latinoamérica y Europa. En los últimos años ha impartido programas de formación para profesionales de habla rusa, contribuyendo al intercambio y desarrollo de la psicoterapia Gestalt entre Latinoamérica y Rusia.\n\nHa desarrollado una propuesta clínica que integra la fenomenología y el diagnóstico comprensivo para comprender con mayor profundidad el proceso que vive cada persona. Desde esa comprensión, orienta el proceso terapéutico y el uso de las intervenciones clínicas hacia aquellos aspectos que resultan centrales para favorecer cambios significativos en la experiencia de la persona.",
+      "ru": "Антонио Мартинес Рибес — психолог и гештальт-психотерапевт. Содиректор Центра гештальт-психотерапии в Сантьяго (Чили) и сооснователь Institut Gestalt de Barcelona. Имеет более тридцати лет опыта в подготовке психотерапевтов в Латинской Америке и Европе. В последние годы проводит обучающие программы для русскоязычных специалистов, способствуя обмену и развитию гештальт-психотерапии между Латинской Америкой и Россией.\n\nРазработал клинический подход, интегрирующий феноменологию и комплексную диагностику для более глубокого понимания процесса, который проживает каждый человек. Исходя из этого понимания, он выстраивает терапевтический процесс и применение клинических интервенций, направляя их на те аспекты, которые являются ключевыми для достижения значимых изменений в опыте человека."
     },
     "eventTitle": {
       "es": "¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.",
@@ -131,8 +131,8 @@ window.SCHEDULE_DETAILS = {
       "ru": "Марина Варас Шнаке"
     },
     "bio": {
-      "es": "",
-      "ru": ""
+      "es": "Marina Varas Schnake es psicóloga y psicoterapeuta Gestalt. Codirectora del Centro de Psicoterapia Gestalt de Santiago (Chile). Hija de Adriana Schnake, ha continuado, desarrollado y difundido internacionalmente el enfoque Gestalt de las enfermedades, formando terapeutas en Latinoamérica, Europa y en programas dirigidos a profesionales de habla rusa. Su trabajo ha contribuido a ampliar este enfoque hacia nuevos ámbitos de aplicación clínica y de formación de psicoterapeutas.\n\nEs docente internacional especializada en psicoterapia Gestalt con niños, adolescentes y adultos. Es autora de los libros Terapia Gestalt en Grupo y Terapia Gestalt con Niños y Adolescentes, y coautora de Gestalt y Autismo: Una guía a dos voces.",
+      "ru": "Марина Варас Шнаке — психолог и гештальт-психотерапевт. Содиректор Центра гештальт-психотерапии в Сантьяго (Чили). Дочь Адрианы Шнаке, она продолжила, развила и распространила в международном масштабе гештальт-подход к работе с болезнями, обучая терапевтов в Латинской Америке, Европе и в программах для русскоязычных специалистов. Её работа способствовала расширению этого подхода на новые области клинического применения и подготовки психотерапевтов.\n\nМеждународный преподаватель, специализирующийся на гештальт-терапии с детьми, подростками и взрослыми. Автор книг «Гештальт-терапия в группе» и «Гештальт-терапия с детьми и подростками», а также соавтор книги «Гештальт и аутизм: руководство в двух голосах»."
     },
     "eventTitle": {
       "es": "¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.",
@@ -249,6 +249,42 @@ window.SCHEDULE_DETAILS = {
     "eventDesc": {
       "es": "¿Qué sucede con una persona cuando migra? Más allá del cambio de país, la migración pone en movimiento la identidad, los vínculos, las pérdidas y la manera de estar en el mundo. Hace más de 25 años acompaño a personas migrantes, y esa experiencia fue dando forma a muchas de las preguntas que compartiremos en esta charla.\n\nHace más de 25 años acompaño a personas migrantes. En ese recorrido fui descubriendo que el duelo migratorio tiene características muy particulares: es un duelo parcial, múltiple y recurrente. No solo implica dejar un lugar; también transforma, muchas veces de manera silenciosa, la identidad de quien lo atraviesa. Es una experiencia profunda, compleja y, con frecuencia, difícil de comprender para quienes no la han vivido.\n\nExiste abundante bibliografía sobre relatos y experiencias individuales de migración, así como sobre sus dimensiones sociales, políticas y culturales. Sin embargo, son mucho menos frecuentes los trabajos que describen el proceso migratorio como una experiencia psicológica a lo largo de sus distintas etapas, y no he encontrado desarrollos sistemáticos desde el Enfoque Gestáltico.\n\nEsta falta de marcos específicos hace que, en ocasiones, quienes acompañan a personas migrantes deban apoyarse principalmente en su experiencia clínica y en su intuición. Como consecuencia, algunas reacciones esperables dentro del proceso migratorio pueden interpretarse como indicadores de psicopatología cuando, en realidad, forman parte de un proceso de adaptación complejo. Comprender estas diferencias permite acompañar con mayor sensibilidad, reducir el riesgo de intervenciones iatrogénicas y ofrecer un sostén más ajustado a las necesidades de cada etapa.\n\nLa propuesta de este encuentro es compartir un mapa que ayude a comprender el proceso migratorio desde una perspectiva gestáltica, reconociendo sus distintas fases, sus desafíos y también sus posibilidades de crecimiento. Está dirigida tanto a profesionales de la salud mental como a quienes acompañan migrantes desde otros lugares. Juntos exploraremos herramientas para una comprensión más profunda del proceso y abordaremos fenómenos tan poco intuitivos como el doble desarraigo que muchas personas experimentan al regresar a su país de origen: una vivencia tan frecuente como invisibilizada, que suele sorprender incluso a quienes la atraviesan.",
       "ru": "Что происходит с человеком при миграции? Помимо смены страны, миграция приводит в движение идентичность, связи, утраты и способ быть в мире. Более 25 лет я сопровождаю мигрантов, и этот опыт сформировал многие вопросы, которыми мы поделимся на этой встрече.\n\nБолее 25 лет я сопровождаю мигрантов. В этом пути я обнаруживала, что миграционное горевание имеет очень особенные черты: это частичное, множественное и повторяющееся горевание. Оно не только означает оставить место; оно также — часто тихо — преобразует идентичность того, кто через него проходит. Это глубокий, сложный опыт, который часто трудно понять тем, кто его не переживал.\n\nСуществует много литературы об индивидуальных историях миграции, а также о её социальных, политических и культурных измерениях. Гораздо реже встречаются работы, которые описывают миграционный процесс как психологический опыт на разных этапах, и я не нашла систематических разработок с позиции гештальт-подхода.\n\nИз-за отсутствия специфических рамок те, кто сопровождает мигрантов, иногда опираются в основном на клинический опыт и интуицию. В результате ожидаемые реакции внутри миграционного процесса могут ошибочно трактоваться как признаки психопатологии, тогда как на деле они часть сложной адаптации. Понимание этих различий позволяет сопровождать более чутко, снижать риск ятрогенных интервенций и давать поддержку, лучше согласованную с потребностями каждого этапа.\n\nПредложение этой встречи — поделиться картой, которая помогает понимать миграционный процесс с гештальт-перспективы, признавая его фазы, вызовы и возможности роста. Она адресована и специалистам психического здоровья, и тем, кто сопровождает мигрантов из других позиций. Вместе мы исследуем инструменты более глубокого понимания процесса и обратимся к таким неочевидным феноменам, как двойное отчуждение, которое многие переживают при возвращении в страну происхождения: опыт столь же частый, сколь и невидимый, часто удивляющий даже тех, кто через него проходит."
+    }
+  },
+  "alejandro-corchs": {
+    "name": {
+      "es": "Alejandro Corchs",
+      "ru": "Алехандро Корчс"
+    },
+    "bio": {
+      "es": "Alejandro Corchs Lerena es hijo de Elena Lerena y Alberto Corchs, uruguayos desaparecidos en Argentina durante la dictadura militar en diciembre de 1977, cuando él tenía veintiún meses. Por ciertos y milagrosos avatares de la vida, fue criado por sus abuelos.\n🌿 Es Hombre Medicina, Custodio de la Sabiduría de los Pueblos Originarios de América.\n🌌 Es terapeuta en Tanatología, disciplina que reconoce la muerte como un evento natural en la vida.\n🧑‍🤝‍🧑 Es terapeuta de grupo, de pareja, y de familia, formado en el Centro Gestáltico de Montevideo.\n🏡 Gestó en familia el nacimiento de varias comunidades, y vive junto a su esposa y sus dos hijos, en una hermosa reserva de flora y fauna autóctonas, integradas por familias de diferentes filosofías, que acordaron reunirse para construir un espacio que honre y respete la vida y la diversidad.\n🔥 Es cofundador de Purificación, centro de crecimiento psicoespiritual y formación de tanatólogos.\n📚 Ha recibido varios reconocimientos por sus libros y por su labor humanitaria.",
+      "ru": "Алехандро Корчс Лерена — сын Елены Лерены и Альберто Корчса, уругвайцев, исчезнувших в Аргентине в период военной диктатуры в декабре 1977 года, когда ему был двадцать один месяц. По счастливому стечению обстоятельств он был воспитан своими бабушкой и дедушкой.\n🌿 Medicine Man, хранитель мудрости коренных народов Америки.\n🌌 Терапевт в области танатологии — дисциплины, признающей смерть естественным событием в жизни человека.\n🧑‍🤝‍🧑 Групповой, семейный терапевт и терапевт пар, прошедший подготовку в Гештальт-центре Монтевидео.\n🏡 Вместе с семьёй стоял у истоков нескольких сообществ. Живёт с женой и двумя детьми в прекрасном заповеднике местной флоры и фауны — месте, объединившем семьи разных философских взглядов, которые решили создать пространство, чтящее жизнь и разнообразие.\n🔥 Сооснователь центра психодуховного роста и подготовки танатологов «Purificación».\n📚 Удостоен нескольких наград за книги и гуманитарную деятельность."
+    },
+    "eventTitle": {
+      "es": "El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.",
+      "ru": "Путь прощения. Глубокое понимание, чтобы терапевт мог понимать и сопровождать состояние сознания своего пациента."
+    },
+    "eventDesc": {
+      "es": "",
+      "ru": ""
+    }
+  },
+  "viktor-liubava": {
+    "name": {
+      "es": "Viktor Berezin, Liubava Kobylinskaia-Vashchuk",
+      "ru": "Виктор Березин, Любава Кобылинская-Ващук"
+    },
+    "bio": {
+      "es": "Viktor Berezin\nTerapeuta Gestáltico, supervisor y coordinador de grupos\nEspecialidad: la dimensión existencial de la terapia gestáltica\nFundador del proyecto Gestalt Global\n\nLiubava Kobylinskaia-Vashchuk\nPsicóloga, especialista en crisis, trauma y terapia familiar\nTerapeuta gestáltica, supervisora y entrenadora asociada\nEspecialidad: psicología familiar y psicoterapia de grupo\nTerapeuta gestáltica y supervisora acreditada por la EAGT",
+      "ru": "Виктор Березин\nГештальт-терапевт, супервизор, ведущий групп\nСпециализация: экзистенциальное измерение гештальт-терапии\nОснователь проекта Gestalt Global\n\nЛюбава Кобылинская-Ващук\nПсихолог, специализации по кризисам, травмам и семейной терапии\nГештальт-терапевт, супервизор, ассоциированный тренер\nСпециализация: семейная психология и групповая психотерапия\nАккредитованный гештальт-терапевт и супервизор EAGT"
+    },
+    "eventTitle": {
+      "es": "Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este",
+      "ru": "Преподавание и развитие гештальт-терапии: диалог Латинской Америки и Восточной Европы"
+    },
+    "eventDesc": {
+      "es": "",
+      "ru": ""
     }
   }
 };

@@ -766,12 +766,29 @@
             text-wrap: pretty;
         }
 
-        #expositores .speakers-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            max-width: 840px;
+        #expositores .speakers-carousel {
+            position: relative;
+            max-width: 900px;
             margin: 4rem auto 0;
+            padding: 0 3rem;
+        }
+
+        #expositores .speakers-carousel-viewport {
+            overflow: hidden;
+            border-radius: 24px;
+        }
+
+        #expositores .speakers-carousel-track {
+            display: flex;
+            transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+        }
+
+        #expositores .speakers-carousel-track .speaker-card {
+            flex: 0 0 100%;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
         }
 
         #expositores .speaker-card {
@@ -785,12 +802,12 @@
             border-radius: 24px;
             border: 1px solid rgba(212, 165, 116, 0.2);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease;
         }
 
         #expositores .speaker-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            transform: none;
+            box-shadow: 0 16px 44px rgba(0, 0, 0, 0.08);
         }
 
         #expositores .speaker-avatar {
@@ -826,7 +843,71 @@
             font-style: italic;
         }
 
+        #expositores .speakers-carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            border: 1px solid rgba(44, 95, 93, 0.2);
+            background: #fff;
+            color: var(--color-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            line-height: 1;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        #expositores .speakers-carousel-btn:hover {
+            background: var(--color-secondary);
+            color: #fff;
+            border-color: var(--color-secondary);
+        }
+
+        #expositores .speakers-carousel-btn:disabled {
+            opacity: 0.35;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        #expositores .speakers-carousel-btn.prev { left: 0; }
+        #expositores .speakers-carousel-btn.next { right: 0; }
+
+        #expositores .speakers-carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        #expositores .speakers-carousel-dot {
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            border: none;
+            padding: 0;
+            background: rgba(44, 95, 93, 0.25);
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        #expositores .speakers-carousel-dot.active {
+            background: var(--color-secondary);
+            transform: scale(1.2);
+        }
+
         @media (max-width: 600px) {
+            #expositores .speakers-carousel {
+                padding: 0 2.5rem;
+            }
+
             #expositores .speaker-card {
                 flex-direction: column;
                 align-items: center;
@@ -1593,8 +1674,8 @@
                             </tr>
                             <tr>
                                 <td class="schedule-time">11:30–13:30</td>
-                                <td data-es='<strong class="schedule-speaker">Marina Varas Schnake</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.</span>' data-ru='<strong class="schedule-speaker">Марина Варас Шнаке</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">Что может принести болезнь в терапевтический процесс? Диалог с больным органом как путь личностной интеграции.</span>'><strong class="schedule-speaker">Marina Varas Schnake</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.</span></td>
-                                <td data-es='<strong class="schedule-speaker">Alejandro Corchs</strong><br><span class="schedule-title">El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.</span>' data-ru='<strong class="schedule-speaker">Алехандро Корчс</strong><br><span class="schedule-title">Путь прощения. Глубокое понимание, чтобы терапевт мог понимать и сопровождать состояние сознания своего пациента.</span>'><strong class="schedule-speaker">Alejandro Corchs</strong><br><span class="schedule-title">El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="bio">Marina Varas Schnake</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="bio">Марина Варас Шнаке</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">Что может принести болезнь в терапевтический процесс? Диалог с больным органом как путь личностной интеграции.</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="bio">Marina Varas Schnake</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="marina-varas" data-detail-type="event">¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="alejandro-corchs" data-detail-type="bio">Alejandro Corchs</strong><br><span class="schedule-title">El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="alejandro-corchs" data-detail-type="bio">Алехандро Корчс</strong><br><span class="schedule-title">Путь прощения. Глубокое понимание, чтобы терапевт мог понимать и сопровождать состояние сознания своего пациента.</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="alejandro-corchs" data-detail-type="bio">Alejandro Corchs</strong><br><span class="schedule-title">El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.</span></td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -1648,7 +1729,7 @@
                             </tr>
                             <tr>
                                 <td class="schedule-time">11:00–13:00</td>
-                                <td data-es='<strong class="schedule-speaker">Viktor Berezin, Liubava Kobylinskaia-Vashchuk</strong><br><span class="schedule-title">Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este</span>' data-ru='<strong class="schedule-speaker">Виктор Березин, Любава Кобылинская-Ващук</strong><br><span class="schedule-title">Преподавание и развитие гештальт-терапии: диалог Латинской Америки и Восточной Европы</span>'><strong class="schedule-speaker">Viktor Berezin, Liubava Kobylinskaia-Vashchuk</strong><br><span class="schedule-title">Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="viktor-liubava" data-detail-type="bio">Viktor Berezin, Liubava Kobylinskaia-Vashchuk</strong><br><span class="schedule-title">Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="viktor-liubava" data-detail-type="bio">Виктор Березин, Любава Кобылинская-Ващук</strong><br><span class="schedule-title">Преподавание и развитие гештальт-терапии: диалог Латинской Америки и Восточной Европы</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="viktor-liubava" data-detail-type="bio">Viktor Berezin, Liubava Kobylinskaia-Vashchuk</strong><br><span class="schedule-title">Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este</span></td>
                                 <td data-es='<strong class="schedule-speaker">Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="sonia-solari" data-detail-type="event">Del barro a la luz</span>' data-ru='<strong class="schedule-speaker">Соня Солари, Летиция Коста, Габриэла Ачур, Хулиета Басса и Мариана Ногейра</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="sonia-solari" data-detail-type="event">От глины к свету</span>'><strong class="schedule-speaker">Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="sonia-solari" data-detail-type="event">Del barro a la luz</span></td>
                                 <td></td>
                             </tr>
@@ -1662,7 +1743,7 @@
                             </tr>
                             <tr>
                                 <td class="schedule-time">14:30–16:00</td>
-                                <td data-es='<strong class="schedule-speaker">Antonio Martínez Ribes</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.</span>' data-ru='<strong class="schedule-speaker">Антонио Мартинес Рибес</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">Что делает психотерапию Gestalt эффективной? Феноменология и понимающая диагностика как основа клинической практики.</span>'><strong class="schedule-speaker">Antonio Martínez Ribes</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.</span></td>
+                                <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="bio">Antonio Martínez Ribes</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="bio">Антонио Мартинес Рибес</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">Что делает психотерапию Gestalt эффективной? Феноменология и понимающая диагностика как основа клинической практики.</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="bio">Antonio Martínez Ribes</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="antonio-martinez" data-detail-type="event">¿Qué hace efectiva la psicoterapia Gestalt? Fenomenología y diagnóstico comprensivo como fundamento de la práctica clínica.</span></td>
                                 <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="bio">Anaclara Falco</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="event">Herramientas para el acompañamiento terapéutico de mujeres</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="bio">Анаклара Фалько</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="event">Инструменты для терапевтического сопровождения женщин</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="bio">Anaclara Falco</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="anaclara-falco" data-detail-type="event">Herramientas para el acompañamiento terapéutico de mujeres</span></td>
                                 <td data-es='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="bio">Tatiana Ermoshina</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="event">El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas</span>' data-ru='<strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="bio">Татьяна Ермошина</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="event">Язык эмоций и язык тела. Когда эмоции не находят слов: как культура формирует путь от эмоций к симптомам</span>'><strong class="schedule-speaker schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="bio">Tatiana Ermoshina</strong><br><span class="schedule-title schedule-clickable" role="button" tabindex="0" data-detail="tatiana-ermoshina" data-detail-type="event">El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no encuentran palabras: cómo la cultura configura el camino de las emociones a los síntomas</span></td>
                             </tr>
@@ -1747,7 +1828,10 @@
             </p>
         </div>
 
-        <div id="expositores-contenido" class="speakers-grid">
+        <div class="speakers-carousel" id="expositores-carousel">
+            <button type="button" class="speakers-carousel-btn prev" aria-label="Anterior" data-es-label="Anterior" data-ru-label="Назад">‹</button>
+            <div class="speakers-carousel-viewport">
+                <div id="expositores-contenido" class="speakers-carousel-track">
             <div class="speaker-card fade-in">
                 <div class="speaker-avatar">
                     <img src="assets/hermann-schreck.png" alt="Hermann Schreck">
@@ -1812,6 +1896,10 @@
                     </p>
                 </div>
             </div>
+            </div>
+            </div>
+            <button type="button" class="speakers-carousel-btn next" aria-label="Siguiente" data-es-label="Siguiente" data-ru-label="Вперёд">›</button>
+            <div class="speakers-carousel-dots" id="expositores-dots" role="tablist" aria-label="Expositores"></div>
         </div>
     </section>
 
@@ -2052,6 +2140,7 @@
             updatePriceCardButtons();
             if (typeof updateSpeakerInfoLabels === 'function') updateSpeakerInfoLabels();
             if (typeof window.refreshScheduleModal === 'function') window.refreshScheduleModal();
+            if (typeof window.updateExpositoresCarouselLabels === 'function') window.updateExpositoresCarouselLabels();
         }
 
         function setActiveTier() {
@@ -2254,6 +2343,68 @@
             });
 
             window.refreshScheduleModal = refreshOpenModal;
+        })();
+
+
+        (function initExpositoresCarousel() {
+            const root = document.getElementById('expositores-carousel');
+            const track = document.getElementById('expositores-contenido');
+            const dotsWrap = document.getElementById('expositores-dots');
+            if (!root || !track || !dotsWrap) return;
+
+            const cards = [...track.querySelectorAll('.speaker-card')];
+            if (!cards.length) return;
+
+            const prevBtn = root.querySelector('.speakers-carousel-btn.prev');
+            const nextBtn = root.querySelector('.speakers-carousel-btn.next');
+            let index = 0;
+
+            cards.forEach((_, i) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'speakers-carousel-dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', String(i + 1));
+                dot.addEventListener('click', () => goTo(i));
+                dotsWrap.appendChild(dot);
+            });
+
+            function updateLabels() {
+                const lang = document.documentElement.lang === 'ru' ? 'ru' : 'es';
+                [prevBtn, nextBtn].forEach(btn => {
+                    if (!btn) return;
+                    const label = btn.getAttribute('data-' + lang + '-label');
+                    if (label) btn.setAttribute('aria-label', label);
+                });
+            }
+
+            function goTo(i) {
+                index = Math.max(0, Math.min(cards.length - 1, i));
+                track.style.transform = 'translateX(-' + (index * 100) + '%)';
+                dotsWrap.querySelectorAll('.speakers-carousel-dot').forEach((dot, di) => {
+                    dot.classList.toggle('active', di === index);
+                });
+                if (prevBtn) prevBtn.disabled = index === 0;
+                if (nextBtn) nextBtn.disabled = index === cards.length - 1;
+            }
+
+            prevBtn && prevBtn.addEventListener('click', () => goTo(index - 1));
+            nextBtn && nextBtn.addEventListener('click', () => goTo(index + 1));
+
+            let touchX = null;
+            track.addEventListener('touchstart', (e) => {
+                touchX = e.changedTouches[0].screenX;
+            }, { passive: true });
+            track.addEventListener('touchend', (e) => {
+                if (touchX == null) return;
+                const dx = e.changedTouches[0].screenX - touchX;
+                touchX = null;
+                if (Math.abs(dx) < 40) return;
+                goTo(index + (dx < 0 ? 1 : -1));
+            }, { passive: true });
+
+            window.updateExpositoresCarouselLabels = updateLabels;
+            updateLabels();
+            goTo(0);
         })();
 
     </script>
