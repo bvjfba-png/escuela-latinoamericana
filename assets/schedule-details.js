@@ -283,8 +283,8 @@ window.SCHEDULE_DETAILS = {
       "ru": "Преподавание и развитие гештальт-терапии: диалог Латинской Америки и Восточной Европы"
     },
     "eventDesc": {
-      "es": "",
-      "ru": ""
+      "es": "¿Qué significa realmente formarse como terapeuta Gestalt? ¿Y significa lo mismo en diferentes partes del mundo?\n\nEsta mesa redonda reunirá a terapeutas y formadores de distintos países de América Latina y Europa del Este para poner en diálogo diferentes maneras de entender la formación gestáltica.\n\n¿Cómo se llega a ser terapeuta Gestalt? ¿Qué lugar ocupan la teoría, la práctica, la terapia personal y la supervisión? ¿Quién decide cuándo una persona está preparada para ejercer? Hablaremos de requisitos, horas de formación, certificación y acreditación, pero también de algo más profundo: ¿qué idea de terapeuta hay detrás de cada modelo de formación?\n\nUn encuentro para descubrir qué compartimos, en qué nos diferenciamos y qué podemos aprender unos de otros.",
+      "ru": "Что на самом деле значит обучаться как гештальт-терапевт? И значит ли это одно и то же в разных частях мира?\n\nЭтот круглый стол соберёт терапевтов и преподавателей из разных стран Латинской Америки и Восточной Европы, чтобы сопоставить разные способы понимать гештальт-обучение.\n\nКак становятся гештальт-терапевтом? Какое место занимают теория, практика, личная терапия и супервизия? Кто решает, когда человек готов к практике? Мы поговорим о требованиях, часах обучения, сертификации и аккредитации — и о чём-то более глубоком: какая идея терапевта стоит за каждой моделью подготовки?\n\nВстреча, чтобы увидеть, что у нас общего, в чём мы различаемся и чему можем научиться друг у друга."
     }
   }
 };
