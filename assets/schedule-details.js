@@ -207,7 +207,7 @@ window.SCHEDULE_DETAILS = {
       "ru": "Антрополог-исследователь (Университет Буэнос-Айреса), преподаватель, аудиовизуальный режиссёр, музыкант; подготовка по гештальт-терапии (Casa Gestáltica de la Salud, Аргентина)."
     },
     "eventTitle": {
-      "es": "Pensar de forma integral ciencias sociales y gestáltica para el diseño de políticas públicas para la gestión de riesgo agroclimático.",
+      "es": "Hacia un enfoque holístico de aplicaciones múltiples: integrando Antropología, Realización Audiovisual y Gestalt para re-imaginar terapias grupales, estrategias educativas escolares y gestiones de riesgos agroclimáticos.",
       "ru": "Интегральное мышление: социальные науки и гештальт для разработки публичной политики в управлении агроклиматическими рисками."
     },
     "eventDesc": {
