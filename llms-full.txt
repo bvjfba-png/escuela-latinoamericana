@@ -7,7 +7,7 @@
 > Contact: gestalt.escuela.latinoamerica@gmail.com
 > Registration & payment: https://gestalt-latam.com/pago.html
 
-Last generated: 2026-08-07
+Last generated: 2026-09-02
 
 ---
 
@@ -116,7 +116,7 @@ Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje 
 
 ### 11:00–11:15
 
-- **ES:** Presentación de talleres / mesas redondas (3 actividades)
+- **ES:** Presentación de talleres / mesas redondas (2 actividades)
 
 ### 11:15–11:30
 
@@ -128,8 +128,10 @@ Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje 
 ¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.' data-ru='Марина Варас Шнаке
 Что может принести болезнь в терапевтический процесс? Диалог с больным органом как путь личностной интеграции.'>Marina Varas Schnake
 ¿Qué puede aportar la enfermedad al proceso terapéutico? El diálogo con el órgano enfermo como camino de integración personal.
-- **ES:** Mesa redonda 1
-- **ES:** Mesa redonda 2
+- **ES:** Alejandro Corchs
+El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.' data-ru='Алехандро Корчс
+Путь прощения. Глубокое понимание, чтобы терапевт мог понимать и сопровождать состояние сознания своего пациента.'>Alejandro Corchs
+El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.
 
 ### 13:30–14:30
 
@@ -141,18 +143,18 @@ Las relaciones psicoterapéuticas: las posibilidades del terapeuta como paisaje 
 
 ### 15:00–16:30
 
-- **ES:** Alejandro Corchs
-El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.' data-ru='Алехандро Корчс
-Путь прощения. Глубокое понимание, чтобы терапевт мог понимать и сопровождать состояние сознания своего пациента.'>Alejandro Corchs
-El camino del perdón. Una comprensión profunda para que el terapeuta comprenda y acompañe de buena manera, al estado de conciencia de su paciente.
+- **ES:** Ana Rabino
+Gestión de la ira' data-ru='Ана Рабино
+Управление гневом'>Ana Rabino
+Gestión de la ira
 - **ES:** Nora Guinsburg
 Sobre la importancia del trabajo profundo en sí mismo. Diálogo con órganos.' data-ru='Нора Гинсбург
 О важности глубокой работы с самим собой. Диалог с органами.'>Nora Guinsburg
 Sobre la importancia del trabajo profundo en sí mismo. Diálogo con órganos.
 - **ES:** Maria Silvia Dameno
-Duelo migratorio' data-ru='Мария Сильвия Дамeno
-Миграционное горевание'>Maria Silvia Dameno
-Duelo migratorio
+Duelo migratorio. Reseñando más de 25 años de experiencia e investigación en la aplicación de la terapia gestáltica y el trabajo a distancia, con personas que han migrado' data-ru='Мария Сильвия Дамено
+Миграционное горевание. Обзор более чем 25 лет опыта и исследований в применении гештальт-терапии и дистанционной работы с людьми, пережившими миграцию'>Maria Silvia Dameno
+Duelo migratorio. Reseñando más de 25 años de experiencia e investigación en la aplicación de la terapia gestáltica y el trabajo a distancia, con personas que han migrado
 
 ### 16:30–17:00
 
@@ -161,17 +163,17 @@ Duelo migratorio
 ### 17:00–18:30
 
 - **ES:** María Allende y Fernando Bianchi
-El posicionamiento del terapeuta desde el enfoque EcoGestalt' data-ru='Мария Альенде и Fernando Bianchi
+El posicionamiento del terapeuta desde el enfoque EcoGestalt' data-ru='Мария Альенде и Фернандо Бьянки
 Позиционирование терапевта с точки зрения подхода EcoGestalt'>María Allende y Fernando Bianchi
 El posicionamiento del terapeuta desde el enfoque EcoGestalt
 - **ES:** Hugo B. Partucci
-Hacia un enfoque holístico de aplicaciones múltiples: integrando Antropología, Realización Audiovisual y Gestalt para re-imaginar terapias grupales…' data-ru='Hugo B. Partucci
-Интегральное мышление: социальные науки и Gestalt для публичной политики…'>Hugo B. Partucci
-Hacia un enfoque holístico de aplicaciones múltiples: integrando Antropología, Realización Audiovisual y Gestalt para re-imaginar terapias grupales…
-- **ES:** Svetlana Ovchinnik
-Una conexión que surge antes de las palabras.' data-ru='Светлана Овчинник
-Связь, которая возникает раньше слов.'>Svetlana Ovchinnik
-Una conexión que surge antes de las palabras.
+Hacia un enfoque holístico de aplicaciones múltiples: integrando Antropología, Realización Audiovisual y Gestalt para re-imaginar terapias grupales, estrategias educativas escolares y gestiones de riesgos agroclimáticos.' data-ru='Hugo B. Partucci
+Интегральное мышление: социальные науки и гештальт для разработки публичной политики в управлении агроклиматическими рисками.'>Hugo B. Partucci
+Hacia un enfoque holístico de aplicaciones múltiples: integrando Antropología, Realización Audiovisual y Gestalt para re-imaginar terapias grupales, estrategias educativas escolares y gestiones de riesgos agroclimáticos.
+- **ES:** Daria Fadeeva
+La crisis como espacio de «no saber»: una indagación desde la terapia Gestalt sobre el espacio entre quien fui y quien aún no he llegado a ser.' data-ru='Дарья Фадеева
+Кризис как пространство «незнания»: исследование в гештальт-терапии пространства между тем, кем я был(а), и тем, кем ещё не стал(а).'>Daria Fadeeva
+La crisis como espacio de «no saber»: una indagación desde la terapia Gestalt sobre el espacio entre quien fui y quien aún no he llegado a ser.
 
 ## Schedule — Day 2 (October 3)
 
@@ -184,7 +186,7 @@ El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia
 
 ### 10:45–11:00
 
-- **ES:** Pausa para café (15 min)
+- **ES:** Presentación de mesa redonda y taller práctico (2 actividades) · Pausa para café
 
 ### 11:00–13:00
 
@@ -192,8 +194,10 @@ El lenguaje de la presencia: aprendizajes de un gestáltico latino en Rusia
 Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este' data-ru='Виктор Березин, Любава Кобылинская-Ващук
 Преподавание и развитие гештальт-терапии: диалог Латинской Америки и Восточной Европы'>Viktor Berezin, Liubava Kobylinskaia-Vashchuk
 Enseñanza y desarrollo de la terapia gestáltica: un diálogo entre América Latina y Europa del Este
-- **ES:** Mesa redonda 3
-- **ES:** Mesa redonda 4
+- **ES:** Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira
+Del barro a la luz' data-ru='Соня Солари, Летиция Коста, Габриэла Ачур, Хулиета Басса и Мариана Ногейра
+От глины к свету'>Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira
+Del barro a la luz
 
 ### 13:00–14:00
 
@@ -224,10 +228,10 @@ El lenguaje de las emociones y el lenguaje del cuerpo. Cuando las emociones no e
 
 ### 16:15–17:45
 
-- **ES:** Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira
-Del barro a la luz' data-ru='Соня Солари, Летиция Коста, Габриэла Ачур, Хулиета Басса и Мариана Ногейра
-От глины к свету'>Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira
-Del barro a la luz
+- **ES:** Andrei Sirota
+Cosas obvias sobre la interrupción del contacto' data-ru='Андрей Сирота
+Очевидные вещи о прерывании контакта'>Andrei Sirota
+Cosas obvias sobre la interrupción del contacto
 - **ES:** Carlos María Gatti
 Exploración vivencial del sí mismo. Diálogo con órganos' data-ru='Карлос Мария Гатти
 Экзистенциальное исследование себя. Диалог с органами'>Carlos María Gatti
@@ -276,6 +280,58 @@ Adicciones y Gestalt: consumos problemáticos y adicciones conductuales
 ### Kirill Khlomov
 
 ### Alejandro Corchs
+
+### Sonia Solari
+
+### Gabriela Achur
+
+### Leticia Costa
+
+### Julieta Basa
+
+### Mariana Nogueira
+
+### Nicolas Pinter
+
+### Hugo B. Partucci
+
+### Bio
+
+**ES:** Investigador antropólogo (Universidad de Buenos Aires), docente, realizador audiovisual y músico, con formación en terapia gestáltica (Casa Gestáltica de la Salud, Argentina).
+
+**RU:** Исследователь-антрополог (Universidad de Buenos Aires), преподаватель, автор аудиовизуальных работ и музыкант, с образованием в области гештальт-терапии (Casa Gestáltica de la Salud, Аргентина).
+
+### Maria Silvia Dameno
+
+### Maria Allende
+
+### Fernando Bianchi
+
+### Daria Fadeeva
+
+### Bio
+
+**ES:** Magíster en Psicología, psicoterapeuta Gestalt. Especialización en el trabajo con crisis y traumas desde el enfoque gestáltico.
+
+**RU:** Магистр психологии, гештальт-психотерапевт. Специализация в работе с кризисами и травмами с гештальт-подхода.
+
+### Anaclara Falco
+
+### Tatiana Ermóshina
+
+### Bio
+
+**ES:** Terapeuta Gestalt certificado y acreditado (MGI). Especializado en la normalización de la conducta alimentaria.
+
+**RU:** Сертифицированный и аккредитованный гештальт-терапевт (MGI). Специализация в нормализации пищевого поведения.
+
+### Nora Guinsburg
+
+### Carlos María Gatti
+
+### Melisa Vazquez
+
+### Ana Cecilia Rabino
 
 ## Venue — Crystal Tower Hotel
 

@@ -269,6 +269,24 @@ window.SCHEDULE_DETAILS = {
       "ru": ""
     }
   },
+  "andrei-sirota": {
+    "name": {
+      "es": "Andrei Sirota",
+      "ru": "Андрей Сирота"
+    },
+    "bio": {
+      "es": "",
+      "ru": ""
+    },
+    "eventTitle": {
+      "es": "Cosas obvias sobre la interrupción del contacto",
+      "ru": "Очевидные вещи о прерывании контакта"
+    },
+    "eventDesc": {
+      "es": "A veces, para no perder al otro, hay que perderse un poco a uno mismo.\n\nContener la bronca, renunciar a los deseos, ser un poquito más cómodo o más interesante. A veces esto pasa en las relaciones cercanas, a veces en terapia, en grupo o en una cultura nueva.\n\nEn el encuentro vamos a hablar de cómo evitar el encuentro puede ser una manera de sostener el vínculo, de organizar el contacto con el otro de la forma más confiable y segura posible.\n\nVa a haber algo de teoría, experiencia personal y una sesión terapéutica pública con un voluntario. Vamos a mirar lo que pase ahí a través de dos lentes distintas: cómo la persona interrumpe el movimiento hacia su necesidad — y cómo, a través de eso, sostiene el vínculo con el otro.",
+      "ru": "Иногда, чтобы не потерять другого, приходится немного потерять себя.\n\nСдержать злость, отказаться от желаний, быть каплю удобнее или интереснее. Иногда это происходит в близких отношениях, иногда в терапии, группе или новой культуре.\n\nНа мероприятии поговорим о том, как избегание встречи может являться способом поддержать связь, организовать контакт с другим наиболее надежным и безопасным образом.\n\nБудет немного теории, личного опыта и публичная терапевтическая сессия с добровольцем. На происходящее в ней мы посмотрим через две разные линзы: как человек прерывает движение к своей потребности — и как этим сохраняет отношения с другим."
+    }
+  },
   "viktor-liubava": {
     "name": {
       "es": "Viktor Berezin, Liubava Kobylinskaia-Vashchuk",
