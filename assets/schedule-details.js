@@ -55,12 +55,12 @@ window.SCHEDULE_DETAILS = {
   },
   "sonia-solari": {
     "name": {
-      "es": "Sonia Solari, Leticia Costa, Gabriela Achur, Julieta Bassa y Mariana Nogueira",
-      "ru": "Соня Солари, Летиция Коста, Габриэла Ачур, Хулиета Басса и Мариана Ногейра"
+      "es": "Sonia Solari",
+      "ru": "Соня Солари"
     },
     "bio": {
-      "es": "",
-      "ru": ""
+      "es": "Psicóloga gestáltica, formada en Rosario y Buenos Aires, con más de 30 años de experiencia en esta profesión transformadora. Su pasión por la Gestalt la ha llevado a transmitir este enfoque a través de la formación y a ser una de las gestoras de la formación gestáltica.\n\nEn Gestalt Paraná, Sonia descubrió la construcción natural y co-creó el Centro de Barro, expandiendo el enfoque gestáltico a través de lo vivencial y el aprendizaje con la naturaleza como maestra. Además, forma parte de SomosTierraMonte, una asociación sin fines de lucro y reserva natural.\n\nSonia también es terapeuta corporal, lo que le permite una profunda comprensión y lectura de los cuerpos, tanto el suyo como el de los demás.",
+      "ru": "Гештальт-психолог, получившая образование в Росарио и Буэнос-Айресе, с более чем 30-летним опытом в этой трансформирующей профессии. Её страсть к гештальту привела её к передаче этого подхода через обучение и к роли одной из организаторов гештальт-образования.\n\nВ Gestalt Paraná Соня открыла для себя природное строительство и со-основала Centro de Barro, расширяя гештальт-подход через переживание и обучение с природой как учителем. Кроме того, она является частью SomosTierraMonte — некоммерческой ассоциации и природного заповедника.\n\nСоня также телесный терапевт, что даёт ей глубокое понимание и чтение тел — как своего, так и других."
     },
     "eventTitle": {
       "es": "Del barro a la luz",
@@ -69,6 +69,114 @@ window.SCHEDULE_DETAILS = {
     "eventDesc": {
       "es": "Llevar la Gestalt a la cotidianidad. Una filosofía de vida, plasmada en una forma de vida. Valorar el ecosistema del cual somos parte. Una forma de existir orgánica. En conexión e interconexión con todos los seres, la naturaleza y la vida toda.\n\nDel barro a la luz: una mirada gestáltica de la construcción natural. La Gestalt nos invita a comprender al ser humano como un organismo en permanente relación con su ambiente. No existimos separados del mundo que habitamos: nos configuramos en un campo donde persona, comunidad y naturaleza se influyen mutuamente.",
       "ru": "Принести гештальт в повседневность. Философия жизни, воплощённая в образе жизни. Ценить экосистему, частью которой мы являемся. Органичный способ существования. В связи и взаимосвязи со всеми существами, природой и жизнью в целом.\n\nОт глины к свету: гештальт-взгляд на естественное строительство. Гештальт приглашает понимать человека как организм в постоянном отношении со средой. Мы не существуем отдельно от мира, в котором живём: мы формируемся в поле, где человек, сообщество и природа взаимно влияют друг на друга."
+    }
+  },
+  "leticia-costa": {
+    "name": {
+      "es": "Leticia Costa",
+      "ru": "Летиция Коста"
+    },
+    "bio": {
+      "es": "Dra. Leticia Costa, psicóloga gestáltica. MP 271 U.N.R.\nFormación en el Enfoque AGBA.\nDoctorado U.N.E.R.\nDocente e investigadora U.A.D.E.R.\nInvestigadora colaboradora en I.R.I.C.E. CONICET.\nEscritora de libros y artículos científicos sobre diálogo, cuidados, comunidades y desarrollo de equipos y organizaciones.\n\nFue docente en la formación en Gestalt del Centro Gestáltico, donde acompañó a generaciones de profesionales en su camino de aprendizaje y práctica.\nSupervisora y consultora, promotora del enfoque gestáltico en el ámbito académico y universitario. Creadora de Espacio Sacra, parte del ecobarrio Gestalt Paraná, un lugar que integra naturaleza, bioconstrucción y comunidad como inspiración para habitar el cuidado y la transformación. Su práctica se nutre de la sensibilidad poética y la búsqueda de armonía, acompañando procesos de sanación y crecimiento personal.",
+      "ru": "Д-р Летиция Коста, гештальт-психолог. MP 271 U.N.R.\nОбучение в подходе AGBA.\nДокторская степень U.N.E.R.\nПреподаватель и исследователь U.A.D.E.R.\nСотрудник-исследователь I.R.I.C.E. CONICET.\nАвтор книг и научных статей о диалоге, заботе, сообществах и развитии команд и организаций.\n\nПреподавала в программе гештальт-образования Centro Gestáltico, сопровождая поколения профессионалов на их пути обучения и практики.\nСупервизор и консультант, пропагандист гештальт-подхода в академической и университетской сфере. Создательница Espacio Sacra — части экобарrio Gestalt Paraná, места, где природа, биостройка и сообщество вдохновляют на заботу и трансформацию. Её практика питается поэтической чувствительностью и поиском гармонии, сопровождая процессы исцеления и личностного роста."
+    },
+    "eventTitle": {
+      "es": "",
+      "ru": ""
+    },
+    "eventDesc": {
+      "es": "",
+      "ru": ""
+    }
+  },
+  "gabriela-achur": {
+    "name": {
+      "es": "Gabriela Achur",
+      "ru": "Габриэла Ачур"
+    },
+    "bio": {
+      "es": "Lic. en Psicología USAL 1992. MAT. PROF 0247.\nEGRESADA AGBA 2000.\nConsteladora (Centro Latinoamericano de Constelaciones Familiares, 2005).\nCo-creadora de Gestalt Paraná (1998) y de la Formación Gestalt Paraná (2008). Activa hasta la actualidad: 15 promociones de graduados.\nCo-creadora del Centro de Barro. 15 años de bioconstrucción activa.\n\nSoy bio constructora desde mis 40 años... ¡Esto me cambió la vida para siempre!\nHoy llevamos 8 construcciones creadas con nuestras manos y, por supuesto, las de muchos más, ya que creamos comunitariamente.\n\nDesde 1993 camino con compromiso y amor el sendero de la psicoterapia. En este viaje, fui sumando herramientas, vivencias y aprendizajes que hoy nutren mi servicio en Gestalt Paraná.",
+      "ru": "Лицензированный психолог USAL, 1992. MAT. PROF 0247.\nВыпускница AGBA, 2000.\nКонстеллятор (Латиноамериканский центр семейных расстановок, 2005).\nСо-основательница Gestalt Paraná (1998) и программы обучения Gestalt Paraná (2008). Активна по сей день: 15 выпускных групп.\nСо-основательница Centro de Barro. 15 лет активной биостройки.\n\nЯ занимаюсь биостройкой с 40 лет... Это навсегда изменило мою жизнь!\nСегодня мы создали 8 построек своими руками — и, конечно, руками многих других, потому что мы строим сообща.\n\nС 1993 года я иду по пути психотерапии с преданностью и любовью. В этом путешествии я накапливала инструменты, переживания и знания, которые сегодня питают мою работу в Gestalt Paraná."
+    },
+    "eventTitle": {
+      "es": "",
+      "ru": ""
+    },
+    "eventDesc": {
+      "es": "",
+      "ru": ""
+    }
+  },
+  "julieta-basa": {
+    "name": {
+      "es": "Julieta Bassa",
+      "ru": "Хулиета Басса"
+    },
+    "bio": {
+      "es": "Egresada de la Universidad Católica Argentina, sede Paraná. MP 1257.\nFormada en Gestalt Paraná como facilitadora gestáltica (2010).\nLicenciada en Psicología y consteladora familiar. Terapeuta gestáltica.\n\nA lo largo de estos años he trabajado tanto en espacios terapéuticos clínicos como en instituciones de niñez y familia, entre otras.\nHace 18 años que formo parte de Gestalt Paraná. En este lugar hacemos una Gestalt viva, en profunda conexión con la naturaleza y sus estaciones.\nNuestro Centro es de barro, construido desde la permacultura, con nuestras manos y las de muchos otros que son parte de esta trama de vida.\n\nEn mi recorrido he coordinado talleres para niños y adolescentes. He brindado espacios terapéuticos grupales para adultos y he sostenido el espacio de escucha individual al cabo de todos estos años.\nEn la actualidad brindo espacio de terapia individual, sesiones individuales y talleres grupales de constelaciones.",
+      "ru": "Выпускница Universidad Católica Argentina, филиал Paraná. MP 1257.\nОбучение в Gestalt Paraná как гештальт-фасилитатор (2010).\nЛицензированный психолог и семейный констеллятор. Гештальт-терапевт.\n\nНа протяжении этих лет я работала как в клинических терапевтических пространствах, так и в учреждениях для детей и семей, среди прочего.\n18 лет я являюсь частью Gestalt Paraná. Здесь мы практикуем живой гештальт в глубокой связи с природой и её сезонами.\nНаш центр построен из глины, с применением пермакультуры, нашими руками и руками многих других, кто является частью этой ткани жизни.\n\nНа своём пути я координировала мастер-классы для детей и подростков. Проводила групповые терапевтические пространства для взрослых и на протяжении всех этих лет сопровождала индивидуальное пространство слушания.\nВ настоящее время я предлагаю индивидуальную терапию, индивидуальные сессии и групповые мастер-классы по расстановкам."
+    },
+    "eventTitle": {
+      "es": "",
+      "ru": ""
+    },
+    "eventDesc": {
+      "es": "",
+      "ru": ""
+    }
+  },
+  "mariana-nogueira": {
+    "name": {
+      "es": "Mariana Nogueira",
+      "ru": "Мариана Ногейра"
+    },
+    "bio": {
+      "es": "Egresada de la Universidad Católica Argentina, sede Paraná. MP 1238.\nFormada en Gestalt Paraná como facilitadora gestáltica (2010).\n\nSoy psicóloga gestáltica con amplia trayectoria. Trabajo en el Centro Gestáltico brindando apoyo terapéutico a niños, adolescentes, jóvenes y adultos. Además, brindo el espacio de Re-cre(A)rte, donde se utiliza el arte como herramienta para despertar la creatividad y promover el bienestar emocional.",
+      "ru": "Выпускница Universidad Católica Argentina, филиал Paraná. MP 1238.\nОбучение в Gestalt Paraná как гештальт-фасилитатор (2010).\n\nЯ гештальт-психолог с большим опытом. Работаю в Centro Gestáltico, оказывая терапевтическую поддержку детям, подросткам, молодым людям и взрослым. Кроме того, я веду пространство Re-cre(A)rte, где искусство используется как инструмент для пробуждения творчества и содействия эмоциональному благополучию."
+    },
+    "eventTitle": {
+      "es": "",
+      "ru": ""
+    },
+    "eventDesc": {
+      "es": "",
+      "ru": ""
+    }
+  },
+  "nicolas-pinter": {
+    "name": {
+      "es": "Nicolas Pinter",
+      "ru": "Николас Пинтер"
+    },
+    "bio": {
+      "es": "Inspirador gestáltico y constelador familiar.\nLicenciado en marketing y comercialización.\nEmpresario.\nDirector de empresa.\n\nEstoy en Gestalt Paraná para acompañarte en cada paso de tu proceso personal y ayudarte a liberar esos bloqueos emocionales que no te dejan vivir plenamente.",
+      "ru": "Гештальт-наставник и семейный констеллятор.\nЛицензированный специалист в области маркетинга и коммерции.\nПредприниматель.\nДиректор компании.\n\nЯ в Gestalt Paraná, чтобы сопровождать вас на каждом шаге вашего личного процесса и помогать освободиться от тех эмоциональных блоков, которые не дают жить полноценно."
+    },
+    "eventTitle": {
+      "es": "",
+      "ru": ""
+    },
+    "eventDesc": {
+      "es": "",
+      "ru": ""
+    }
+  },
+  "daria-fadeeva": {
+    "name": {
+      "es": "Daria Fadeeva",
+      "ru": "Дарья Фадеева"
+    },
+    "bio": {
+      "es": "Magíster en Psicología, psicoterapeuta Gestalt. Especialización en el trabajo con crisis y traumas desde el enfoque gestáltico.",
+      "ru": "Магистр психологии, гештальт-психотерапевт. Специализация в работе с кризисами и травмами с гештальт-подхода."
+    },
+    "eventTitle": {
+      "es": "La crisis como espacio de «no saber»: una indagación desde la terapia Gestalt sobre el espacio entre quien fui y quien aún no he llegado a ser.",
+      "ru": "Кризис как пространство «незнания»: исследование в гештальт-терапии пространства между тем, кем я был(а), и тем, кем ещё не стал(а)."
+    },
+    "eventDesc": {
+      "es": "El taller está dedicado a explorar la crisis de identidad: ese período en el que la imagen que tenemos de nosotros mismos, nuestras formas habituales de establecer contacto y de organizar la vida dejan de funcionar, mientras que una nueva identidad aún no se ha configurado.\n\n¿Qué nos sucede a nosotros y a nuestros pacientes cuando nos encontramos en este «corredor oscuro»: un espacio de confusión, miedo, vergüenza, incertidumbre y desconocimiento? Cuando ya no es posible volver a lo anterior, pero todavía no está claro hacia dónde avanzar.\n\nExploraremos este período a través de la teoría del Self, prestando atención a cómo sus funciones se manifiestan y se transforman en condiciones de incertidumbre.\n\nA través del trabajo experimental y fenomenológico, intentaremos acercarnos a la vivencia de la crisis y explorar qué puede sostener a una persona cuando el conocimiento habitual de sí misma, sus formas de contacto y sus apoyos dejan temporalmente de funcionar.",
+      "ru": "Мастер-класс посвящён исследованию кризиса идентичности — того периода, когда прежнее представление о себе, привычные способы контакта и организации жизни больше не работают, а новое ещё не сформировалось.\n\nЧто происходит с нами и нашими клиентами, когда мы оказываемся в этом «тёмном коридоре» — пространстве растерянности, страха, стыда, неопределённости и незнания? Когда уже невозможно вернуться к прежнему, но ещё непонятно, куда двигаться дальше?\n\nМы исследуем этот период через теорию Self. Обратимся к тому, как в условиях неопределенности проявляются и изменяются его функции. Через экспериментальную и феноменологическую работу мы попробуем приблизиться к переживанию кризиса и исследовать, что может поддерживать человека в период, когда привычное знание о себе, способы контакта и опоры перестают работать."
     }
   },
   "hermann-schreck": {
@@ -185,8 +293,8 @@ window.SCHEDULE_DETAILS = {
       "ru": "Ана Рабино"
     },
     "bio": {
-      "es": "",
-      "ru": ""
+      "es": "Lic. en Psicología (Universidad de la República Oriental del Uruguay, febrero 2003). Posgrado en Psicoterapia Gestáltica, con especializaciones en adultos, en niños y adolescentes, y en grupos. Posgrado en terapia gestáltica de parejas.\n\nDocente en la cátedra de Escuelas Psicológicas Contemporáneas de la Licenciatura en Musicoterapia del Instituto Universitario CEDIIAP desde 2016, y en la formación en Gestalt del centro gestáltico Somos Presencia desde 2008.\n\nCoordinadora en Constelaciones Familiares y Organizacionales desde 2006. Imparte cursos de Eneagrama desde 2007, cursos de Herramientas Psicológicas para trabajadores de la salud y de Gestión de la Ira. Coordinación de grupos y talleres terapéuticos grupales.\n\nCuidado de equipos técnicos de MIDES. Socia fundadora de la Asociación Gestáltica del Uruguay. Diplomado en Políticas Públicas en Salud Mental (2020).",
+      "ru": "Лицензированный психолог (Universidad de la República Oriental del Uruguay, февраль 2003). Послевузовское образование в области гештальт-психотерапии со специализациями для взрослых, детей и подростков, а также для групп. Послевузовское образование в области гештальт-терапии пар.\n\nПреподаватель кафедры современных психологических школ на программе лицензиатуры по музыкотерапии Instituto Universitario CEDIIAP с 2016 года и в программе гештальт-образования центра Somos Presencia с 2008 года.\n\nКоординатор семейных и организационных расстановок с 2006 года. Проводит курсы Eneagrama с 2007 года, курсы «Психологические инструменты для работников здравоохранения» и «Управление гневом». Координация групп и групповых терапевтических мастер-классов.\n\nЗабота о технических командах MIDES. Соучредительница Asociación Gestáltica del Uruguay. Диплом по государственной политике в области психического здоровья (2020)."
     },
     "eventTitle": {
       "es": "Gestión de la ira",
@@ -275,8 +383,8 @@ window.SCHEDULE_DETAILS = {
       "ru": "Андрей Сирота"
     },
     "bio": {
-      "es": "",
-      "ru": ""
+      "es": "Psicólogo, terapeuta de parejas, emigrante. Trabaja desde el enfoque gestáltico y la terapia de parejas centrada en las emociones.",
+      "ru": "Психолог, парный терапевт, эмигрант. Работает в гештальт-подходе и эмоционально-фокусированной терапии пар."
     },
     "eventTitle": {
       "es": "Cosas obvias sobre la interrupción del contacto",
