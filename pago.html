@@ -433,6 +433,159 @@
             transform: translateY(-2px);
         }
 
+        .promo-code-box {
+            background: white;
+            border-radius: 20px;
+            padding: 1.75rem 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .promo-code-box h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--color-secondary);
+        }
+
+        .promo-code-box > p {
+            color: var(--color-muted);
+            font-size: 0.9375rem;
+            line-height: 1.55;
+            max-width: 480px;
+            margin: 0 auto 1.25rem;
+        }
+
+        .promo-code-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: stretch;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .promo-code-form input {
+            flex: 1 1 200px;
+            min-width: 0;
+            padding: 0.85rem 1.1rem;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            text-align: center;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .promo-code-form input:focus {
+            border-color: var(--color-secondary);
+        }
+
+        .promo-code-form button {
+            flex: 0 0 auto;
+            padding: 0.85rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            background: var(--color-secondary);
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .promo-code-form button:hover {
+            background: var(--color-text);
+            transform: translateY(-1px);
+        }
+
+        .promo-code-message {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            min-height: 1.35em;
+        }
+
+        .promo-code-message.is-success {
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+
+        .promo-code-message.is-error {
+            color: #b42318;
+        }
+
+        .promo-code-box.is-applied {
+            border-color: rgba(44, 95, 93, 0.35);
+            background: linear-gradient(180deg, #f4faf9 0%, white 100%);
+        }
+
+        .promo-code-box.is-applied .promo-code-form {
+            display: none;
+        }
+
+        .promo-applied-row {
+            display: none;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0.25rem;
+        }
+
+        .promo-code-box.is-applied .promo-applied-row {
+            display: flex;
+        }
+
+        .promo-applied-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.55rem 1rem;
+            border-radius: 50px;
+            background: var(--color-secondary);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+        }
+
+        .promo-remove-btn {
+            padding: 0.55rem 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 50px;
+            background: transparent;
+            color: var(--color-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .promo-remove-btn:hover {
+            border-color: var(--color-text);
+            color: var(--color-text);
+        }
+
+        .price-amount .price-original {
+            text-decoration: line-through;
+            opacity: 0.45;
+            font-weight: 500;
+            margin-right: 0.35rem;
+        }
+
+        .price-amount.has-promo .price-value {
+            color: var(--color-secondary);
+        }
+
         .payment-methods {
             background: white;
             border-radius: 20px;
@@ -1045,7 +1198,7 @@
                    data-es-inactive="Disponible hasta el 15 de julio de 2026"
                    data-ru-inactive="Доступно до 15 июля 2026">Precio actual · hasta el 15 de julio de 2026</p>
                 <p class="price-label" data-es="Early Bird" data-ru="Предпродажа">Early Bird</p>
-                <p class="price-amount">$120 <span>USD</span></p>
+                <p class="price-amount" data-price="120"><span class="price-value">$120</span> <span>USD</span></p>
                 <p class="price-note" data-es="Tarifa más conveniente mientras confirmamos el programa." data-ru="Самая выгодная цена, пока мы формируем программу.">Tarifa más conveniente mientras confirmamos el programa.</p>
                 <a href="#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
@@ -1058,7 +1211,7 @@
                    data-es-inactive="Disponible del 16 de julio al 31 de agosto de 2026"
                    data-ru-inactive="Доступно с 16 июля по 31 августа 2026">Disponible del 16 de julio al 31 de agosto de 2026</p>
                 <p class="price-label" data-es="Es momento de sumarte" data-ru="Самое время присоединиться">Es momento de sumarte</p>
-                <p class="price-amount">$160 <span>USD</span></p>
+                <p class="price-amount" data-price="160"><span class="price-value">$160</span> <span>USD</span></p>
                 <p class="price-note" data-es="Precio intermedio antes del cierre de inscripciones." data-ru="Промежуточная цена до закрытия регистрации.">Precio intermedio antes del cierre de inscripciones.</p>
                 <a href="#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
@@ -1071,7 +1224,7 @@
                    data-es-inactive="Disponible del 1 al 30 de septiembre de 2026"
                    data-ru-inactive="Доступно с 1 по 30 сентября 2026">Disponible del 1 al 30 de septiembre de 2026</p>
                 <p class="price-label" data-es="Última llamada" data-ru="Последний шанс">Última llamada</p>
-                <p class="price-amount">$190 <span>USD</span></p>
+                <p class="price-amount" data-price="190"><span class="price-value">$190</span> <span>USD</span></p>
                 <p class="price-note" data-es="Última oportunidad para inscribirse en la conferencia." data-ru="Последняя возможность зарегистрироваться на конференцию.">Última oportunidad para inscribirse en la conferencia.</p>
                 <a href="#registro" class="btn-primary price-card-btn" data-es="Registrarse" data-ru="Зарегистрироваться"></a>
             </div>
@@ -1085,40 +1238,76 @@
             <a href="mailto:gestalt.escuela.latinoamerica@gmail.com?subject=Descuento%20AGU%20para%20la%20conferencia" class="agu-contact-btn" data-es="Solicitar descuento AGU" data-ru="Запросить скидку AGU">Solicitar descuento AGU</a>
         </div>
 
+        <div class="promo-code-box" id="promo-code-box">
+            <h3 data-es="¿Tienes un código promocional?" data-ru="Есть промокод?">¿Tienes un código promocional?</h3>
+            <p data-es="Ingresa tu código para ver enlaces de pago con descuento." data-ru="Введите промокод, чтобы увидеть ссылки на оплату со скидкой.">
+                Ingresa tu código para ver enlaces de pago con descuento.
+            </p>
+            <form class="promo-code-form" id="promo-code-form" autocomplete="off">
+                <input type="text" id="promo-code-input" name="promo_code" maxlength="40"
+                       placeholder="CÓDIGO" aria-label="Código promocional"
+                       data-es-placeholder="CÓDIGO" data-ru-placeholder="ПРОМОКОД">
+                <button type="submit" data-es="Aplicar" data-ru="Применить">Aplicar</button>
+            </form>
+            <div class="promo-applied-row">
+                <span class="promo-applied-badge" id="promo-applied-badge"></span>
+                <button type="button" class="promo-remove-btn" id="promo-remove-btn"
+                        data-es="Quitar código" data-ru="Убрать промокод">Quitar código</button>
+            </div>
+            <div class="promo-code-message" id="promo-code-message" role="status" aria-live="polite"></div>
+        </div>
+
         <div class="payment-methods" id="pago">
             <h3 data-es="Formas de pago" data-ru="Способы оплаты">Formas de pago</h3>
-            <p data-es="Paga de la forma que te resulte más cómoda y envíanos el comprobante para confirmar tu participación." data-ru="Оплатите удобным способом и отправьте нам подтверждение, чтобы мы подтвердили ваше участие.">
+            <p id="payment-methods-intro"
+               data-es="Paga de la forma que te resulte más cómoda y envíanos el comprobante para confirmar tu participación."
+               data-ru="Оплатите удобным способом и отправьте нам подтверждение, чтобы мы подтвердили ваше участие.">
                 Paga de la forma que te resulte más cómoda y envíanos el comprobante para confirmar tu participación.
             </p>
             <a href="mailto:gestalt.escuela.latinoamerica@gmail.com?subject=Comprobante%20de%20pago%20-%20Conferencia%20Gestalt" class="payment-confirmation" data-es="Enviar comprobante" data-ru="Отправить подтверждение">Enviar comprobante</a>
             <div class="payment-options">
                 <div class="payment-option">
                     <span class="payment-option-label" data-es="Pago en USD" data-ru="Оплата в USD">Pago en USD</span>
-                    <a href="https://paypal.me/LubavaKV/160" class="payment-btn paypal-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://paypal.me/LubavaKV/190" id="pay-link-paypal" class="payment-btn paypal-btn" target="_blank" rel="noopener noreferrer"
+                       data-default-href="https://paypal.me/LubavaKV/190">
                         <img src="assets/paypal-logo.png" alt="PayPal">
                         <span data-es="Pagar en USD" data-ru="Оплатить в USD">Pagar en USD</span>
                     </a>
-                    <p class="payment-note" data-es="Pago en dólares a través de PayPal. Debes ingresar manualmente el monto según la tarifa vigente." data-ru="Оплата в долларах через PayPal. Необходимо вручную указать сумму по действующему тарифу.">
+                    <p class="payment-note" id="pay-note-paypal"
+                       data-es="Pago en dólares a través de PayPal. Debes ingresar manualmente el monto según la tarifa vigente."
+                       data-ru="Оплата в долларах через PayPal. Необходимо вручную указать сумму по действующему тарифу."
+                       data-es-default="Pago en dólares a través de PayPal. Debes ingresar manualmente el monto según la tarifa vigente."
+                       data-ru-default="Оплата в долларах через PayPal. Необходимо вручную указать сумму по действующему тарифу.">
                         Pago en dólares a través de PayPal. Debes ingresar manualmente el monto según la tarifa vigente.
                     </p>
                 </div>
                 <div class="payment-option">
                     <span class="payment-option-label" data-es="Pago en RUB" data-ru="Оплата в RUB">Pago en RUB</span>
-                    <a href="https://l-kv.com/1montevideo" class="payment-btn rub-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://l-kv.com/1montevideo" id="pay-link-rub" class="payment-btn rub-btn" target="_blank" rel="noopener noreferrer"
+                       data-default-href="https://l-kv.com/1montevideo">
                         <img src="assets/sbp-icon.png" alt="">
                         <span data-es="Pagar en rublos" data-ru="Оплатить в рублях">Pagar en rublos</span>
                     </a>
-                    <p class="payment-note" data-es="Pago en rublos a través del sistema de pagos rápidos." data-ru="Оплата в рублях через систему быстрых платежей.">
+                    <p class="payment-note" id="pay-note-rub"
+                       data-es="Pago en rublos a través del sistema de pagos rápidos."
+                       data-ru="Оплата в рублях через систему быстрых платежей."
+                       data-es-default="Pago en rublos a través del sistema de pagos rápidos."
+                       data-ru-default="Оплата в рублях через систему быстрых платежей.">
                         Pago en rublos a través del sistema de pagos rápidos.
                     </p>
                 </div>
                 <div class="payment-option">
                     <span class="payment-option-label" data-es="Mercado Pago" data-ru="Mercado Pago">Mercado Pago</span>
-                    <a href="https://mpago.la/1sgjuwZ" class="payment-btn mp-btn" target="_blank" rel="noopener noreferrer">
+                    <a href="https://mpago.la/2MzNNce" id="pay-link-mp" class="payment-btn mp-btn" target="_blank" rel="noopener noreferrer"
+                       data-default-href="https://mpago.la/2MzNNce">
                         <img src="assets/mercadopago-logo.png" alt="Mercado Pago">
                         <span data-es="Pagar con Mercado Pago" data-ru="Оплатить через Mercado Pago">Pagar con Mercado Pago</span>
                     </a>
-                    <p class="payment-note" data-es="Pago a través de Mercado Pago. Debes ingresar el monto según la tarifa vigente." data-ru="Оплата через Mercado Pago. Необходимо указать сумму по действующему тарифу.">
+                    <p class="payment-note" id="pay-note-mp"
+                       data-es="Pago a través de Mercado Pago. Debes ingresar el monto según la tarifa vigente."
+                       data-ru="Оплата через Mercado Pago. Необходимо указать сумму по действующему тарифу."
+                       data-es-default="Pago a través de Mercado Pago. Debes ingresar el monto según la tarifa vigente."
+                       data-ru-default="Оплата через Mercado Pago. Необходимо указать сумму по действующему тарифу.">
                         Pago a través de Mercado Pago. Debes ingresar el monto según la tarifa vigente.
                     </p>
                 </div>
@@ -1178,6 +1367,7 @@
             document.documentElement.lang = lang;
             setActiveTier();
             if (typeof updatePriceCardButtons === 'function') updatePriceCardButtons();
+            if (typeof syncPromoUi === 'function') syncPromoUi();
         }
 
         function setActiveTier() {
@@ -1204,11 +1394,15 @@
                     if (text) deadline.textContent = text;
                 }
             });
+
+            if (typeof updatePaymentLinksForPromo === 'function') updatePaymentLinksForPromo();
+            if (typeof updatePriceDisplays === 'function') updatePriceDisplays();
         }
 
         setActiveTier();
 
         const STORAGE_KEY = 'conference_registered';
+        const PROMO_STORAGE_KEY = 'conference_promo_code';
         const SUPABASE_URL = 'https://pfkcukagmuliwyrjykql.supabase.co';
         const SUPABASE_ANON_KEY = 'sb_publishable_280xYCZpvzKIKV_d_DAOjQ_15scTCmx';
         const PAYMENT_METHOD_LABELS = {
@@ -1220,6 +1414,232 @@
                 ru: 'Нужно уточнить самый удобный способ',
             },
         };
+
+        // Promo codes → discounted payment links (60% off = pay 40%).
+        // Replace rub / mercadoPago URLs with your real discounted payment pages if needed.
+        const PROMO_CODES = {
+            GESTALT60: {
+                discountPercent: 60,
+                links: {
+                    paypal: 'https://paypal.me/LubavaKV/76',
+                    rub: 'https://l-kv.com/1montevideo-promo',
+                    mercadoPago: 'https://mpago.la/2StsUC7',
+                },
+            },
+        };
+
+        let appliedPromoCode = null;
+
+        function normalizePromoCode(value) {
+            return String(value || '').trim().toUpperCase();
+        }
+
+        function getActiveTierPrice() {
+            const amountEl = document.querySelector('.price-card.active .price-amount[data-price]');
+            if (amountEl) {
+                const price = Number(amountEl.dataset.price);
+                if (price) return price;
+            }
+            const fallback = document.querySelector('.price-amount[data-price]');
+            return fallback ? Number(fallback.dataset.price) || 160 : 160;
+        }
+
+        function getDiscountedAmount(basePrice, discountPercent) {
+            return Math.round(basePrice * (100 - discountPercent) / 100);
+        }
+
+        function getLang() {
+            return document.documentElement.lang || 'es';
+        }
+
+        function setLocalizedText(el, es, ru) {
+            if (!el) return;
+            el.setAttribute('data-es', es);
+            el.setAttribute('data-ru', ru);
+            el.textContent = getLang() === 'ru' ? ru : es;
+        }
+
+        function updatePriceDisplays() {
+            const promo = appliedPromoCode ? PROMO_CODES[appliedPromoCode] : null;
+            document.querySelectorAll('.price-amount[data-price]').forEach(el => {
+                const base = Number(el.dataset.price);
+                const valueEl = el.querySelector('.price-value');
+                if (!valueEl || !base) return;
+
+                if (promo) {
+                    const discounted = getDiscountedAmount(base, promo.discountPercent);
+                    valueEl.innerHTML = `<span class="price-original">$${base}</span>$${discounted}`;
+                    el.classList.add('has-promo');
+                } else {
+                    valueEl.textContent = `$${base}`;
+                    el.classList.remove('has-promo');
+                }
+            });
+        }
+
+        function updatePaymentLinksForPromo() {
+            const paypalLink = document.getElementById('pay-link-paypal');
+            const rubLink = document.getElementById('pay-link-rub');
+            const mpLink = document.getElementById('pay-link-mp');
+            const paypalNote = document.getElementById('pay-note-paypal');
+            const rubNote = document.getElementById('pay-note-rub');
+            const mpNote = document.getElementById('pay-note-mp');
+            const intro = document.getElementById('payment-methods-intro');
+            const promo = appliedPromoCode ? PROMO_CODES[appliedPromoCode] : null;
+
+            if (!promo) {
+                if (paypalLink) paypalLink.href = paypalLink.dataset.defaultHref;
+                if (rubLink) rubLink.href = rubLink.dataset.defaultHref;
+                if (mpLink) mpLink.href = mpLink.dataset.defaultHref;
+
+                [paypalNote, rubNote, mpNote].forEach(note => {
+                    if (!note) return;
+                    setLocalizedText(note, note.dataset.esDefault, note.dataset.ruDefault);
+                });
+
+                if (intro) {
+                    setLocalizedText(
+                        intro,
+                        'Paga de la forma que te resulte más cómoda y envíanos el comprobante para confirmar tu participación.',
+                        'Оплатите удобным способом и отправьте нам подтверждение, чтобы мы подтвердили ваше участие.'
+                    );
+                }
+                return;
+            }
+
+            const basePrice = getActiveTierPrice();
+            const amount = getDiscountedAmount(basePrice, promo.discountPercent);
+
+            if (paypalLink) paypalLink.href = promo.links.paypal;
+            if (rubLink) rubLink.href = promo.links.rub;
+            if (mpLink) mpLink.href = promo.links.mercadoPago;
+
+            setLocalizedText(
+                paypalNote,
+                `Código aplicado: ${promo.discountPercent}% de descuento. Monto con descuento: $${amount} USD (tarifa vigente $${basePrice}).`,
+                `Промокод применён: скидка ${promo.discountPercent}%. Сумма со скидкой: $${amount} USD (актуальный тариф $${basePrice}).`
+            );
+            setLocalizedText(
+                rubNote,
+                `Enlace de pago con ${promo.discountPercent}% de descuento (equiv. $${amount} USD).`,
+                `Ссылка на оплату со скидкой ${promo.discountPercent}% (экв. $${amount} USD).`
+            );
+            setLocalizedText(
+                mpNote,
+                `Enlace de Mercado Pago con ${promo.discountPercent}% de descuento (equiv. $${amount} USD).`,
+                `Ссылка Mercado Pago со скидкой ${promo.discountPercent}% (экв. $${amount} USD).`
+            );
+            if (intro) {
+                setLocalizedText(
+                    intro,
+                    `Descuento del ${promo.discountPercent}% aplicado. Usa los enlaces de abajo (precio con descuento: $${amount} USD) y envíanos el comprobante.`,
+                    `Скидка ${promo.discountPercent}% применена. Используйте ссылки ниже (цена со скидкой: $${amount} USD) и отправьте подтверждение оплаты.`
+                );
+            }
+        }
+
+        function syncPromoUi() {
+            const box = document.getElementById('promo-code-box');
+            const message = document.getElementById('promo-code-message');
+            const badge = document.getElementById('promo-applied-badge');
+            const input = document.getElementById('promo-code-input');
+            const lang = getLang();
+
+            if (!box) return;
+
+            if (appliedPromoCode && PROMO_CODES[appliedPromoCode]) {
+                const percent = PROMO_CODES[appliedPromoCode].discountPercent;
+                box.classList.add('is-applied');
+                if (badge) badge.textContent = `${appliedPromoCode} · −${percent}%`;
+                if (message) {
+                    message.className = 'promo-code-message is-success';
+                    setLocalizedText(
+                        message,
+                        `¡Código válido! Se muestran enlaces de pago con ${percent}% de descuento.`,
+                        `Промокод принят! Показаны ссылки на оплату со скидкой ${percent}%.`
+                    );
+                }
+            } else {
+                box.classList.remove('is-applied');
+                if (message) {
+                    message.className = 'promo-code-message';
+                    message.textContent = '';
+                    message.removeAttribute('data-es');
+                    message.removeAttribute('data-ru');
+                }
+            }
+
+            if (input) {
+                const placeholder = input.getAttribute(lang === 'ru' ? 'data-ru-placeholder' : 'data-es-placeholder');
+                if (placeholder) input.placeholder = placeholder;
+            }
+
+            updatePriceDisplays();
+            updatePaymentLinksForPromo();
+        }
+
+        function applyPromoCode(rawCode, options = {}) {
+            const { silent = false } = options;
+            const code = normalizePromoCode(rawCode);
+            const message = document.getElementById('promo-code-message');
+            const config = PROMO_CODES[code];
+
+            if (!code) {
+                if (!silent && message) {
+                    message.className = 'promo-code-message is-error';
+                    setLocalizedText(message, 'Ingresa un código promocional.', 'Введите промокод.');
+                }
+                return false;
+            }
+
+            if (!config) {
+                appliedPromoCode = null;
+                sessionStorage.removeItem(PROMO_STORAGE_KEY);
+                syncPromoUi();
+                if (!silent && message) {
+                    message.className = 'promo-code-message is-error';
+                    setLocalizedText(message, 'Código promocional no válido.', 'Неверный промокод.');
+                }
+                return false;
+            }
+
+            appliedPromoCode = code;
+            sessionStorage.setItem(PROMO_STORAGE_KEY, code);
+            syncPromoUi();
+            return true;
+        }
+
+        function clearPromoCode() {
+            appliedPromoCode = null;
+            sessionStorage.removeItem(PROMO_STORAGE_KEY);
+            const input = document.getElementById('promo-code-input');
+            if (input) input.value = '';
+            syncPromoUi();
+        }
+
+        function initPromoCode() {
+            const form = document.getElementById('promo-code-form');
+            const removeBtn = document.getElementById('promo-remove-btn');
+            const stored = sessionStorage.getItem(PROMO_STORAGE_KEY);
+
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const input = document.getElementById('promo-code-input');
+                    applyPromoCode(input && input.value);
+                });
+            }
+
+            if (removeBtn) {
+                removeBtn.addEventListener('click', clearPromoCode);
+            }
+
+            if (stored && PROMO_CODES[normalizePromoCode(stored)]) {
+                applyPromoCode(stored, { silent: true });
+            } else {
+                syncPromoUi();
+            }
+        }
 
         if (sessionStorage.getItem(STORAGE_KEY)) {
             localStorage.setItem(STORAGE_KEY, '1');
@@ -1307,6 +1727,7 @@
             }
             setActiveTier();
             updatePriceCardButtons();
+            if (typeof syncPromoUi === 'function') syncPromoUi();
 
             if (scroll) {
                 const target = resolveAnchorTarget(scrollTarget);
@@ -1332,6 +1753,7 @@
             }
         }
 
+        initPromoCode();
         switchLang('es', document.querySelector('.lang-btn.active'));
 
         const paymentHashRequested = location.hash === '#tarifas' || location.hash === '#pago';
