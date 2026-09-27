@@ -1167,6 +1167,113 @@
             color: var(--color-muted);
         }
 
+        .student-discount {
+            max-width: 720px;
+            margin: 2rem auto 0;
+            background: white;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 165, 116, 0.45);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .student-discount summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            transition: background 0.2s ease;
+        }
+
+        .student-discount summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .student-discount summary:hover {
+            background: rgba(212, 165, 116, 0.08);
+        }
+
+        .student-discount-summary-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            min-width: 0;
+        }
+
+        .student-discount-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            line-height: 1.4;
+        }
+
+        .student-discount-hint {
+            font-size: 0.875rem;
+            color: var(--color-muted);
+        }
+
+        .student-discount-chevron {
+            flex-shrink: 0;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: rgba(212, 165, 116, 0.2);
+            color: var(--color-text);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1;
+            transition: transform 0.25s ease, background 0.2s ease;
+        }
+
+        .student-discount[open] .student-discount-chevron {
+            transform: rotate(45deg);
+            background: var(--color-accent);
+            color: white;
+        }
+
+        .student-discount-body {
+            padding: 1.25rem 2rem 1.75rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .student-discount-body p {
+            color: var(--color-muted);
+            font-size: 1rem;
+            line-height: 1.65;
+            margin: 0 0 1rem;
+        }
+
+        .student-discount-body p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .student-discount-contact {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1.25rem;
+            padding: 0.85rem 1.5rem;
+            background: var(--color-secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .student-discount-contact:hover {
+            background: var(--color-text);
+            transform: translateY(-2px);
+        }
+
         .pricing-actions {
             display: flex;
             justify-content: center;
@@ -1661,7 +1768,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="schedule-time">8:30–9:30</td>
+                                <td class="schedule-time">9:00–9:30</td>
                                 <td class="schedule-plenary" colspan="3" data-es='Registro y acreditación de participantes' data-ru='Регистрация и аккредитация участников'>Registro y acreditación de participantes</td>
                             </tr>
                             <tr>
@@ -2232,6 +2339,35 @@
         </div>
 
         <p class="pricing-note" data-es="Puedes elegir la forma de pago (PayPal, rublos o Mercado Pago) después de completar el formulario de inscripción." data-ru="Способ оплаты (PayPal, рубли или Mercado Pago) вы сможете выбрать после заполнения регистрационной анкеты."></p>
+
+        <details class="student-discount" id="descuento-estudiantes">
+            <summary>
+                <span class="student-discount-summary-text">
+                    <span class="student-discount-title"
+                          data-es="¿Estudias terapia Gestalt? Puedes obtener un descuento"
+                          data-ru="Учитесь гештальт-терапии? Вам доступна скидка">¿Estudias terapia Gestalt? Puedes obtener un descuento</span>
+                    <span class="student-discount-hint"
+                          data-es="Toca para ver cómo solicitarla"
+                          data-ru="Нажмите, чтобы узнать, как получить">Toca para ver cómo solicitarla</span>
+                </span>
+                <span class="student-discount-chevron" aria-hidden="true">+</span>
+            </summary>
+            <div class="student-discount-body">
+                <p data-es="Si eres estudiante de un programa de terapia Gestalt, para obtener el descuento acude a tu instituto o al centro donde te formas."
+                   data-ru="Если вы студент программы гештальт-терапии, чтобы получить скидку обратитесь в свой институт или туда, где вы обучаетесь.">
+                    Si eres estudiante de un programa de terapia Gestalt, para obtener el descuento acude a tu instituto o al centro donde te formas.
+                </p>
+                <p data-es="Si allí no pueden ofrecerte la reducción, pide que se pongan en contacto con nosotros: te ayudaremos a formularla y a gestionar el descuento a través de nosotros."
+                   data-ru="Если там не смогут предоставить скидку, пусть свяжутся с нами — мы поможем оформить её и сделать скидку через нас.">
+                    Si allí no pueden ofrecerte la reducción, pide que se pongan en contacto con nosotros: te ayudaremos a formularla y a gestionar el descuento a través de nosotros.
+                </p>
+                <a href="mailto:gestalt.escuela.latinoamerica@gmail.com?subject=Descuento%20para%20estudiantes%20de%20Gestalt"
+                   class="student-discount-contact"
+                   data-es="Escribirnos sobre el descuento"
+                   data-ru="Написать нам о скидке">Escribirnos sobre el descuento</a>
+            </div>
+        </details>
+
         <div class="pricing-actions">
             <a href="pago.html#pago" class="btn-secondary" data-es="Ir al pago" data-ru="Перейти к оплате"></a>
         </div>
